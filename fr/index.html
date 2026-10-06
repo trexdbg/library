@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111416">
+  <meta name="description" content="Libria, une bibliothèque virtuelle immersive pour explorer et découvrir des livres.">
+  <title>Libria — Bibliothèque immersive</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-theme="fantasy">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="topbar">
+    <button class="brand" id="homeButton" aria-label="Accueil">
+      <span class="brand-mark">L</span>
+      <span>
+        <strong>LIBRIA</strong>
+        <small id="brandTagline">La bibliothèque vivante</small>
+      </span>
+    </button>
+
+    <nav class="genres" id="genreNav" aria-label="Univers"></nav>
+
+    <div class="top-actions">
+      <label class="search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Rechercher un livre...">
+      </label>
+      <button class="language" id="languageButton" type="button">FR</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-copy">
+      <p class="eyebrow" id="eyebrow">Explorez les rayons</p>
+      <h1 id="roomTitle">Fantasy</h1>
+      <p id="roomIntro">Des mondes anciens, des quêtes impossibles et des légendes à portée de main.</p>
+    </section>
+
+    <section class="library-stage" aria-label="Rayonnages">
+      <div class="back-wall">
+        <div class="arch arch-left"></div>
+        <div class="arch arch-right"></div>
+        <div class="wall-sign"><span id="wallSign">FANTASY</span></div>
+      </div>
+
+      <div class="shelf-viewport" id="shelfViewport">
+        <div class="shelf-track" id="shelfTrack"></div>
+      </div>
+
+      <div class="foreground">
+        <div class="lamp"><span></span></div>
+        <div class="bench"></div>
+        <div class="plant"></div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>←</span>
+        <span id="scrollText">Faites défiler les rayons</span>
+        <span>→</span>
+      </div>
+    </section>
+  </main>
+
+  <aside class="book-panel" id="bookPanel" aria-hidden="true">
+    <button class="panel-close" id="panelClose" type="button" aria-label="Fermer">×</button>
+    <div class="panel-cover" id="panelCover"></div>
+
+    <div class="panel-content">
+      <p class="panel-kicker" id="panelKicker">Sélection Libria</p>
+      <h2 id="panelTitle"></h2>
+      <p class="panel-subtitle" id="panelSubtitle"></p>
+      <p class="panel-author" id="panelAuthor"></p>
+      <div class="panel-tags" id="panelTags"></div>
+      <p class="panel-summary" id="panelSummary"></p>
+
+      <section class="review-card">
+        <small id="reviewLabel">Notre avis</small>
+        <p id="panelReview"></p>
+      </section>
+
+      <section class="edition-card">
+        <small id="editionLabel">Édition affichée</small>
+        <div class="edition-line">
+          <strong id="editionPublisher"></strong>
+          <span id="editionLanguage"></span>
+        </div>
+        <p class="source-note" id="sourceNote">Couverture de démonstration via Open Library.</p>
+      </section>
+    </div>
+  </aside>
+
+  <div class="panel-backdrop" id="panelBackdrop"></div>
+  <script type="module" src="../app.js"></script>
+</body>
+</html>
