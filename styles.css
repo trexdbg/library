@@ -63,3 +63,18 @@ body[data-theme="jeunesse"]{--bg:#182022;--bg2:#253033;--wood:#493b32;--wood2:#6
 @media(max-width:650px){.brand small{display:none}.hero-copy{width:calc(100% - 30px)}.hero-copy h1{font-size:46px}.hero-copy p:last-child{font-size:17px}.library-stage{width:100%;border-radius:22px 22px 0 0;min-height:510px}.shelf-track{gap:15px;padding-inline:0}.shelf-unit{width:470px;transform:scale(.82);margin-inline:-36px}.book-panel{padding:30px 24px 50px}.panel-cover{width:145px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 .edition-card{margin:26px 0 6px;padding:16px 18px;border:1px solid rgba(255,255,255,.07);border-radius:14px;background:rgba(255,255,255,.025)}.edition-card>small{display:block;margin-bottom:8px;color:var(--accent);text-transform:uppercase;letter-spacing:.15em}.edition-line{display:flex;justify-content:space-between;gap:18px;align-items:center}.edition-line strong{font-size:13px}.edition-line span{color:var(--muted);font-size:11px}.source-note{margin:10px 0 0;color:color-mix(in srgb,var(--muted) 70%,transparent);font-size:10px;line-height:1.45}
+
+:root{--scene-shift:0px;--foreground-shift:0px}
+.back-wall{translate:var(--scene-shift) 0;transition:translate .15s linear,opacity .6s ease}
+.foreground{translate:var(--foreground-shift) 0;transition:translate .15s linear}
+.library-stage:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(8,10,11,.42),transparent 13%,transparent 87%,rgba(8,10,11,.42)),linear-gradient(180deg,rgba(255,255,255,.025),transparent 22%,rgba(0,0,0,.16) 75%,rgba(0,0,0,.36));mix-blend-mode:normal;z-index:7}
+.book.with-cover{background-image:linear-gradient(90deg,rgba(0,0,0,.38),rgba(255,255,255,.03) 18%,rgba(0,0,0,.18)),var(--book-cover);background-size:cover;background-position:center}
+.book.with-cover .book-spine{background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.12) 50%,rgba(255,255,255,.05));inset:0;padding:8px 5px;font-size:10px}
+.book.with-cover:hover{background-position:56% center}
+.shelf-case:before{content:"";position:absolute;inset:14px 13px auto;height:22px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.07),transparent 72%);filter:blur(9px);pointer-events:none}
+.shelf-row:before{content:"";position:absolute;left:2%;right:2%;bottom:0;height:18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.18));pointer-events:none}
+.library-stage{background:radial-gradient(circle at 50% 12%,rgba(225,230,226,.08),transparent 23%),radial-gradient(circle at 18% 22%,var(--glow),transparent 22%),linear-gradient(180deg,color-mix(in srgb,var(--stone) 11%,var(--bg)) 0%,var(--bg2) 58%,#0a0d0d 100%)}
+body[data-theme="fantasy"] .library-stage{background:radial-gradient(circle at 50% 12%,rgba(228,224,210,.08),transparent 24%),radial-gradient(circle at 18% 22%,rgba(125,145,124,.09),transparent 24%),linear-gradient(180deg,#1b2220 0%,#151b19 56%,#0c0f0e 100%)}
+body[data-theme="scifi"] .library-stage{background:radial-gradient(circle at 50% 10%,rgba(175,211,223,.11),transparent 23%),linear-gradient(180deg,#17232a 0%,#111a1f 56%,#0a0f12 100%)}
+body[data-theme="polar"] .library-stage{background:radial-gradient(circle at 30% 10%,rgba(146,161,151,.07),transparent 18%),linear-gradient(180deg,#171c1b 0%,#111514 58%,#090b0b 100%)}
+body[data-theme="jeunesse"] .library-stage{background:radial-gradient(circle at 50% 10%,rgba(225,208,190,.1),transparent 22%),linear-gradient(180deg,#283235 0%,#20292b 58%,#111617 100%)}
