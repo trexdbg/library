@@ -258,9 +258,7 @@ function makeFiller(index, shelfIndex) {
 function makeBookCard(work, index, featured) {
   const edition = editionFor(work, state.lang);
   const button = document.createElement("button");
-  const sizeClass = work.size ? " size-" + work.size : "";
-
-  button.className = "book-card" + sizeClass + (featured ? " featured" : "");
+  button.className = "book-card" + (featured ? " featured" : "");
   button.type = "button";
   button.style.background = gradient(work);
   button.setAttribute("aria-label", edition.title + " — " + work.author);
@@ -322,7 +320,7 @@ function populateShelf(target, shelfIndex, candidates) {
 function renderShelves() {
   const filtered = visibleWorks();
   const all = availableWorks();
-  const source = filtered.length ? filtered : all;
+  const source = state.search ? filtered : all;
 
   shelfEls.forEach(function(target, shelfIndex) {
     let shelfWorks = source.filter(function(work) {
