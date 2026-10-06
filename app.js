@@ -168,6 +168,8 @@ function renderNav() {
   els.genreNav.innerHTML = "";
 
   Object.keys(genres).forEach(function(key) {
+    if (!availableWorks(key).length) return;
+
     const button = document.createElement("button");
     button.className = "genre-button" + (state.genre === key ? " active" : "");
     button.textContent = genres[key].label[state.lang];
