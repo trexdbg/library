@@ -196,6 +196,12 @@ function makeBook(work, sizeOverride) {
   button.style.setProperty("--cover-bg", gradient(work));
   button.setAttribute("aria-label", edition.title + " — " + work.author);
 
+  const cover = coverUrl(edition, "M");
+  if (cover) {
+    button.style.setProperty("--book-cover", "url('" + cover + "')");
+    button.classList.add("with-cover");
+  }
+
   const spine = document.createElement("span");
   spine.className = "book-spine";
   spine.textContent = edition.title;
@@ -401,5 +407,11 @@ els.shelfViewport.addEventListener("wheel", function(event) {
     els.shelfViewport.scrollLeft += event.deltaY;
   }
 }, { passive: false });
+
+els.shelfViewport.addEventListener("scroll", function() {
+  const x = els.shelfViewport.scrollLeft;
+  document.documentElement.style.setProperty("--scene-shift", (x * -0.035) + "px");
+  document.documentElement.style.setProperty("--foreground-shift", (x * -0.07) + "px");
+});
 
 render();
