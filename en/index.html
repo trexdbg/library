@@ -3,77 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111416">
+  <meta name="theme-color" content="#0d1010">
   <meta name="description" content="Libria, an immersive virtual library for exploring and discovering books.">
   <title>Libria — Immersive virtual library</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body data-theme="fantasy">
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="homeButton" type="button" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">⌑</span>
+        <span class="brand-copy">
+          <strong>LIBRIA</strong>
+          <small id="brandTagline">The living library</small>
+        </span>
+      </button>
 
-  <header class="topbar">
-    <button class="brand" id="homeButton" aria-label="Home">
-      <span class="brand-mark">L</span>
-      <span>
-        <strong>LIBRIA</strong>
-        <small id="brandTagline">The living library</small>
-      </span>
-    </button>
-
-    <nav class="genres" id="genreNav" aria-label="Genres"></nav>
-
-    <div class="top-actions">
       <label class="search">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Search for a book...">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search for a book, an author, a world...">
       </label>
-      <button class="language" id="languageButton" type="button">EN</button>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero-copy">
-      <p class="eyebrow" id="eyebrow">Explore the shelves</p>
-      <h1 id="roomTitle">Fantasy</h1>
-      <p id="roomIntro">Ancient worlds, impossible quests and legends within reach.</p>
-    </section>
-
-    <section class="library-stage" aria-label="Bookshelves">
-      <div class="back-wall">
-        <div class="arch arch-left"></div>
-        <div class="arch arch-right"></div>
-        <div class="wall-sign"><span id="wallSign">FANTASY</span></div>
+      <div class="top-actions">
+        <button class="quiet-link" id="discoverButton" type="button">Discover</button>
+        <button class="language" id="languageButton" type="button" aria-label="Changer de langue">EN</button>
       </div>
+    </header>
 
-      <div class="shelf-viewport" id="shelfViewport">
-        <div class="shelf-track" id="shelfTrack"></div>
-      </div>
+    <main class="library-shell">
+      <aside class="genre-panel" aria-label="Genres">
+        <p class="menu-caption" id="menuCaption">Explore</p>
+        <nav class="genre-nav" id="genreNav"></nav>
+        <div class="genre-note">
+          <span class="genre-note-dot"></span>
+          <p id="genreNote">Scroll through the scene or swipe the books to wander along the shelves.</p>
+        </div>
+      </aside>
 
-      <div class="foreground">
-        <div class="lamp"><span></span></div>
-        <div class="bench"></div>
-        <div class="plant"></div>
-      </div>
+      <section class="library-scene" id="libraryScene" aria-label="Immersive library">
+        <div class="scene-image" id="sceneImage" aria-hidden="true"></div>
+        <div class="scene-grade" aria-hidden="true"></div>
+        <div class="scene-light scene-light-a" aria-hidden="true"></div>
+        <div class="scene-light scene-light-b" aria-hidden="true"></div>
 
-      <div class="scroll-hint">
-        <span>←</span>
-        <span id="scrollText">Browse the shelves</span>
-        <span>→</span>
-      </div>
-    </section>
-  </main>
+        <div class="room-copy">
+          <p class="eyebrow" id="eyebrow">Explore the shelves</p>
+          <h1 id="roomTitle">Fantasy</h1>
+          <p id="roomIntro">Ancient worlds, impossible quests and legends within reach.</p>
+        </div>
+
+        <div class="shelf-zone shelf-zone-top" data-shelf="0">
+          <div class="shelf-strip" id="shelfTop"></div>
+        </div>
+        <div class="shelf-zone shelf-zone-middle" data-shelf="1">
+          <div class="shelf-strip" id="shelfMiddle"></div>
+        </div>
+        <div class="shelf-zone shelf-zone-bottom" data-shelf="2">
+          <div class="shelf-strip" id="shelfBottom"></div>
+        </div>
+
+        <div class="shelf-sign" id="shelfSign">
+          <span id="shelfSignText">Great worlds</span>
+        </div>
+
+        <div class="scene-hint" id="sceneHint">
+          <span class="hint-arrow">←</span>
+          <span id="scrollText">Browse the shelves</span>
+          <span class="hint-arrow">→</span>
+        </div>
+
+        <nav class="bottom-rail" id="bottomRail" aria-label="Genre navigation"></nav>
+      </section>
+    </main>
+  </div>
 
   <aside class="book-panel" id="bookPanel" aria-hidden="true">
     <button class="panel-close" id="panelClose" type="button" aria-label="Close">×</button>
-    <div class="panel-cover" id="panelCover"></div>
+    <div class="panel-hero">
+      <div class="panel-cover" id="panelCover"></div>
+      <div class="panel-heading">
+        <p class="panel-kicker" id="panelKicker">Libria selection</p>
+        <h2 id="panelTitle"></h2>
+        <p class="panel-subtitle" id="panelSubtitle"></p>
+        <p class="panel-author" id="panelAuthor"></p>
+        <div class="panel-tags" id="panelTags"></div>
+      </div>
+    </div>
+
+    <div class="panel-tabs" aria-hidden="true">
+      <span class="active" id="tabOverview">Overview</span>
+      <span id="tabReview">Our review</span>
+      <span id="tabAuthor">The author</span>
+      <span id="tabSimilar">Similar</span>
+    </div>
 
     <div class="panel-content">
-      <p class="panel-kicker" id="panelKicker">Libria selection</p>
-      <h2 id="panelTitle"></h2>
-      <p class="panel-subtitle" id="panelSubtitle"></p>
-      <p class="panel-author" id="panelAuthor"></p>
-      <div class="panel-tags" id="panelTags"></div>
       <p class="panel-summary" id="panelSummary"></p>
 
       <section class="review-card">
