@@ -3,77 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111416">
+  <meta name="theme-color" content="#0d1010">
   <meta name="description" content="Libria, une bibliothèque virtuelle immersive pour explorer et découvrir des livres.">
   <title>Libria — Bibliothèque immersive</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-theme="fantasy">
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="homeButton" type="button" aria-label="Accueil">
+        <span class="brand-mark" aria-hidden="true">⌑</span>
+        <span class="brand-copy">
+          <strong>LIBRIA</strong>
+          <small id="brandTagline">La bibliothèque vivante</small>
+        </span>
+      </button>
 
-  <header class="topbar">
-    <button class="brand" id="homeButton" aria-label="Accueil">
-      <span class="brand-mark">L</span>
-      <span>
-        <strong>LIBRIA</strong>
-        <small id="brandTagline">La bibliothèque vivante</small>
-      </span>
-    </button>
-
-    <nav class="genres" id="genreNav" aria-label="Univers"></nav>
-
-    <div class="top-actions">
       <label class="search">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Rechercher un livre...">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Rechercher un livre, un auteur, un univers...">
       </label>
-      <button class="language" id="languageButton" type="button">FR</button>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero-copy">
-      <p class="eyebrow" id="eyebrow">Explorez les rayons</p>
-      <h1 id="roomTitle">Fantasy</h1>
-      <p id="roomIntro">Des mondes anciens, des quêtes impossibles et des légendes à portée de main.</p>
-    </section>
-
-    <section class="library-stage" aria-label="Rayonnages">
-      <div class="back-wall">
-        <div class="arch arch-left"></div>
-        <div class="arch arch-right"></div>
-        <div class="wall-sign"><span id="wallSign">FANTASY</span></div>
+      <div class="top-actions">
+        <button class="quiet-link" id="discoverButton" type="button">Découvrir</button>
+        <button class="language" id="languageButton" type="button" aria-label="Changer de langue">FR</button>
       </div>
+    </header>
 
-      <div class="shelf-viewport" id="shelfViewport">
-        <div class="shelf-track" id="shelfTrack"></div>
-      </div>
+    <main class="library-shell">
+      <aside class="genre-panel" aria-label="Univers">
+        <p class="menu-caption" id="menuCaption">Explorer</p>
+        <nav class="genre-nav" id="genreNav"></nav>
+        <div class="genre-note">
+          <span class="genre-note-dot"></span>
+          <p id="genreNote">Faites défiler la scène ou glissez les livres pour flâner dans le rayon.</p>
+        </div>
+      </aside>
 
-      <div class="foreground">
-        <div class="lamp"><span></span></div>
-        <div class="bench"></div>
-        <div class="plant"></div>
-      </div>
+      <section class="library-scene" id="libraryScene" aria-label="Bibliothèque immersive">
+        <div class="scene-image" id="sceneImage" aria-hidden="true"></div>
+        <div class="scene-grade" aria-hidden="true"></div>
+        <div class="scene-light scene-light-a" aria-hidden="true"></div>
+        <div class="scene-light scene-light-b" aria-hidden="true"></div>
 
-      <div class="scroll-hint">
-        <span>←</span>
-        <span id="scrollText">Faites défiler les rayons</span>
-        <span>→</span>
-      </div>
-    </section>
-  </main>
+        <div class="room-copy">
+          <p class="eyebrow" id="eyebrow">Explorez les rayons</p>
+          <h1 id="roomTitle">Fantasy</h1>
+          <p id="roomIntro">Des mondes anciens, des quêtes impossibles et des légendes à portée de main.</p>
+        </div>
+
+        <div class="shelf-zone shelf-zone-top" data-shelf="0">
+          <div class="shelf-strip" id="shelfTop"></div>
+        </div>
+        <div class="shelf-zone shelf-zone-middle" data-shelf="1">
+          <div class="shelf-strip" id="shelfMiddle"></div>
+        </div>
+        <div class="shelf-zone shelf-zone-bottom" data-shelf="2">
+          <div class="shelf-strip" id="shelfBottom"></div>
+        </div>
+
+        <div class="shelf-sign" id="shelfSign">
+          <span id="shelfSignText">Grands univers</span>
+        </div>
+
+        <div class="scene-hint" id="sceneHint">
+          <span class="hint-arrow">←</span>
+          <span id="scrollText">Faites défiler les rayons</span>
+          <span class="hint-arrow">→</span>
+        </div>
+
+        <nav class="bottom-rail" id="bottomRail" aria-label="Navigation des univers"></nav>
+      </section>
+    </main>
+  </div>
 
   <aside class="book-panel" id="bookPanel" aria-hidden="true">
     <button class="panel-close" id="panelClose" type="button" aria-label="Fermer">×</button>
-    <div class="panel-cover" id="panelCover"></div>
+    <div class="panel-hero">
+      <div class="panel-cover" id="panelCover"></div>
+      <div class="panel-heading">
+        <p class="panel-kicker" id="panelKicker">Sélection Libria</p>
+        <h2 id="panelTitle"></h2>
+        <p class="panel-subtitle" id="panelSubtitle"></p>
+        <p class="panel-author" id="panelAuthor"></p>
+        <div class="panel-tags" id="panelTags"></div>
+      </div>
+    </div>
+
+    <div class="panel-tabs" aria-hidden="true">
+      <span class="active" id="tabOverview">Aperçu</span>
+      <span id="tabReview">Notre critique</span>
+      <span id="tabAuthor">L’auteur</span>
+      <span id="tabSimilar">Similaires</span>
+    </div>
 
     <div class="panel-content">
-      <p class="panel-kicker" id="panelKicker">Sélection Libria</p>
-      <h2 id="panelTitle"></h2>
-      <p class="panel-subtitle" id="panelSubtitle"></p>
-      <p class="panel-author" id="panelAuthor"></p>
-      <div class="panel-tags" id="panelTags"></div>
       <p class="panel-summary" id="panelSummary"></p>
 
       <section class="review-card">
