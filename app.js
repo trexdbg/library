@@ -103,10 +103,38 @@ const els = {
   sourceNote: document.querySelector("#sourceNote")
 };
 
+function languageFromPath() {
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  return parts.find(function(part) {
+    return part === "fr" || part === "en";
+  }) || null;
+}
+
+function languageUrl(lang) {
+  const url = new URL(window.location.href);
+  const parts = url.pathname.split("/");
+  const index = parts.findIndex(function(part) {
+    return part === "fr" || part === "en";
+  });
+
+  if (index >= 0) {
+    parts[index] = lang;
+  } else {
+    if (parts[parts.length - 1] !== "") parts.push("");
+    parts.splice(parts.length - 1, 0, lang);
+  }
+
+  url.pathname = parts.join("/");
+  url.search = "";
+  return url.toString();
+}
+
 const stored = localStorage.getItem("libria-lang");
 const browserLang = (navigator.language || "fr").slice(0, 2);
+const routedLang = languageFromPath();
+
 const state = {
-  lang: (stored || browserLang) === "en" ? "en" : "fr",
+  lang: routedLang || ((stored || browserLang) === "en" ? "en" : "fr"),
   genre: "fantasy",
   search: ""
 };
@@ -328,19 +356,9 @@ els.searchInput.addEventListener("input", function(event) {
 });
 
 els.languageButton.addEventListener("click", function() {
-  state.lang = state.lang === "fr" ? "en" : "fr";
-
-  if (!availableWorks(state.genre).length) {
-    state.genre = firstGenreWithBooks(state.lang);
-  }
-
-  state.search = "";
-  els.searchInput.value = "";
-  localStorage.setItem("libria-lang", state.lang);
-
-  closeBook();
-  render();
-  els.shelfViewport.scrollTo({ left: 0, behavior: "smooth" });
+  const nextLang = state.lang === "fr" ? "en" : "fr";
+  localStorage.setItem("libria-lang", nextLang);
+  window.location.href = languageUrl(nextLang);
 });
 
 els.panelClose.addEventListener("click", closeBook);
