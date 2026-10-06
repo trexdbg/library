@@ -67,9 +67,11 @@
   <aside class="book-panel" id="bookPanel" aria-hidden="true">
     <button class="panel-close" id="panelClose" type="button" aria-label="Fermer">×</button>
     <div class="panel-cover" id="panelCover"></div>
+
     <div class="panel-content">
       <p class="panel-kicker" id="panelKicker">Sélection Libria</p>
       <h2 id="panelTitle"></h2>
+      <p class="panel-subtitle" id="panelSubtitle"></p>
       <p class="panel-author" id="panelAuthor"></p>
       <div class="panel-tags" id="panelTags"></div>
       <p class="panel-summary" id="panelSummary"></p>
@@ -79,12 +81,13 @@
         <p id="panelReview"></p>
       </section>
 
-      <section class="offers">
-        <div class="offers-head">
-          <h3 id="offersTitle">Formats & offres</h3>
-          <small id="offersUpdated">Données de démonstration</small>
+      <section class="edition-card">
+        <small id="editionLabel">Édition affichée</small>
+        <div class="edition-line">
+          <strong id="editionPublisher"></strong>
+          <span id="editionLanguage"></span>
         </div>
-        <div id="offerList"></div>
+        <p class="source-note" id="sourceNote">Couverture de démonstration via Open Library.</p>
       </section>
     </div>
   </aside>
