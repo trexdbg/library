@@ -582,10 +582,10 @@ export function editionFor(work, lang) {
 export function coverUrl(edition, size = "L") {
   if (!edition) return "";
   if (edition.olid) {
-    return "https://covers.openlibrary.org/b/olid/" + edition.olid + "-" + size + ".jpg";
+    return "https://covers.openlibrary.org/b/olid/" + edition.olid + "-" + size + ".jpg?default=false";
   }
   if (edition.isbn) {
-    return "https://covers.openlibrary.org/b/isbn/" + edition.isbn + "-" + size + ".jpg";
+    return "https://covers.openlibrary.org/b/isbn/" + edition.isbn + "-" + size + ".jpg?default=false";
   }
   return "";
 }
