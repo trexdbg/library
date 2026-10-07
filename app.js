@@ -168,11 +168,16 @@ const state = {
   roomWidth: window.innerWidth,
   cameraCurrent: 0,
   cameraTarget: 0,
+  roomEls: [],
+  rafId: 0,
+  lastFrameTime: 0,
+  wheelSnapTimer: 0,
+  wheelGestureStart: null,
   pointerId: null,
   pointerStartX: 0,
   pointerStartTarget: 0,
-  wheelLocked: false,
-  hasMoved: false
+  hasMoved: false,
+  reducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches
 };
 
 function t() {
@@ -312,6 +317,7 @@ function renderWorld() {
   els.world.innerHTML = "";
   els.world.appendChild(createHall());
   availableGenres().forEach((genre) => els.world.appendChild(createGenreRoom(genre)));
+  state.roomEls = Array.from(els.world.querySelectorAll(".room"));
 
   const enter = document.querySelector("#enterLibrary");
   const hallSearch = document.querySelector("#hallSearch");
@@ -360,6 +366,7 @@ function resizeCamera() {
   state.roomIndex = Math.max(0, Math.min(rooms().length - 1, Math.round(fractional)));
   state.cameraTarget = state.roomIndex * state.roomWidth;
   state.cameraCurrent = state.cameraTarget;
+  state.lastFrameTime = 0;
   applyCamera();
 }
 
@@ -367,15 +374,20 @@ function maxCamera() {
   return Math.max(0, (rooms().length - 1) * state.roomWidth);
 }
 
-function applyCamera() {
-  els.world.style.transform = `translate3d(${-state.cameraCurrent}px, 0, 0)`;
+function clampCamera(value) {
+  return Math.max(0, Math.min(maxCamera(), value));
+}
 
-  const roomEls = els.world.querySelectorAll(".room");
-  roomEls.forEach((room, index) => {
+function applyCamera() {
+  state.roomEls.forEach((room, index) => {
+    const x = index * state.roomWidth - state.cameraCurrent;
     const local = (state.cameraCurrent - index * state.roomWidth) / state.roomWidth;
-    const bounded = Math.max(-1.5, Math.min(1.5, local));
+    const bounded = Math.max(-1.35, Math.min(1.35, local));
+
+    room.style.transform = `translate3d(${x.toFixed(2)}px, 0, 0)`;
     room.style.setProperty("--room-offset", bounded.toFixed(3));
     room.classList.toggle("is-current", Math.abs(local) < 0.5);
+    room.classList.toggle("is-near", Math.abs(local) < 1.15);
   });
 
   const nearest = Math.max(0, Math.min(rooms().length - 1, Math.round(state.cameraCurrent / state.roomWidth)));
@@ -385,15 +397,58 @@ function applyCamera() {
   }
 }
 
-function animateCamera() {
+function requestCameraFrame() {
+  if (state.reducedMotion) {
+    state.cameraCurrent = state.cameraTarget;
+    applyCamera();
+    return;
+  }
+
+  if (!state.rafId) {
+    state.rafId = requestAnimationFrame(animateCamera);
+  }
+}
+
+function animateCamera(timestamp) {
+  state.rafId = 0;
+
+  const dt = state.lastFrameTime
+    ? Math.min(34, timestamp - state.lastFrameTime)
+    : 16.67;
+  state.lastFrameTime = timestamp;
+
   const distance = state.cameraTarget - state.cameraCurrent;
-  if (Math.abs(distance) < 0.25) {
+  const timeConstant = state.pointerId !== null ? 44 : 105;
+  const alpha = 1 - Math.exp(-dt / timeConstant);
+
+  if (Math.abs(distance) < 0.28) {
     state.cameraCurrent = state.cameraTarget;
   } else {
-    state.cameraCurrent += distance * 0.115;
+    state.cameraCurrent += distance * alpha;
   }
+
   applyCamera();
-  requestAnimationFrame(animateCamera);
+
+  if (Math.abs(state.cameraTarget - state.cameraCurrent) >= 0.28) {
+    state.rafId = requestAnimationFrame(animateCamera);
+  } else {
+    state.lastFrameTime = 0;
+  }
+}
+
+function snapAfterWheel() {
+  const start = state.wheelGestureStart ?? state.cameraTarget;
+  const moved = state.cameraTarget - start;
+  const startIndex = Math.round(start / state.roomWidth);
+  let targetIndex = Math.round(state.cameraTarget / state.roomWidth);
+
+  if (Math.abs(moved) > state.roomWidth * 0.055 && Math.abs(moved) < state.roomWidth * 0.72) {
+    targetIndex = startIndex + Math.sign(moved);
+  }
+
+  state.wheelGestureStart = null;
+  state.wheelSnapTimer = 0;
+  goToRoom(targetIndex);
 }
 
 function markMoved() {
@@ -408,6 +463,7 @@ function goToRoom(index) {
   state.cameraTarget = targetIndex * state.roomWidth;
   markMoved();
   updateNavigationState();
+  requestCameraFrame();
 }
 
 function updateNavigationState() {
@@ -549,16 +605,30 @@ els.languageButton.addEventListener("click", () => {
 
 els.viewport.addEventListener("wheel", (event) => {
   if (els.searchDialog.open || els.bookDialog.open) return;
-  const amount = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
-  if (Math.abs(amount) < 7) return;
-  event.preventDefault();
-  if (state.wheelLocked) return;
 
-  state.wheelLocked = true;
-  goToRoom(state.roomIndex + (amount > 0 ? 1 : -1));
-  window.setTimeout(() => {
-    state.wheelLocked = false;
-  }, 620);
+  const raw = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+  if (Math.abs(raw) < 0.5) return;
+
+  event.preventDefault();
+
+  const amount = event.deltaMode === 1
+    ? raw * 16
+    : event.deltaMode === 2
+      ? raw * state.roomWidth
+      : raw;
+
+  if (!state.wheelSnapTimer) {
+    state.wheelGestureStart = state.cameraTarget;
+  }
+
+  const scale = Math.abs(amount) > 60 ? 1.65 : 1.08;
+  state.cameraTarget = clampCamera(state.cameraTarget + amount * scale);
+
+  markMoved();
+  requestCameraFrame();
+
+  window.clearTimeout(state.wheelSnapTimer);
+  state.wheelSnapTimer = window.setTimeout(snapAfterWheel, 155);
 }, { passive: false });
 
 els.viewport.addEventListener("pointerdown", (event) => {
@@ -573,8 +643,9 @@ els.viewport.addEventListener("pointerdown", (event) => {
 els.viewport.addEventListener("pointermove", (event) => {
   if (state.pointerId !== event.pointerId) return;
   const dx = event.clientX - state.pointerStartX;
-  state.cameraTarget = Math.max(0, Math.min(maxCamera(), state.pointerStartTarget - dx * 1.05));
+  state.cameraTarget = clampCamera(state.pointerStartTarget - dx);
   markMoved();
+  requestCameraFrame();
 });
 
 function finishPointer(event) {
@@ -606,4 +677,3 @@ renderStaticText();
 renderWorld();
 renderCompass();
 resizeCamera();
-animateCamera();
