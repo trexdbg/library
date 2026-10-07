@@ -151,7 +151,7 @@ function languageUrl(lang) {
     parts[current] = lang;
     url.pathname = parts.join("/");
   } else {
-    const base = url.pathname.replace(/index\\.html$/i, "").replace(/\\/?$/, "/");
+    const base = url.pathname.replace(/index\.html$/i, "").replace(/\/?$/, "/");
     url.pathname = base + lang + "/";
   }
 
