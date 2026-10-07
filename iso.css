@@ -258,9 +258,10 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
   .iso-copy h1{font-size:48px}
   .iso-copy__intro{font-size:17px}
   .iso-current{display:none}
-  .iso-map-wrap{display:block;height:auto;min-height:0;padding:0;margin:0;overflow:visible}
-  .iso-map,.iso-map-hud{display:none}
-  .iso-mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+  .iso-map-wrap{display:block;height:390px;min-height:0;padding:0;margin:8px -16px 0;overflow:hidden}
+  .iso-map{display:block;width:760px;max-width:none;height:auto;max-height:none;transform:translateX(calc((100vw - 760px)/2));pointer-events:none}
+  .iso-map-hud{display:none}
+  .iso-mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
   .iso-mobile-card{
     min-height:118px;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;
     background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012))
