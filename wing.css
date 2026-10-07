@@ -14,6 +14,9 @@ body[data-genre="fantasy"]{--accent:#c19a65;--accent-rgb:193,154,101;--hero-imag
 body[data-genre="scifi"]{--accent:#8eabb1;--accent-rgb:142,171,177;--hero-image:url("./assets/rooms/scifi.webp")}
 body[data-genre="polar"]{--accent:#89998e;--accent-rgb:137,153,142;--hero-image:url("./assets/rooms/polar.webp")}
 body[data-genre="jeunesse"]{--accent:#c99d79;--accent-rgb:201,157,121;--hero-image:url("./assets/rooms/jeunesse.webp")}
+body[data-genre="classics"]{--accent:#c2a57a;--accent-rgb:194,165,122;--hero-image:url("./assets/rooms/hall.webp")}
+body[data-genre="romance"]{--accent:#c78d8f;--accent-rgb:199,141,143;--hero-image:url("./assets/rooms/jeunesse.webp")}
+body[data-genre="horror"]{--accent:#9d6b65;--accent-rgb:157,107,101;--hero-image:url("./assets/rooms/polar.webp")}
 button,input{font:inherit}
 a{color:inherit}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}

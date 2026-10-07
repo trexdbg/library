@@ -190,3 +190,20 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--brass);outline-offs
 .room-sign--hall{font-size:12px;fill:#e5c58f}
 @media(max-width:980px){.iso-map--library{max-height:62dvh}.room-sign{font-size:16px}.room-sign-small{font-size:8px}}
 @media(max-width:680px){.iso-map--library{min-width:760px;width:760px;transform:translateX(calc((100vw - 760px)/2));}.iso-map-wrap{overflow:hidden}.iso-mobile-list{position:relative;z-index:3}}
+
+/* V11 — annexes: Classiques, Romance, Horreur */
+.iso-wing--annex{transform-box:fill-box;transform-origin:center}
+.annex-floor,.annex-wall{stroke:rgba(255,255,255,.13);stroke-width:1}
+.classics-floor{fill:#6f604f}.classics-wall{fill:#33291f}.classics-wall-side{fill:#241d17}
+.romance-floor{fill:#80565b}.romance-wall{fill:#4b3036}.romance-wall-side{fill:#342126}
+.horror-floor{fill:#302728}.horror-wall{fill:#1e1719}.horror-wall-side{fill:#120e10}
+.annex-shelves rect{fill:#422c1e;stroke:#9d7149;stroke-width:1}
+.annex-columns rect{fill:#b49a77;stroke:#d3bd99;stroke-width:.7}
+.annex-table{fill:#7c5638;stroke:#c79b66;stroke-width:1}
+.romance-rug{fill:#74414d;stroke:#d6a1a3;stroke-width:2}
+.romance-sofa{fill:#a16d73;stroke:#d5a2a6;stroke-width:1}.romance-sofa--right{fill:#8b5c65}
+.romance-lamp{fill:#e2b780;stroke:#ffe0ad}.romance-lamp-stand{stroke:#b08a5e;stroke-width:2}
+.horror-arch{fill:none;stroke:#715052;stroke-width:6}
+.horror-candles circle{fill:#f0c779}.horror-candles path{stroke:#d2aa68;stroke-width:1.5}
+.annex-sign{font-size:11px}.annex-sign-small{font-size:6px}
+@media(max-width:680px){.iso-mobile-list{grid-template-columns:1fr 1fr}.iso-wing--annex{filter:none}}
