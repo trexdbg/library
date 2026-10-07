@@ -732,6 +732,174 @@ export const works = [
       fr:{title:"Ça",subtitle:"Roman",publisher:"Le Livre de Poche",tags:["Horreur","enfance","Derry"],summary:"À Derry, un groupe d'enfants affronte une présence qui exploite leurs peurs. Des années plus tard, ils doivent revenir terminer ce qu'ils avaient commencé.",review:"Un roman massif qui mêle horreur et mémoire de l'enfance, parfait pour donner de la profondeur à cette nouvelle aile."},
       en:{title:"It",subtitle:"A novel",publisher:"Scribner",isbn:"9781501142970",tags:["Horror","childhood","Derry"],summary:"In Derry, a group of children confronts an entity that feeds on fear. Years later they must return to finish what they started.",review:"A huge novel mixing horror with childhood memory, giving the room scale and depth."}
     }
+  },
+  {
+    id:"mistborn-final-empire", genre:"fantasy", shelf:0, size:"tall",
+    colors:["#6a3037","#171619"], author:"Brandon Sanderson",
+    editions:{
+      fr:{title:"L'Empire ultime",subtitle:"Fils-des-Brumes — Tome 1",publisher:"Le Livre de Poche",coverIsbn:"9780765350381",tags:["Fantasy","allomancie","rébellion"],summary:"Depuis mille ans, le Seigneur Maître règne sur un empire couvert de cendres. Vin, voleuse des rues, découvre un pouvoir rare et rejoint un groupe décidé à renverser l'ordre établi.",review:"Un excellent roman d'entrée dans la fantasy moderne : système de magie très lisible, rythme de casse et vraie montée en puissance."},
+      en:{title:"Mistborn: The Final Empire",subtitle:"Mistborn — Book 1",publisher:"Tor",isbn:"9780765350381",tags:["Fantasy","allomancy","rebellion"],summary:"For a thousand years the Lord Ruler has ruled an ash-covered empire. Street thief Vin discovers a rare power and joins a crew planning the impossible.",review:"A highly readable gateway into modern epic fantasy, with a rigorous magic system and heist-like momentum."}
+    }
+  },
+  {
+    id:"assassins-apprentice", genre:"fantasy", shelf:1, size:"tall",
+    colors:["#664c38","#24211e"], author:"Robin Hobb",
+    editions:{
+      fr:{title:"L'Apprenti assassin",subtitle:"L'Assassin royal — Tome 1",publisher:"J'ai Lu",coverIsbn:"9780553573398",tags:["Fantasy","cour","apprentissage"],summary:"Fitz, fils illégitime d'un prince, grandit à la cour des Six-Duchés. Son éducation le conduit vers les secrets du pouvoir, de la magie et du métier d'assassin.",review:"Une fantasy intime et patiente, remarquable par l'attachement qu'elle crée autour de Fitz et de ses contradictions."},
+      en:{title:"Assassin's Apprentice",subtitle:"The Farseer Trilogy — Book 1",publisher:"Bantam",isbn:"9780553573398",tags:["Fantasy","court","coming of age"],summary:"Fitz, the illegitimate son of a prince, grows up at the Six Duchies court and is trained in politics, magic and assassination.",review:"Patient, character-led fantasy whose greatest strength is the intimacy of Fitz's voice and development."}
+    }
+  },
+  {
+    id:"wizard-of-earthsea", genre:"fantasy", shelf:2, size:"short",
+    colors:["#3f6a62","#d2a764"], author:"Ursula K. Le Guin",
+    editions:{
+      fr:{title:"Le Sorcier de Terremer",subtitle:"Terremer — Tome 1",publisher:"Le Livre de Poche",coverIsbn:"9780547773742",tags:["Fantasy","magie","identité"],summary:"Le jeune Ged possède un talent immense pour la magie. Son orgueil libère pourtant une ombre qu'il devra apprendre à affronter autrement que par la force.",review:"Court, dense et profondément différent de la fantasy spectaculaire : un classique sur le pouvoir, le nom et la connaissance de soi."},
+      en:{title:"A Wizard of Earthsea",subtitle:"Earthsea — Book 1",publisher:"HMH",isbn:"9780547773742",tags:["Fantasy","magic","identity"],summary:"Young Ged has immense magical talent, but his pride releases a shadow he must learn to confront through understanding rather than force.",review:"A concise classic about power, naming and self-knowledge that still feels unlike most modern fantasy."}
+    }
+  },
+  {
+    id:"snow-crash", genre:"scifi", shelf:0, size:"wide",
+    colors:["#d04946","#243844"], author:"Neal Stephenson",
+    editions:{
+      fr:{title:"Le Samouraï virtuel",subtitle:"Roman",publisher:"Le Livre de Poche",coverIsbn:"9780553380958",tags:["Cyberpunk","métavers","satire"],summary:"Hiro est hacker, sabreur et livreur de pizzas. Lorsqu'un étrange virus menace à la fois les ordinateurs et les esprits, il plonge dans une enquête aussi érudite que frénétique.",review:"Cyberpunk baroque, drôle et débordant d'idées, dont le Metaverse est devenu une référence culturelle."},
+      en:{title:"Snow Crash",subtitle:"A novel",publisher:"Bantam",isbn:"9780553380958",tags:["Cyberpunk","metaverse","satire"],summary:"Hiro is a hacker, swordsman and pizza deliverer who is pulled into an investigation of a virus threatening both computers and human minds.",review:"Baroque, funny and idea-dense cyberpunk whose Metaverse became a lasting cultural reference."}
+    }
+  },
+  {
+    id:"the-dispossessed", genre:"scifi", shelf:1, size:"tall",
+    colors:["#8b7559","#3c3833"], author:"Ursula K. Le Guin",
+    editions:{
+      fr:{title:"Les Dépossédés",subtitle:"Une utopie ambiguë",publisher:"Le Livre de Poche",coverIsbn:"9780061054884",tags:["Science-fiction","utopie","politique"],summary:"Le physicien Shevek quitte la société anarchiste d'Anarres pour Urras, monde riche et inégalitaire, dans l'espoir de partager une découverte scientifique majeure.",review:"Une SF politique d'une intelligence rare qui refuse les réponses simples et confronte deux sociétés à leurs propres contradictions."},
+      en:{title:"The Dispossessed",subtitle:"An Ambiguous Utopia",publisher:"Harper Voyager",isbn:"9780061054884",tags:["Science fiction","utopia","politics"],summary:"Physicist Shevek leaves anarchist Anarres for wealthy, unequal Urras in hopes of sharing a major scientific breakthrough.",review:"Politically sophisticated science fiction that refuses easy answers and tests both societies against their contradictions."}
+    }
+  },
+  {
+    id:"children-of-time", genre:"scifi", shelf:2, size:"tall",
+    colors:["#526c51","#202e28"], author:"Adrian Tchaikovsky",
+    editions:{
+      fr:{title:"Dans la toile du temps",subtitle:"Roman",publisher:"Denoël",coverIsbn:"9780316452502",tags:["Évolution","espace","civilisations"],summary:"Les derniers humains cherchent un monde terraformé par leurs ancêtres. Ils y découvrent une civilisation qui n'a pas suivi la trajectoire évolutive prévue.",review:"Une grande fresque d'évolution parallèle, inventive et étonnamment émouvante, qui décentre radicalement le regard humain."},
+      en:{title:"Children of Time",subtitle:"A novel",publisher:"Orbit",isbn:"9780316452502",tags:["Evolution","space","civilisations"],summary:"Humanity's survivors seek a terraformed world left by their ancestors and discover a civilisation that evolved along an unexpected path.",review:"A sweeping story of parallel evolution that radically shifts the human point of view."}
+    }
+  },
+  {
+    id:"big-sleep", genre:"polar", shelf:0, size:"short",
+    colors:["#58463b","#1e1c1b"], author:"Raymond Chandler",
+    editions:{
+      fr:{title:"Le Grand Sommeil",subtitle:"Une enquête de Philip Marlowe",publisher:"Folio Policier",coverIsbn:"9780394758282",tags:["Noir","détective","Los Angeles"],summary:"Le détective Philip Marlowe est engagé par un vieux général pour régler une affaire de chantage. L'enquête l'entraîne rapidement dans les secrets d'une famille riche et dangereuse.",review:"La voix de Chandler compte presque autant que l'intrigue : ironie, corruption et Los Angeles nocturne fondent le roman noir moderne."},
+      en:{title:"The Big Sleep",subtitle:"A Philip Marlowe novel",publisher:"Vintage Crime",isbn:"9780394758282",tags:["Noir","detective","Los Angeles"],summary:"Private detective Philip Marlowe is hired to handle a blackmail case that quickly opens onto the secrets of a wealthy and dangerous family.",review:"Chandler's voice matters as much as the mystery: wit, corruption and nocturnal Los Angeles define modern noir."}
+    }
+  },
+  {
+    id:"in-the-woods", genre:"polar", shelf:1, size:"tall",
+    colors:["#34453d","#171b18"], author:"Tana French",
+    editions:{
+      fr:{title:"La Mort dans les bois",subtitle:"Dublin Murder Squad",publisher:"Calmann-Lévy",coverIsbn:"9780143113492",tags:["Enquête","mémoire","Irlande"],summary:"Un policier enquête sur le meurtre d'une enfant dans les mêmes bois où, des années plus tôt, deux de ses amis ont disparu alors qu'il fut le seul retrouvé.",review:"Un polar littéraire très psychologique, où l'enquête contemporaine réveille une mémoire personnelle beaucoup plus trouble."},
+      en:{title:"In the Woods",subtitle:"Dublin Murder Squad — Book 1",publisher:"Penguin",isbn:"9780143113492",tags:["Mystery","memory","Ireland"],summary:"A detective investigates a child's murder in the same woods where two of his childhood friends disappeared and he alone was found.",review:"A psychologically rich literary mystery where the present investigation destabilises the detective's own past."}
+    }
+  },
+  {
+    id:"devotion-suspect-x", genre:"polar", shelf:2, size:"wide",
+    colors:["#6f675b","#252527"], author:"Keigo Higashino",
+    editions:{
+      fr:{title:"Le Dévouement du suspect X",subtitle:"Une enquête du professeur Galileo",publisher:"Actes Sud",coverIsbn:"9781250002699",tags:["Polar japonais","logique","crime"],summary:"Après un meurtre commis en état de légitime défense, un mathématicien brillant organise un alibi presque parfait. Face à lui, un physicien tente d'en comprendre la logique.",review:"Un formidable duel intellectuel qui révèle très tôt le crime pour déplacer le suspense vers la mécanique de sa dissimulation."},
+      en:{title:"The Devotion of Suspect X",subtitle:"Detective Galileo",publisher:"Minotaur",isbn:"9781250002699",tags:["Japanese crime","logic","murder"],summary:"After a killing in self-defence, a brilliant mathematician constructs an almost perfect alibi while a physicist tries to unravel its logic.",review:"A superb battle of intellect that reveals the crime early and relocates suspense to the mechanics of concealment."}
+    }
+  },
+  {
+    id:"matilda", genre:"jeunesse", shelf:0, size:"short",
+    colors:["#537ba0","#e8c364"], author:"Roald Dahl",
+    editions:{
+      fr:{title:"Matilda",subtitle:"Roman jeunesse",publisher:"Gallimard Jeunesse",coverIsbn:"9780142410370",tags:["École","livres","humour"],summary:"Matilda adore lire mais sa famille ne comprend rien à sa curiosité. À l'école, elle trouve enfin une alliée face à une directrice aussi cruelle que grotesque.",review:"Drôle, insolent et profondément amoureux des livres : un classique jeunesse qui correspond parfaitement à l'idée même de Libria."},
+      en:{title:"Matilda",subtitle:"A novel",publisher:"Puffin",isbn:"9780142410370",tags:["School","books","humour"],summary:"Matilda loves reading, but her family dismisses her curiosity. At school she finds an ally against a headmistress as cruel as she is absurd.",review:"Funny, rebellious and deeply in love with books — an ideal classic for Libria's young-readers wing."}
+    }
+  },
+  {
+    id:"northern-lights", genre:"jeunesse", shelf:1, size:"tall",
+    colors:["#365d73","#bd9d62"], author:"Philip Pullman",
+    editions:{
+      fr:{title:"Les Royaumes du Nord",subtitle:"À la croisée des mondes — Tome 1",publisher:"Gallimard Jeunesse",coverIsbn:"9780440238133",tags:["Fantasy jeunesse","daemons","aventure"],summary:"Lyra quitte Oxford pour le Grand Nord afin de retrouver un ami disparu. Son voyage révèle des expériences inquiétantes, une mystérieuse Poussière et d'autres mondes possibles.",review:"Une aventure jeunesse ambitieuse, sombre et philosophique, capable de grandir avec ses lecteurs."},
+      en:{title:"Northern Lights",subtitle:"His Dark Materials — Book 1",publisher:"Scholastic",isbn:"9780440238133",tags:["Young fantasy","daemons","adventure"],summary:"Lyra leaves Oxford for the far North to find a missing friend and uncovers disturbing experiments, mysterious Dust and other possible worlds.",review:"An ambitious, dark and philosophical children's adventure that grows with its readers."}
+    }
+  },
+  {
+    id:"wrinkle-in-time", genre:"jeunesse", shelf:2, size:"wide",
+    colors:["#755f91","#253950"], author:"Madeleine L'Engle",
+    editions:{
+      fr:{title:"Un raccourci dans le temps",subtitle:"Le Quintette du temps — Tome 1",publisher:"Hachette",coverIsbn:"9781250004673",tags:["Science-fiction jeunesse","famille","temps"],summary:"Meg, son petit frère Charles Wallace et leur ami Calvin traversent l'espace et le temps pour retrouver le père disparu de Meg.",review:"Un classique jeunesse étrange et cosmique, où la science se mêle au conte et à une aventure familiale très personnelle."},
+      en:{title:"A Wrinkle in Time",subtitle:"Time Quintet — Book 1",publisher:"Square Fish",isbn:"9781250004673",tags:["Young science fiction","family","time"],summary:"Meg, her brother Charles Wallace and their friend Calvin cross space and time to find Meg's missing father.",review:"A strange cosmic children's classic where science, fairy tale and family adventure meet."}
+    }
+  },
+  {
+    id:"jane-eyre", genre:"classics", shelf:0, size:"tall",
+    colors:["#5c473c","#d1b47f"], author:"Charlotte Brontë",
+    editions:{
+      fr:{title:"Jane Eyre",subtitle:"Roman",publisher:"Folio classique",coverIsbn:"9780141441146",tags:["Classique","gothique","indépendance"],summary:"Orpheline devenue gouvernante, Jane refuse de sacrifier sa dignité à la pauvreté, aux conventions ou à l'amour lorsqu'elle découvre les secrets de Thornfield.",review:"Un classique gothique et profondément moderne par l'intransigeance avec laquelle Jane défend son autonomie."},
+      en:{title:"Jane Eyre",subtitle:"A novel",publisher:"Penguin Classics",isbn:"9780141441146",tags:["Classic","gothic","independence"],summary:"Orphaned Jane becomes a governess and refuses to sacrifice her dignity to poverty, convention or love when Thornfield's secrets emerge.",review:"A Gothic classic that still feels modern in Jane's insistence on autonomy and equality."}
+    }
+  },
+  {
+    id:"count-monte-cristo", genre:"classics", shelf:1, size:"wide",
+    colors:["#3f5265","#a37d4d"], author:"Alexandre Dumas",
+    editions:{
+      fr:{title:"Le Comte de Monte-Cristo",subtitle:"Roman",publisher:"Folio classique",coverIsbn:"9780140449266",tags:["Classique","vengeance","aventure"],summary:"Trahi et emprisonné le jour où sa vie semblait s'ouvrir, Edmond Dantès s'évade, découvre une fortune et revient sous une nouvelle identité pour régler ses comptes.",review:"Un monument d'aventure et de vengeance dont la longueur devient une force tant l'architecture du récit est addictive."},
+      en:{title:"The Count of Monte Cristo",subtitle:"A novel",publisher:"Penguin Classics",isbn:"9780140449266",tags:["Classic","revenge","adventure"],summary:"Betrayed and imprisoned just as his life is opening up, Edmond Dantès escapes, finds a fortune and returns under a new identity to settle old debts.",review:"A monumental adventure of revenge whose vast length becomes part of its addictive architecture."}
+    }
+  },
+  {
+    id:"great-gatsby", genre:"classics", shelf:2, size:"short",
+    colors:["#1d5964","#d5b259"], author:"F. Scott Fitzgerald",
+    editions:{
+      fr:{title:"Gatsby le Magnifique",subtitle:"Roman",publisher:"Folio",coverIsbn:"9780743273565",tags:["Classique","rêve américain","années 1920"],summary:"Nick Carraway découvre les fêtes de son mystérieux voisin Gatsby et comprend peu à peu que toute cette splendeur tourne autour d'un désir ancien et impossible.",review:"Court et lumineux en surface, profondément désenchanté dessous : une critique durable du rêve américain et de ses illusions."},
+      en:{title:"The Great Gatsby",subtitle:"A novel",publisher:"Scribner",isbn:"9780743273565",tags:["Classic","American dream","1920s"],summary:"Nick Carraway enters the glittering world of his mysterious neighbour Gatsby and learns that its splendour is organised around an impossible old desire.",review:"Brief and glittering on the surface, deeply disenchanted underneath — a lasting critique of the American dream."}
+    }
+  },
+  {
+    id:"normal-people", genre:"romance", shelf:0, size:"tall",
+    colors:["#ebe7df","#55766b"], author:"Sally Rooney",
+    editions:{
+      fr:{title:"Normal People",subtitle:"Roman",publisher:"L'Olivier",coverIsbn:"9781984822185",tags:["Romance","Irlande","relations"],summary:"Connell et Marianne se rapprochent au lycée, se perdent, se retrouvent puis changent de place socialement et affectivement au fil de leurs années étudiantes.",review:"Une histoire d'amour littéraire surtout fascinée par ce que les personnages n'arrivent pas à se dire au bon moment."},
+      en:{title:"Normal People",subtitle:"A novel",publisher:"Hogarth",isbn:"9781984822185",tags:["Romance","Ireland","relationships"],summary:"Connell and Marianne grow close at school, drift apart and reconnect as their social and emotional positions keep changing through university.",review:"A literary love story fascinated by everything its characters fail to say at the right moment."}
+    }
+  },
+  {
+    id:"flatshare", genre:"romance", shelf:1, size:"short",
+    colors:["#e39b75","#3f706f"], author:"Beth O'Leary",
+    editions:{
+      fr:{title:"À partager",subtitle:"Roman",publisher:"Hugo Roman",coverIsbn:"9781250295637",tags:["Romance","colocation","comédie"],summary:"Tiffy et Leon partagent le même appartement et le même lit, mais jamais aux mêmes heures. Ils commencent par communiquer uniquement grâce à des petits mots.",review:"Une comédie romantique au concept immédiatement clair, portée par une progression tendre et un vrai sens du quotidien."},
+      en:{title:"The Flatshare",subtitle:"A novel",publisher:"Flatiron",isbn:"9781250295637",tags:["Romance","flatshare","comedy"],summary:"Tiffy and Leon share the same flat and the same bed but never at the same time, communicating at first only through notes.",review:"A high-concept romantic comedy with warmth, everyday detail and a satisfyingly gradual relationship."}
+    }
+  },
+  {
+    id:"red-white-royal-blue", genre:"romance", shelf:2, size:"wide",
+    colors:["#d64e52","#4a6da0"], author:"Casey McQuiston",
+    editions:{
+      fr:{title:"My Dear F***ing Prince",subtitle:"Roman",publisher:"Lumen",coverIsbn:"9781250316776",tags:["Romance queer","politique","royauté"],summary:"Le fils de la présidente des États-Unis et un prince britannique sont forcés d'afficher une amitié diplomatique qui se transforme rapidement en quelque chose de beaucoup moins officiel.",review:"Une romance queer très pop qui assume l'utopie politique, l'humour et le plaisir d'une histoire d'amour à très forte visibilité."},
+      en:{title:"Red, White & Royal Blue",subtitle:"A novel",publisher:"St. Martin's Griffin",isbn:"9781250316776",tags:["Queer romance","politics","royalty"],summary:"The U.S. president's son and a British prince are forced into a diplomatic friendship that quickly becomes something much less official.",review:"A bright queer romance that embraces political escapism, humour and the pressure of a highly public love story."}
+    }
+  },
+  {
+    id:"haunting-hill-house", genre:"horror", shelf:0, size:"tall",
+    colors:["#4f5146","#171917"], author:"Shirley Jackson",
+    editions:{
+      fr:{title:"Maison hantée",subtitle:"Roman",publisher:"Rivages",coverIsbn:"9780143039983",tags:["Horreur","maison hantée","psychologie"],summary:"Quatre personnes séjournent à Hill House pour observer ses phénomènes inexpliqués. Pour Eleanor, la maison semble rapidement devenir beaucoup plus personnelle.",review:"Une référence absolue du fantastique psychologique, où l'architecture de la maison et la fragilité d'Eleanor deviennent indissociables."},
+      en:{title:"The Haunting of Hill House",subtitle:"A novel",publisher:"Penguin Classics",isbn:"9780143039983",tags:["Horror","haunted house","psychological"],summary:"Four people stay at Hill House to investigate its unexplained phenomena, and for Eleanor the house soon becomes intensely personal.",review:"A definitive psychological haunted-house novel where architecture and Eleanor's vulnerability become inseparable."}
+    }
+  },
+  {
+    id:"mexican-gothic", genre:"horror", shelf:1, size:"tall",
+    colors:["#5d6b52","#6a2737"], author:"Silvia Moreno-Garcia",
+    editions:{
+      fr:{title:"Mexican Gothic",subtitle:"Roman",publisher:"Bragelonne",coverIsbn:"9780525620808",tags:["Gothique","Mexique","manoir"],summary:"Noemí rejoint sa cousine dans un manoir isolé après avoir reçu une lettre alarmante. La famille qui y vit, la maison et même l'air semblent cacher quelque chose.",review:"Un gothique moderne somptueux qui utilise les codes du manoir anglais pour parler de domination, d'héritage et de corps."},
+      en:{title:"Mexican Gothic",subtitle:"A novel",publisher:"Del Rey",isbn:"9780525620808",tags:["Gothic","Mexico","mansion"],summary:"Noemí travels to an isolated mansion after receiving an alarming letter from her cousin, where the family, house and even the air conceal something.",review:"A lush modern Gothic that repurposes the English manor tradition around domination, inheritance and the body."}
+    }
+  },
+  {
+    id:"the-exorcist", genre:"horror", shelf:2, size:"short",
+    colors:["#242827","#75806e"], author:"William Peter Blatty",
+    editions:{
+      fr:{title:"L'Exorciste",subtitle:"Roman",publisher:"Robert Laffont",coverIsbn:"9780061007224",tags:["Horreur","possession","foi"],summary:"Lorsque le comportement d'une enfant devient inexplicable malgré les examens médicaux, sa mère finit par demander l'aide de prêtres confrontés à leurs propres doutes.",review:"Plus ambigu et plus lent que sa réputation spectaculaire : un roman sur la peur, mais aussi sur le doute et la possibilité de croire."},
+      en:{title:"The Exorcist",subtitle:"A novel",publisher:"Harper",isbn:"9780061007224",tags:["Horror","possession","faith"],summary:"When a child's behaviour becomes inexplicable despite medical examination, her mother turns to priests who face doubts of their own.",review:"More ambiguous and deliberate than its sensational reputation suggests — a novel about fear, doubt and the possibility of belief."}
+    }
   }
 ];
 
@@ -746,6 +914,9 @@ export function coverUrl(edition, size = "L") {
   }
   if (edition.isbn) {
     return "https://covers.openlibrary.org/b/isbn/" + edition.isbn + "-" + size + ".jpg?default=false";
+  }
+  if (edition.coverIsbn) {
+    return "https://covers.openlibrary.org/b/isbn/" + edition.coverIsbn + "-" + size + ".jpg?default=false";
   }
   return "";
 }
