@@ -126,3 +126,67 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--brass);outline-offs
   .iso-mobile-card span{display:block;margin-top:8px;color:#b99b70;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* V9 — architectural isometric library */
+.iso-map-wrap{filter:drop-shadow(0 36px 34px rgba(0,0,0,.48))}
+.iso-map--library{overflow:visible}
+.map-ornament{fill:none;stroke:rgba(197,160,106,.08);stroke-width:1;stroke-dasharray:3 7;pointer-events:none}
+.library-shadow{fill:rgba(0,0,0,.42);transform:translateY(18px)}
+.library-plinth{fill:#17130f;stroke:rgba(214,181,129,.18);stroke-width:1.3}
+.library-plinth-side{fill:#0b0908;stroke:rgba(255,255,255,.025)}
+.library-plinth-side--right{fill:#100d0a}
+.hall-group{pointer-events:none}
+.hall-floor{fill:url(#stoneTop);stroke:rgba(224,194,149,.35);stroke-width:1.3}
+.hall-wall{stroke:rgba(224,194,149,.2);stroke-width:1}
+.hall-wall--left{fill:#30271e}.hall-wall--right{fill:#261e18}
+.hall-rug{fill:#7a3d30;stroke:#c39358;stroke-width:2}
+.hall-rug--inner{fill:none;stroke:#243f4d;stroke-width:5;stroke-dasharray:4 3}
+.hall-arch{fill:none;stroke:#8d765b;stroke-width:8;stroke-linejoin:round}
+.hall-arch--right{stroke:#7b664f}
+.hall-dome{fill:url(#glassGlow);stroke:#cfaa70;stroke-width:2}
+.hall-dome-line{fill:none;stroke:rgba(231,199,148,.55);stroke-width:1}
+.hall-table{fill:#2a1a12}.hall-table-top{fill:#76502f;stroke:#c49a63;stroke-width:1}
+.hall-globe{fill:#b98442;stroke:#f1ce91;stroke-width:1}
+.hall-globe-ring{fill:none;stroke:#e7c37f;stroke-width:1}
+.hall-chairs ellipse{fill:#583622;stroke:#aa7446;stroke-width:1}
+.hall-shelves rect{fill:#3b2518;stroke:#8e6038;stroke-width:1}
+.hall-light{fill:url(#hallGlow)}
+.iso-wing{transform-box:fill-box;transform-origin:center;transition:transform .28s cubic-bezier(.2,.8,.2,1),filter .28s ease}
+.iso-wing:hover,.iso-wing:focus{transform:translateY(-8px);filter:brightness(1.1) saturate(1.04)}
+.iso-wing:hover .wing-floor,.iso-wing:focus .wing-floor{stroke:rgba(236,202,148,.72)}
+.wing-floor,.wing-wall,.wing-front-edge{stroke:rgba(255,255,255,.11);stroke-width:1}
+.fantasy-floor{fill:url(#woodTop)}.fantasy-wall{fill:#352419}.fantasy-wall-side{fill:#241912}
+.scifi-floor{fill:url(#blueTop)}.scifi-wall{fill:#22333d}.scifi-wall-side{fill:#18262e}
+.polar-floor{fill:#2d2b27}.polar-wall{fill:#211c17}.polar-wall-side{fill:#171411}
+.youth-floor{fill:url(#honeyTop)}.youth-wall{fill:#5f4531}.youth-wall-side{fill:#3a2b21}
+.wing-front-edge{fill:#17110d}.scifi-edge{fill:#151f25}.polar-edge{fill:#11100f}.youth-edge{fill:#291f18}
+.shelf rect,.shelf polygon{fill:url(#woodDark);stroke:#95643b;stroke-width:1}
+.shelf path{fill:none;stroke:#a77345;stroke-width:1}
+.shelf--scifi polygon{fill:#243946;stroke:#66869a}
+.shelf--polar rect,.shelf--polar polygon{fill:#211811;stroke:#65472f}
+.shelf--youth polygon{fill:#68482f;stroke:#b98450}
+.book-spines rect{fill:#a7653e;stroke:none}.book-spines rect:nth-child(2n){fill:#52604a}.book-spines rect:nth-child(3n){fill:#66516b}
+.fantasy-rug,.polar-rug{fill:#74372d;stroke:#c09562;stroke-width:1}
+.scifi-rug{fill:#172936;stroke:#b48a52;stroke-width:3;stroke-dasharray:3 3}
+.youth-rug{fill:#35516a;stroke:#d5a35f;stroke-width:2}.youth-rug-inner{fill:none;stroke:#d8b068;stroke-width:2;stroke-dasharray:3 5}
+.reading-table{fill:#6e472b;stroke:#c18b51;stroke-width:1}.reading-table--scifi{fill:#263a45;stroke:#8eabb6}.reading-table--polar{fill:#3a281c}.reading-table-leg{fill:#342218}
+.table-lamp{stroke:#f0d497;stroke-width:1}.table-lamp--amber{fill:#e6aa54}.table-lamp--blue{fill:#9bcbd8}.table-lamp--green{fill:#4f8c69}
+.ladder{fill:none;stroke:#bb8650;stroke-width:2}
+.globe{fill:#92724d;stroke:#e1bc78;stroke-width:1}.globe-line{fill:none;stroke:#e1bc78;stroke-width:1}.globe--dark{fill:#4c5a5a}
+.plant circle,.tree circle{fill:#536f3f}.plant rect,.tree rect{fill:#65442b}
+.gothic-window,.youth-window{fill:#e7c88e;stroke:#f0ddb1;stroke-width:1;opacity:.82}
+.gothic-window-line,.youth-window-line{fill:none;stroke:#9c7144;stroke-width:1}
+.wall-map{fill:#9a8058;stroke:#d2b57e;stroke-width:1;opacity:.75}
+.observatory-window{fill:url(#glassGlow);stroke:#9fbfd0;stroke-width:1.4}
+.observatory-grid{fill:none;stroke:rgba(221,239,247,.5);stroke-width:1}
+.planet{fill:#8aa9bd;stroke:#d5e8ef;stroke-width:1}.planet--large{fill:#6f8ba7}.planet--small{fill:#d2c294}
+.orrery ellipse,.orrery path{fill:none;stroke:#d2a55f;stroke-width:1.5}.orrery circle{fill:#c69049;stroke:#f0d29b;stroke-width:1}
+.instrument path{fill:none;stroke:#a7bbc4;stroke-width:1.5}.instrument circle{fill:#b48c55}
+.paper{fill:#d9cfba;stroke:#9d8c71;stroke-width:.6}
+.youth-table{fill:#66452e}.youth-table-top{fill:#a87346;stroke:#e0b47a}.youth-chairs circle{fill:#b0774c;stroke:#e0b47a}
+.reading-nook polygon{fill:#785337;stroke:#c89458}.reading-nook circle{fill:#a66f55}
+.room-sign{pointer-events:none;text-anchor:middle;font:600 14px "Cormorant Garamond",serif;fill:#f4e8d5;letter-spacing:.06em;paint-order:stroke;stroke:#0b0908;stroke-width:4px}
+.room-sign-small{pointer-events:none;text-anchor:middle;font:500 7px Inter,sans-serif;fill:#b7a58f;letter-spacing:.18em;text-transform:uppercase;paint-order:stroke;stroke:#0b0908;stroke-width:3px}
+.room-sign--hall{font-size:12px;fill:#e5c58f}
+@media(max-width:980px){.iso-map--library{max-height:62dvh}.room-sign{font-size:16px}.room-sign-small{font-size:8px}}
+@media(max-width:680px){.iso-map--library{min-width:760px;width:760px;transform:translateX(calc((100vw - 760px)/2));}.iso-map-wrap{overflow:hidden}.iso-mobile-list{position:relative;z-index:3}}
