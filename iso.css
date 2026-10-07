@@ -207,3 +207,6 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--brass);outline-offs
 .horror-candles circle{fill:#f0c779}.horror-candles path{stroke:#d2aa68;stroke-width:1.5}
 .annex-sign{font-size:11px}.annex-sign-small{font-size:6px}
 @media(max-width:680px){.iso-mobile-list{grid-template-columns:1fr 1fr}.iso-wing--annex{filter:none}}
+
+/* V19 — SEO/GEO navigation */
+.site-seo-footer{position:relative;z-index:6;padding:22px 18px 30px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);background:#0b0a08}.site-seo-footer a{color:#81796f;text-decoration:none;font-size:8px}
