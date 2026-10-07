@@ -839,6 +839,34 @@ export const reviewsByWork = {
   ],
   "woman-in-black": [
     {source:"xoxoxo e",kind:"Book review blog",title:"The Woman in Black — Susan Hill",url:"https://xoxoxoe.blogspot.com/2011/10/woman-in-black.html"}
+  ],
+  "uprooted": [
+    {lang:"fr",source:"Libris Revelio",kind:"Blog littéraire",title:"Déracinée de Naomi Novik",url:"https://librisrevelio.wordpress.com/2019/02/04/deracinee-de-naomi-novik/"},
+    {lang:"en",source:"Neth Space",kind:"Book blog",title:"Review: Uprooted by Naomi Novik",url:"https://nethspace.blogspot.com/2015/07/review-uprooted-by-naomi-novik.html"}
+  ],
+  "leviathan-wakes": [
+    {lang:"fr",source:"Un papillon dans la Lune",kind:"Blog littéraire",title:"L’Éveil du Léviathan — James S. A. Corey",url:"https://unpapillondanslalune.blogspot.com/2014/08/leveil-du-leviathan-expanse-t1-de-james.html"},
+    {lang:"en",source:"Fantasy Book Critic",kind:"SFF book blog",title:"Leviathan Wakes — James S. A. Corey",url:"https://fantasybookcritic.blogspot.com/2011/06/leviathan-wakes-by-james-sa-corey.html"}
+  ],
+  "and-then-there-were-none": [
+    {lang:"fr",source:"Clé de l'intrigue",kind:"Blog de lecture",title:"Dix petits nègres / Ils étaient dix — Agatha Christie",url:"https://cledelintrigue.wordpress.com/2024/08/03/dix-petits-negres-ils-etaient-dix-dagatha-christie/"},
+    {lang:"en",source:"Murdered Pages",kind:"Crime review",title:"And Then There Were None — Agatha Christie",url:"https://murderedpages.com/reviews/review-and-then-there-were-none-agatha-christie"}
+  ],
+  "wonder-rj-palacio": [
+    {lang:"fr",source:"Le blog de Galleane",kind:"Blog littéraire",title:"Wonder de R. J. Palacio",url:"https://bloggalleane.blogspot.com/2012/12/wonder.html"},
+    {lang:"en",source:"Shelfish Book Blog",kind:"Book blog",title:"Review of Wonder by R. J. Palacio",url:"https://shelfishbookblog.wordpress.com/2017/09/30/review-of-wonder-by-r-j-palacio/"}
+  ],
+  "to-kill-a-mockingbird": [
+    {lang:"fr",source:"Littécritiques",kind:"Blog littéraire",title:"Ne tirez pas sur l’oiseau moqueur — Harper Lee",url:"https://littecritiques.wordpress.com/2020/02/14/ne-tirez-pas-sur-loiseau-moqueur-harper-lee/"},
+    {lang:"en",source:"Blogs-Of-A-Bookaholic",kind:"Book blog",title:"To Kill A Mockingbird — Harper Lee",url:"https://beckysblogs.wordpress.com/2014/07/11/to-kill-a-mockingbird-by-harper-lee-review-55/"}
+  ],
+  "beach-read": [
+    {lang:"fr",source:"UtoRead",kind:"Critique littéraire",title:"Critique de Beach Read",url:"https://utoread.com/fr/critiques/critique-beach-read/"},
+    {lang:"en",source:"Jessica Favor",kind:"Book blog",title:"Book Review: Beach Read by Emily Henry",url:"https://jessicafavor.wordpress.com/2021/06/21/book-review-beach-read-by-emily-henry/"}
+  ],
+  "only-good-indians": [
+    {lang:"fr",source:"Les Chroniques du Chroniqueur",kind:"Blog littéraire",title:"Un bon Indien est un Indien mort — Stephen Graham Jones",url:"https://leschroniquesduchroniqueur.wordpress.com/2022/10/25/un-bon-indien-est-un-indien-mort-de-stephen-graham-jones/"},
+    {lang:"en",source:"horrormance",kind:"Horror review blog",title:"Review: The Only Good Indians",url:"https://horrormance.wordpress.com/2021/06/03/review-the-only-good-indians/"}
   ]
 };
 
