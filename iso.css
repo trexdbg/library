@@ -258,7 +258,8 @@ a:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
   .iso-copy h1{font-size:48px}
   .iso-copy__intro{font-size:17px}
   .iso-current{display:none}
-  .iso-map-wrap{display:none}
+  .iso-map-wrap{display:block;height:auto;min-height:0;padding:0;margin:0;overflow:visible}
+  .iso-map,.iso-map-hud{display:none}
   .iso-mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
   .iso-mobile-card{
     min-height:118px;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;
