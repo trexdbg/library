@@ -535,6 +535,141 @@ export const reviewsByWork = {
       title:"Guest Review: The Exorcist",
       url:"https://forwinternights.wordpress.com/2011/10/23/guest-review-the-exorcist-40th-anniversary-edition-by-william-peter-blatty/"
     }
+  ],
+  "priory-orange-tree": [
+    {lang:"fr",source:"Litt'150.000",kind:"Blog littéraire",title:"Le Prieuré de l'Oranger",url:"https://littcentcinquante.wordpress.com/2020/10/14/le-prieure-de-loranger/"},
+    {lang:"en",source:"A Blog of Books and Musicals",kind:"Book blog",title:"The Priory of the Orange Tree — Book Review",url:"https://funfandomblog.wordpress.com/2022/03/30/the-priory-of-the-orange-tree-book-review/"}
+  ],
+  "way-of-kings": [
+    {lang:"en",source:"Conversations About Books",kind:"Book blog",title:"The Way of Kings — Brandon Sanderson",url:"https://conversationsaboutbooks.wordpress.com/2019/01/06/book-review-the-way-of-kings-brandon-sanderson/"},
+    {lang:"en",source:"Fyrefly's Book Blog",kind:"Book blog",title:"Brandon Sanderson — The Way of Kings",url:"https://fyreflybooks.wordpress.com/2011/10/31/brandon-sanderson-the-way-of-kings/"}
+  ],
+  "project-hail-mary": [
+    {lang:"fr",source:"Sometimes a book",kind:"Blog littéraire",title:"Projet Dernière Chance — Andy Weir",url:"https://sometimesabook.com/2023/04/08/chronique-projet-derniere-chance-dandy-weir/"},
+    {lang:"en",source:"Reactor",kind:"Book review",title:"Earth in the Balance: Andy Weir's Project Hail Mary",url:"https://reactormag.com/book-reviews-andy-weir-project-hail-mary/"}
+  ],
+  "left-hand-darkness": [
+    {lang:"fr",source:"Mondes de Poche",kind:"Blog littéraire",title:"La Main gauche de la nuit — Ursula K. Le Guin",url:"https://mondesdepoche.fr/2022/03/09/chronique-la-main-gauche-de-la-nuit-ursula-k-le-guin/"}
+  ],
+  "gone-girl": [
+    {lang:"en",source:"Amy Suto",kind:"Book blog",title:"Gone Girl Review",url:"https://www.amysuto.com/desk-of-amy-suto/book-review-gone-girl-by-gillian-flynn"},
+    {lang:"en",source:"Leanne Dyck",kind:"Author blog",title:"Book Review: Gone Girl",url:"https://authorleannedyck.blogspot.com/2015/07/reviewing-gone-girl-by-gillian-flynn.html"}
+  ],
+  "snowman-nesbo": [
+    {lang:"en",source:"Crime by the Book",kind:"Crime blog",title:"Re-Read Book Review: The Snowman",url:"https://crimebythebook.com/blog/2017/10/11/review-the-snowman-by-jo-nesbo"},
+    {lang:"en",source:"Books on the 7:47",kind:"Book blog",title:"Review: The Snowman by Jo Nesbø",url:"https://booksonthe747.com/2017/10/10/review-the-snowman-by-jo-nesbo/"}
+  ],
+  "pride-prejudice": [
+    {lang:"en",source:"Readability",kind:"Book blog",title:"Book review: Pride and Prejudice",url:"https://readability.com.au/2020/05/18/book-review-pride-and-prejudice-by-jane-austen/"}
+  ],
+  "nineteen-eighty-four": [
+    {lang:"fr",source:"Between Books",kind:"Blog littéraire",title:"1984 de George Orwell — Book Review",url:"https://betweenbooksbyghitabenabbou.wordpress.com/2016/02/09/george-orwell-1984/"},
+    {lang:"en",source:"Leesha's Elysian World",kind:"Book blog",title:"1984 by George Orwell — Book Review",url:"https://leeshawritesblogs.wordpress.com/2020/06/09/book-review-1984-by-george-orwell/"}
+  ],
+  "seven-husbands-evelyn-hugo": [
+    {lang:"en",source:"A Blog of Books and Musicals",kind:"Book blog",title:"The Seven Husbands of Evelyn Hugo — Book Review",url:"https://funfandomblog.wordpress.com/2018/10/13/the-seven-husbands-of-evelyn-hugo-book-review/"},
+    {lang:"en",source:"Sarah Collins Bookworm",kind:"Book blog",title:"Book Review: The Seven Husbands of Evelyn Hugo",url:"https://sarahcollinsbookworm.wordpress.com/2021/06/28/book-review-the-seven-husbands-of-evelyn-hugo-by-taylor-jenkins-reid/"}
+  ],
+  "me-before-you": [
+    {lang:"fr",source:"La lectrice en robe jaune",kind:"Blog littéraire",title:"Ma chronique sur Avant toi",url:"https://lalectriceenrobejaune.wordpress.com/2023/04/11/ma-chronique-sur-avant-toi-de-jojo-moyes/"},
+    {lang:"en",source:"Aestas Book Blog",kind:"Book blog",title:"Me Before You — Book Review",url:"https://aestasbookblog.com/me-before-you-review/"}
+  ],
+  "time-travelers-wife": [
+    {lang:"en",source:"Read. Write. Blog.",kind:"Book blog",title:"Book Review — The Time Traveler's Wife",url:"https://christinalawrenceblog.wordpress.com/2013/01/12/book-review-the-time-travelers-wife/"},
+    {lang:"en",source:"Librarians do it Between the Covers",kind:"Book blog",title:"Book Review: The Time Traveler's Wife",url:"https://librariansbetweenthecovers.wordpress.com/2009/08/12/book-review-the-time-travelers-wife/"}
+  ],
+  "the-notebook": [
+    {lang:"en",source:"Misch's Beauty Blog",kind:"Book blog",title:"Book Review: The Notebook",url:"https://mischsbeautyblog.blogspot.com/2011/09/book-review-notebook-by-nicholas-sparks.html"}
+  ],
+  "the-shining": [
+    {lang:"en",source:"Billy's Weblog",kind:"Book blog",title:"Book Review: The Shining",url:"https://lightnessanddark.wordpress.com/2008/11/07/book-review-the-shining-by-stephen-king/"}
+  ],
+  "frankenstein": [
+    {lang:"en",source:"Hopeless Pluto",kind:"Book blog",title:"Who is the real monster? — Frankenstein review",url:"https://hopelesspluto.wordpress.com/2026/10/03/who-is-the-real-monster-my-book-review-of-frankenstein-mary-shelle/"}
+  ],
+  "blade-itself": [
+    {lang:"en",source:"Fyrefly's Book Blog",kind:"Book blog",title:"Joe Abercrombie — The Blade Itself",url:"https://fyreflybooks.wordpress.com/2009/09/21/joe-abercrombie-the-blade-itself/"},
+    {lang:"en",source:"Leona's Blog of Shadows",kind:"Book blog",title:"Book Review: The Blade Itself",url:"https://leonahenry.wordpress.com/2015/07/06/book-review-the-blade-itself-by-joe-abercrombie/"}
+  ],
+  "poppy-war": [
+    {lang:"fr",source:"Ô grimoire !",kind:"Blog littéraire",title:"La Guerre du pavot",url:"https://ogrimoire.com/2026/05/11/la-guerre-du-pavot/"},
+    {lang:"fr",source:"Apprenti·e·s libraires de Mulhouse",kind:"Blog librairie",title:"La Guerre du Pavot de R. F. Kuang",url:"https://lplibrairiemulhouse.wordpress.com/2021/11/16/la-guerre-du-pavot-de-r-f-kuang/"}
+  ],
+  "fifth-season": [
+    {lang:"en",source:"Strakul's Thoughts",kind:"Book blog",title:"Book Review: The Fifth Season",url:"https://www.strakul.com/blog/posts/book-review-the-fifth-season-by-nk-jemisin/"},
+    {lang:"en",source:"Forests and Fiction",kind:"Book blog",title:"Book Review: The Fifth Season",url:"https://forestsandfiction.com/2025/06/11/book-review-the-fifth-season-by-n-k-jemisin/"}
+  ],
+  "androids-dream": [
+    {lang:"en",source:"Books on Tour",kind:"Book blog",title:"Do Androids Dream of Electric Sheep? — Book Review",url:"https://booksontour.net/do-androids-dream-of-electric-sheep-by-philip-k-dick-book-review/"}
+  ],
+  "solaris": [
+    {lang:"en",source:"The Book Shark",kind:"Book blog",title:"Solaris by Stanisław Lem — Review",url:"https://booksharkblog.wordpress.com/2018/09/10/solaris-by-stanislaw-lem-review/"}
+  ],
+  "forever-war": [
+    {lang:"en",source:"Dave Williams",kind:"Book blog",title:"Book review: The Forever War",url:"https://davewilliamswriter.wordpress.com/2024/11/11/book-review-the-forever-war/"}
+  ],
+  "ancillary-justice": [
+    {lang:"en",source:"The Writerly Kind",kind:"Book blog",title:"Review: Ancillary Justice",url:"https://thewriterlykind.wordpress.com/2018/05/24/review-ancillary-justice/"},
+    {lang:"en",source:"Strakul's Thoughts",kind:"Book blog",title:"Book Review: Ancillary Justice",url:"https://www.strakul.com/blog/posts/book-review-ancillary-justice-by-ann-leckie/"}
+  ],
+  "murder-orient-express": [
+    {lang:"fr",source:"La lectrice en robe jaune",kind:"Blog littéraire",title:"Ma chronique sur Le Crime de l'Orient-Express",url:"https://lalectriceenrobejaune.wordpress.com/2023/03/17/ma-chronique-sur-le-crime-de-lorient-express-dagatha-christie/"},
+    {lang:"fr",source:"La récréation littéraire",kind:"Blog littéraire",title:"Chronique — Le Crime de l'Orient Express",url:"https://larecreationculturelledeyuka.blogspot.com/2020/03/chronique-le-crime-de-lorient-express.html"}
+  ],
+  "name-of-rose": [
+    {lang:"fr",source:"Le Littéraire",kind:"Revue littéraire",title:"Le Nom de la rose — Umberto Eco",url:"https://www.lelitteraire.com/ecce-eco-umberto-de-son-petit-nom/"}
+  ],
+  "wuthering-heights": [
+    {lang:"fr",source:"Mon odyssée littéraire",kind:"Blog littéraire",title:"Les Hauts de Hurlevent — Emily Brontë",url:"https://odysseelitteraire.blogspot.com/2026/05/les-hauts-de-hurlevent-emily-bronte.html?m=0"}
+  ],
+  "book-lovers": [
+    {lang:"en",source:"Heather McReads",kind:"Book blog",title:"Book Lovers — Book Review / Analysis",url:"https://heathermcreads.wordpress.com/2024/12/13/book-lovers-by-emily-henry-book-review-analysis/"}
+  ],
+  "it-ends-with-us": [
+    {lang:"en",source:"Aestas Book Blog",kind:"Book blog",title:"It Ends With Us — Book Review",url:"https://aestasbookblog.com/it-ends-with-us-review/"}
+  ],
+  "one-day": [
+    {lang:"en",source:"The Brontë Sister",kind:"Book blog",title:"Book Review: One Day by David Nicholls",url:"https://thebrontesister.wordpress.com/2012/05/31/book-review-one-day-by-david-nicholls/"},
+    {lang:"en",source:"It's All About Books",kind:"Book blog",title:"One Day — Book Review",url:"https://melovebooks.wordpress.com/2014/10/30/one-day-by-david-nicholls/"}
+  ],
+  "call-me-by-your-name": [
+    {lang:"en",source:"A Blog of Books and Musicals",kind:"Book blog",title:"Call Me By Your Name — Mini Book Review",url:"https://funfandomblog.wordpress.com/2020/07/15/call-me-by-your-name-mini-book-review/"},
+    {lang:"en",source:"Mariaku Reads",kind:"Book blog",title:"Book Review: Call Me by Your Name",url:"https://mariakureads.wordpress.com/2026/02/12/book-review-call-me-by-your-name/"}
+  ],
+  "carrie": [
+    {lang:"en",source:"Ched Chichester",kind:"Book blog",title:"Book Review of Stephen King's Carrie",url:"https://chedchichester.substack.com/p/book-review-of-stephen-kings-carrie"}
+  ],
+  "pet-sematary": [
+    {lang:"en",source:"Books of Magic",kind:"Book blog",title:"Book Review: Pet Sematary",url:"https://booksofmagic.wordpress.com/2019/08/29/book-review-pet-sematary/"}
+  ],
+  "house-of-leaves": [
+    {lang:"en",source:"Milam's Musings",kind:"Book blog",title:"Book Review: House of Leaves",url:"https://brettmilam.com/2026/02/21/book-review-house-of-leaves/"},
+    {lang:"en",source:"Amy Suto",kind:"Book blog",title:"House of Leaves Review",url:"https://www.amysuto.com/desk-of-amy-suto/book-review-house-of-leaves-by-mark-z-danielewski"}
+  ],
+  "beloved": [
+    {lang:"en",source:"Leeswammes' Blog",kind:"Book blog",title:"Book Review: Beloved by Toni Morrison",url:"https://leeswammes.wordpress.com/2012/07/18/book-review-beloved-by-toni-morrison/"},
+    {lang:"en",source:"Joel Swagman",kind:"Book blog",title:"Beloved by Toni Morrison — Book Review",url:"https://joelswagman.blogspot.com/2017/10/beloved-by-toni-morrison.html"}
+  ],
+  "eye-of-world": [
+    {lang:"en",source:"Strakul's Thoughts",kind:"Book blog",title:"Book Review: The Eye of the World",url:"https://www.strakul.com/blog/posts/book-review-the-eye-of-the-world-by-robert-jordan/"},
+    {lang:"en",source:"Every Day Should Be Tuesday",kind:"SFF book blog",title:"Review of The Eye of the World",url:"https://everydayshouldbetuesday.wordpress.com/2015/10/15/review-eye-world-robert-jordan/"}
+  ],
+  "bear-nightingale": [
+    {lang:"en",source:"Brew and Books Review",kind:"Book blog",title:"The Bear and the Nightingale",url:"https://brewandbooksreview.blogspot.com/2016/11/the-bear-and-nightingale-by-katherine.html"},
+    {lang:"en",source:"SFF Book Reviews",kind:"SFF book blog",title:"Katherine Arden — The Bear and the Nightingale",url:"https://sffbookreview.wordpress.com/2017/03/06/my-first-favorite-of-the-year-katherine-arden-the-bear-and-the-nightingale/"}
+  ],
+  "gardens-of-moon": [
+    {lang:"en",source:"SFF Book Reviews",kind:"SFF book blog",title:"Steven Erikson — Gardens of the Moon",url:"https://sffbookreview.wordpress.com/2025/08/11/lets-do-this-steven-erikson-gardens-of-the-moon/"},
+    {lang:"en",source:"RonarsCorruption",kind:"Book blog",title:"Book Review — Gardens of the Moon",url:"https://ronarscorruption.wordpress.com/2017/02/01/book-review-gardens-of-the-moon/"}
+  ],
+  "last-unicorn": [
+    {lang:"en",source:"Narrative Investigations",kind:"Book blog",title:"Book Review: The Last Unicorn",url:"https://narrativeinvestigations.blogspot.com/2011/07/book-review-last-unicorn.html?m=0"}
+  ],
+  "fahrenheit-451": [
+    {lang:"en",source:"Let Me Tell You the Story of…",kind:"Book blog",title:"Book Review: Fahrenheit 451",url:"https://hrrgorman.wordpress.com/2019/12/16/book-review-fahrenheit-451/"}
+  ],
+  "les-miserables": [
+    {lang:"en",source:"The Blue Bookcase",kind:"Book review blog",title:"Review: Les Misérables by Victor Hugo",url:"https://thebluebookcase.blogspot.com/2012/12/review-les-miserables-by-victor-hugo.html"}
   ]
 };
 
@@ -577,11 +712,12 @@ function blogReviewFallback(work, edition, lang) {
 
   return {
     lang,
-    source: lang === "fr" ? "Recherche de blogs" : "Blog review search",
-    kind: lang === "fr" ? "Chroniques littéraires" : "Literary blogs",
+    search: true,
+    source: lang === "fr" ? "Recherche ciblée" : "Targeted search",
+    kind: lang === "fr" ? "Blogs littéraires" : "Literary blogs",
     title: lang === "fr"
-      ? `Trouver des chroniques de ${edition.title}`
-      : `Find blog reviews of ${edition.title}`,
+      ? `Rechercher des chroniques de ${edition.title}`
+      : `Search for blog reviews of ${edition.title}`,
     url: `https://www.google.com/search?q=${encodeURIComponent(query)}`
   };
 }

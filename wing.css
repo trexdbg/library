@@ -270,3 +270,16 @@ dialog::backdrop{background:rgba(4,4,3,.72)}
   .book-links__heading small{display:block;margin-top:8px;text-align:left}
   .merchant-links{grid-template-columns:1fr 1fr}
 }
+
+
+/* V14 — distinguish curated articles from generic searches */
+.external-review--search{
+  border-style:dashed;
+  opacity:.72;
+}
+.external-review--search .external-review__source{
+  color:#8a837a;
+}
+.external-review--search:hover{
+  opacity:1;
+}

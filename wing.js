@@ -15,6 +15,7 @@ const labels={
     affiliate:"Lien affilié",
     merchantNote:"En tant que Partenaire Amazon, Libria réalise un bénéfice sur les achats remplissant les conditions requises. Les autres liens affiliés peuvent également générer une commission sans surcoût pour vous.",
     read:"Lire la critique",
+    searchReviews:"Rechercher des chroniques",
     visit:"Voir chez"
   },
   en:{
@@ -27,6 +28,7 @@ const labels={
     affiliate:"Affiliate link",
     merchantNote:"When a link is affiliated, Libria may earn a commission at no extra cost to you.",
     read:"Read review",
+    searchReviews:"Search literary blogs",
     visit:"View at"
   }
 }[lang];
@@ -78,6 +80,72 @@ search.placeholder=labels.search;
 function fallbackGradient(work){
   return `linear-gradient(145deg,${work.colors[0]},${work.colors[1]})`;
 }
+
+const dynamicCoverCache=new Map();
+
+async function resolveCover(work,edition,size="L"){
+  const direct=coverUrl(edition,size);
+  if(direct) return direct;
+
+  const cacheKey=`${work.id}:${lang}:${size}`;
+  if(dynamicCoverCache.has(cacheKey)) return dynamicCoverCache.get(cacheKey);
+
+  try{
+    const stored=sessionStorage.getItem(`libria-cover:${cacheKey}`);
+    if(stored){
+      dynamicCoverCache.set(cacheKey,stored==="none"?"":stored);
+      return stored==="none"?"":stored;
+    }
+  }catch{}
+
+  const titles=[edition.title,work.editions?.en?.title].filter((title,index,array)=>title&&array.indexOf(title)===index);
+
+  try{
+    for(const title of titles){
+      const params=new URLSearchParams({
+        title,
+        author:work.author,
+        fields:"cover_i,title,author_name",
+        limit:"6"
+      });
+      const response=await fetch(`https://openlibrary.org/search.json?${params.toString()}`,{
+        headers:{Accept:"application/json"}
+      });
+      if(!response.ok) continue;
+      const data=await response.json();
+      const match=(data.docs||[]).find(doc=>doc.cover_i);
+      if(match){
+        const resolved=`https://covers.openlibrary.org/b/id/${match.cover_i}-${size}.jpg?default=false`;
+        dynamicCoverCache.set(cacheKey,resolved);
+        try{sessionStorage.setItem(`libria-cover:${cacheKey}`,resolved);}catch{}
+        return resolved;
+      }
+    }
+    dynamicCoverCache.set(cacheKey,"");
+    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,"none");}catch{}
+    return "";
+  }catch{
+    dynamicCoverCache.set(cacheKey,"");
+    return "";
+  }
+}
+
+async function hydrateCardCover(cover,work,edition){
+  const url=await resolveCover(work,edition,"L");
+  if(!url || !cover.isConnected) return;
+
+  const img=document.createElement("img");
+  img.alt="";
+  img.loading="lazy";
+  img.decoding="async";
+  img.addEventListener("load",()=>{
+    if(!cover.isConnected) return;
+    cover.innerHTML="";
+    cover.appendChild(img);
+  },{once:true});
+  img.addEventListener("error",()=>img.remove(),{once:true});
+  img.src=url;
+}
 function makeCard(work){
   const edition=editionFor(work,lang);
   const button=document.createElement("button");
@@ -86,13 +154,9 @@ function makeCard(work){
 
   const wrap=document.createElement("span");wrap.className="book-card__cover-wrap";
   const cover=document.createElement("span");cover.className="book-card__cover";cover.style.background=fallbackGradient(work);
-  const url=coverUrl(edition,"L");
-  if(url){
-    const img=document.createElement("img");img.src=url;img.alt="";img.loading="lazy";img.decoding="async";
-    img.addEventListener("error",()=>{img.remove();cover.innerHTML=`<span class="book-card__fallback">${edition.title}</span>`;});
-    cover.appendChild(img);
-  }else cover.innerHTML=`<span class="book-card__fallback">${edition.title}</span>`;
+  cover.innerHTML=`<span class="book-card__fallback">${edition.title}</span>`;
   wrap.appendChild(cover);
+  hydrateCardCover(cover,work,edition);
 
   const copy=document.createElement("span");copy.className="book-card__copy";
   copy.innerHTML=`<strong>${edition.title}</strong><span>${work.author}</span><small>${edition.tags.slice(0,2).join(" · ")}</small>`;
@@ -124,10 +188,12 @@ function openBook(work){
   e.tags.forEach(tag=>{const s=document.createElement("span");s.textContent=tag;tags.appendChild(s);});
   const cover=document.querySelector("#dialogCover");
   cover.style.backgroundImage=fallbackGradient(work);
-  const url=coverUrl(e,"L");
-  if(url){
-    const img=new Image();img.onload=()=>cover.style.backgroundImage=`url("${url}")`;img.src=url;
-  }
+  resolveCover(work,e,"L").then((url)=>{
+    if(!url) return;
+    const img=new Image();
+    img.onload=()=>cover.style.backgroundImage=`url("${url}")`;
+    img.src=url;
+  });
 
   const links=linksFor(work,e,lang);
   const offersEl=document.querySelector("#dialogOffers");
@@ -150,14 +216,14 @@ function openBook(work){
 
   links.reviews.forEach((review)=>{
     const a=document.createElement("a");
-    a.className="external-review";
+    a.className=`external-review${review.search ? " external-review--search" : ""}`;
     a.href=review.url;
     a.target="_blank";
     a.rel="noopener noreferrer";
     a.innerHTML=`
       <span class="external-review__source">${review.source} · ${review.kind}</span>
       <strong>${review.title}</strong>
-      <span class="external-review__cta">${labels.read} ↗</span>
+      <span class="external-review__cta">${review.search ? labels.searchReviews : labels.read} ↗</span>
     `;
     reviewsEl.appendChild(a);
   });
