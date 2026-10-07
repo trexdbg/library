@@ -196,6 +196,11 @@ export const reviewsByWork = {
   ],
   "mistborn-final-empire": [
     {
+      lang:"fr", source:"À demi-mot", kind:"Blog littéraire",
+      title:"Fils-des-Brumes, T1 — L'Empire ultime",
+      url:"https://a-demi-mot.blogspot.com/2011/11/fils-des-brumes-t1-lempire-ultime.html"
+    },
+    {
       lang:"en", source:"Reading with Jenna", kind:"Book blog",
       title:"Review: The Final Empire by Brandon Sanderson",
       url:"https://readingwithjenna.wordpress.com/2016/08/25/review-the-final-empire-by-brandon-sanderson/"
@@ -254,6 +259,11 @@ export const reviewsByWork = {
   ],
   "the-dispossessed": [
     {
+      lang:"fr", source:"Tu vas t'abîmer les yeux", kind:"Blog littéraire",
+      title:"Les Dépossédés — Ursula K. Le Guin",
+      url:"https://tuvastabimerlesyeux.fr/2020/10/19/les-depossedes-ursula-k-le-guin/"
+    },
+    {
       lang:"en", source:"Strakul's Thoughts", kind:"Book blog",
       title:"Book Review: The Dispossessed",
       url:"https://www.strakul.com/blog/posts/book-review-the-dispossessed-by-ursula-k-le-guin/"
@@ -294,6 +304,16 @@ export const reviewsByWork = {
     }
   ],
   "in-the-woods": [
+    {
+      lang:"fr", source:"La Croisée des Chemins", kind:"Blog littéraire",
+      title:"La Mort dans les bois",
+      url:"https://croiseedeschemins.wordpress.com/2013/03/13/la-mort-dans-les-bois/"
+    },
+    {
+      lang:"fr", source:"Books & Rap", kind:"Blog littéraire",
+      title:"La mort dans les bois — Tana French",
+      url:"https://booksandrap.wordpress.com/2015/11/15/la-mort-dans-les-bois-tana-french/"
+    },
     {
       lang:"en", source:"Reading Matters", kind:"Book blog",
       title:"In the Woods by Tana French",
@@ -428,6 +448,11 @@ export const reviewsByWork = {
   ],
   "flatshare": [
     {
+      lang:"fr", source:"LittlePrettyBooks", kind:"Blog littéraire",
+      title:"À moi la nuit, toi le jour — Beth O'Leary",
+      url:"https://littleprettybooks.com/2020/03/18/a-moi-la-nuit-toi-le-jour-%E2%80%A2-beth-oleary/"
+    },
+    {
       lang:"en", source:"Sprinkling of Creativity", kind:"Book blog",
       title:"The Flatshare by Beth O'Leary — Book Review",
       url:"https://sprinklingofcreativity.wordpress.com/2023/05/10/the-flatshare-by-beth-oleary-book-review/"
@@ -490,6 +515,16 @@ export const reviewsByWork = {
     }
   ],
   "the-exorcist": [
+    {
+      lang:"fr", source:"Les chroniques d'un lecteur passionné", kind:"Blog littéraire",
+      title:"L'Exorciste de William Peter Blatty",
+      url:"https://litteratureenfolie.blogspot.com/2017/04/lexorciste-de-william-peter-blatty.html"
+    },
+    {
+      lang:"fr", source:"Chronique Fiction", kind:"Blog littéraire",
+      title:"Lecture critique — L'Exorciste",
+      url:"https://chronique-fiction.fr/exorciste-william-p-blatty/"
+    },
     {
       lang:"en", source:"Ghost Horses Writing", kind:"Book blog",
       title:"Book Review: The Exorcist",
