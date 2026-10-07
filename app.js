@@ -146,13 +146,15 @@ function languageUrl(lang) {
   const url = new URL(window.location.href);
   const parts = url.pathname.split("/");
   const current = parts.findIndex((part) => part === "fr" || part === "en");
+
   if (current >= 0) {
     parts[current] = lang;
+    url.pathname = parts.join("/");
   } else {
-    if (parts[parts.length - 1] !== "") parts.push("");
-    parts.splice(parts.length - 1, 0, lang);
+    const base = url.pathname.replace(/index\\.html$/i, "").replace(/\\/?$/, "/");
+    url.pathname = base + lang + "/";
   }
-  url.pathname = parts.join("/");
+
   url.search = "";
   url.hash = "";
   return url.toString();
