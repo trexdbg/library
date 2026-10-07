@@ -1,540 +1,609 @@
 import { works, editionFor, coverUrl } from "./data/catalog.js";
 
-const i18n = {
+const copy = {
   fr: {
-    tagline: "La bibliothèque vivante",
-    eyebrow: "Explorez les rayons",
-    search: "Rechercher un livre, un auteur, un univers...",
-    scroll: "Molette, glisser ou balayer pour flâner",
-    review: "Notre avis",
-    edition: "Édition affichée",
-    source: "Couverture de démonstration via Open Library.",
+    brand: "La bibliothèque vivante",
+    locationHall: "Hall",
+    searchButton: "Rechercher",
+    walkHint: "Molette, glisser ou balayer pour se promener",
+    hallEyebrow: "Entrez. Prenez votre temps.",
+    hallTitle: "Une bibliothèque à parcourir, pas un catalogue à faire défiler.",
+    hallIntro: "Avancez de salle en salle, arrêtez-vous devant un rayon et laissez un livre attirer votre regard.",
+    enter: "Commencer la promenade",
+    search: "Chercher dans la bibliothèque",
+    searchEyebrow: "Catalogue Libria",
+    searchTitle: "Trouver un livre",
+    searchPlaceholder: "Titre, auteur, univers…",
+    noResults: "Aucun livre ne correspond à cette recherche.",
     selection: "Sélection Libria",
-    languageName: "Français",
-    menu: "Explorer",
-    note: "Faites défiler la scène ou glissez les livres pour flâner dans le rayon.",
-    discover: "Découvrir",
-    overview: "Aperçu",
-    critique: "Notre critique",
-    author: "L’auteur",
-    similar: "Similaires"
+    review: "Notre regard",
+    edition: "Édition présentée",
+    language: "Français",
+    roomEyebrow: "Salle",
+    shelfLabel: "À portée de main",
+    openBook: "Ouvrir",
+    roomCount: "ouvrages dans cette salle",
+    rooms: {
+      fantasy: {
+        label: "Fantasy",
+        title: "La galerie des mondes",
+        intro: "Des cartes oubliées, des royaumes anciens et des quêtes qui commencent au détour d'un rayon.",
+        marker: "Aile I"
+      },
+      scifi: {
+        label: "Science-fiction",
+        title: "L'observatoire",
+        intro: "Des futurs possibles, des civilisations lointaines et des idées assez vastes pour déplacer les murs.",
+        marker: "Aile II"
+      },
+      polar: {
+        label: "Polar",
+        title: "Le cabinet des ombres",
+        intro: "Ici, chaque silence est un indice et chaque couverture promet une nuit un peu plus longue.",
+        marker: "Aile III"
+      },
+      jeunesse: {
+        label: "Jeunesse",
+        title: "Le salon des merveilles",
+        intro: "Des histoires pour rêver, grandir et retrouver l'émerveillement d'une première bibliothèque.",
+        marker: "Aile IV"
+      }
+    }
   },
   en: {
-    tagline: "The living library",
-    eyebrow: "Explore the shelves",
-    search: "Search for a book, an author, a world...",
-    scroll: "Scroll, drag or swipe to wander",
-    review: "Our review",
-    edition: "Displayed edition",
-    source: "Demo cover provided via Open Library.",
+    brand: "The living library",
+    locationHall: "Hall",
+    searchButton: "Search",
+    walkHint: "Scroll, drag or swipe to wander",
+    hallEyebrow: "Come in. Take your time.",
+    hallTitle: "A library to wander through, not a catalogue to scroll.",
+    hallIntro: "Move from room to room, stop by a shelf and let a book catch your eye.",
+    enter: "Begin the walk",
+    search: "Search the library",
+    searchEyebrow: "Libria catalogue",
+    searchTitle: "Find a book",
+    searchPlaceholder: "Title, author, world…",
+    noResults: "No book matches this search.",
     selection: "Libria selection",
-    languageName: "English",
-    menu: "Explore",
-    note: "Scroll through the scene or swipe the books to wander along the shelves.",
-    discover: "Discover",
-    overview: "Overview",
-    critique: "Our review",
-    author: "The author",
-    similar: "Similar"
+    review: "Our take",
+    edition: "Featured edition",
+    language: "English",
+    roomEyebrow: "Room",
+    shelfLabel: "Within reach",
+    openBook: "Open",
+    roomCount: "books in this room",
+    rooms: {
+      fantasy: {
+        label: "Fantasy",
+        title: "The gallery of worlds",
+        intro: "Forgotten maps, ancient kingdoms and quests waiting at the turn of a shelf.",
+        marker: "Wing I"
+      },
+      scifi: {
+        label: "Science fiction",
+        title: "The observatory",
+        intro: "Possible futures, distant civilisations and ideas large enough to move the walls.",
+        marker: "Wing II"
+      },
+      polar: {
+        label: "Crime",
+        title: "The cabinet of shadows",
+        intro: "Here every silence is a clue and every cover promises a slightly longer night.",
+        marker: "Wing III"
+      },
+      jeunesse: {
+        label: "Young readers",
+        title: "The room of wonders",
+        intro: "Stories to dream, grow and rediscover the wonder of a first library.",
+        marker: "Wing IV"
+      }
+    }
   }
 };
 
-const genres = {
-  fantasy: {
-    label: { fr: "Fantasy", en: "Fantasy" },
-    intro: {
-      fr: "Des mondes anciens, des quêtes impossibles et des légendes à portée de main.",
-      en: "Ancient worlds, impossible quests and legends within reach."
-    },
-    shelves: {
-      fr: ["Incontournables", "Magie & écoles", "Grandes aventures"],
-      en: ["Essentials", "Magic & schools", "Great adventures"]
-    },
-    sign: { fr: "Grands univers", en: "Great worlds" }
-  },
-  scifi: {
-    label: { fr: "Science-fiction", en: "Science fiction" },
-    intro: {
-      fr: "Des futurs possibles, des ailleurs vertigineux et des idées qui déplacent les frontières.",
-      en: "Possible futures, dizzying worlds and ideas that move the frontier."
-    },
-    shelves: {
-      fr: ["Mondes cultes", "Grandes idées", "Imaginaire français"],
-      en: ["Iconic worlds", "Big ideas", "Further horizons"]
-    },
-    sign: { fr: "Au-delà du réel", en: "Beyond reality" }
-  },
-  polar: {
-    label: { fr: "Polar", en: "Crime" },
-    intro: {
-      fr: "Des ombres, des indices, des silences et cette envie irrépressible de tourner la page.",
-      en: "Shadows, clues, silences and the irresistible urge to turn the page."
-    },
-    shelves: {
-      fr: ["Noir", "Enquêtes", "Psychologique"],
-      en: ["Noir", "Investigations", "Psychological"]
-    },
-    sign: { fr: "Affaires classées", en: "Case files" }
-  },
-  jeunesse: {
-    label: { fr: "Jeunesse", en: "Young readers" },
-    intro: {
-      fr: "Des histoires pour rêver, rire, grandir et revenir encore demander une dernière page.",
-      en: "Stories to dream, laugh, grow and always ask for one more page."
-    },
-    shelves: {
-      fr: ["Intemporels", "Premières aventures", "À lire ensemble"],
-      en: ["Timeless", "First adventures", "Read together"]
-    },
-    sign: { fr: "Petites merveilles", en: "Little wonders" }
-  }
-};
+const genreOrder = ["fantasy", "scifi", "polar", "jeunesse"];
 
 const els = {
   body: document.body,
-  genreNav: document.querySelector("#genreNav"),
-  bottomRail: document.querySelector("#bottomRail"),
-  roomTitle: document.querySelector("#roomTitle"),
-  roomIntro: document.querySelector("#roomIntro"),
-  shelfSignText: document.querySelector("#shelfSignText"),
-  shelfTop: document.querySelector("#shelfTop"),
-  shelfMiddle: document.querySelector("#shelfMiddle"),
-  shelfBottom: document.querySelector("#shelfBottom"),
-  libraryScene: document.querySelector("#libraryScene"),
-  sceneImage: document.querySelector("#sceneImage"),
-  searchInput: document.querySelector("#searchInput"),
-  languageButton: document.querySelector("#languageButton"),
-  brandTagline: document.querySelector("#brandTagline"),
-  eyebrow: document.querySelector("#eyebrow"),
-  scrollText: document.querySelector("#scrollText"),
-  menuCaption: document.querySelector("#menuCaption"),
-  genreNote: document.querySelector("#genreNote"),
-  discoverButton: document.querySelector("#discoverButton"),
+  world: document.querySelector("#world"),
+  viewport: document.querySelector("#viewport"),
   homeButton: document.querySelector("#homeButton"),
-  sceneHint: document.querySelector("#sceneHint"),
-  bookPanel: document.querySelector("#bookPanel"),
-  panelBackdrop: document.querySelector("#panelBackdrop"),
-  panelClose: document.querySelector("#panelClose"),
-  panelCover: document.querySelector("#panelCover"),
-  panelKicker: document.querySelector("#panelKicker"),
-  panelTitle: document.querySelector("#panelTitle"),
-  panelSubtitle: document.querySelector("#panelSubtitle"),
-  panelAuthor: document.querySelector("#panelAuthor"),
-  panelTags: document.querySelector("#panelTags"),
-  panelSummary: document.querySelector("#panelSummary"),
+  brandTagline: document.querySelector("#brandTagline"),
+  locationLabel: document.querySelector("#locationLabel"),
+  searchButton: document.querySelector("#searchButton"),
+  searchButtonLabel: document.querySelector("#searchButtonLabel"),
+  languageButton: document.querySelector("#languageButton"),
+  walkHintText: document.querySelector("#walkHintText"),
+  previousRoom: document.querySelector("#previousRoom"),
+  nextRoom: document.querySelector("#nextRoom"),
+  compassRooms: document.querySelector("#compassRooms"),
+  searchDialog: document.querySelector("#searchDialog"),
+  searchEyebrow: document.querySelector("#searchEyebrow"),
+  searchTitle: document.querySelector("#searchTitle"),
+  searchInput: document.querySelector("#searchInput"),
+  searchResults: document.querySelector("#searchResults"),
+  bookDialog: document.querySelector("#bookDialog"),
+  bookCover: document.querySelector("#bookCover"),
+  bookKicker: document.querySelector("#bookKicker"),
+  bookTitle: document.querySelector("#bookTitle"),
+  bookSubtitle: document.querySelector("#bookSubtitle"),
+  bookAuthor: document.querySelector("#bookAuthor"),
+  bookTags: document.querySelector("#bookTags"),
+  bookSummary: document.querySelector("#bookSummary"),
   reviewLabel: document.querySelector("#reviewLabel"),
-  panelReview: document.querySelector("#panelReview"),
+  bookReview: document.querySelector("#bookReview"),
   editionLabel: document.querySelector("#editionLabel"),
   editionPublisher: document.querySelector("#editionPublisher"),
-  editionLanguage: document.querySelector("#editionLanguage"),
-  sourceNote: document.querySelector("#sourceNote"),
-  tabOverview: document.querySelector("#tabOverview"),
-  tabReview: document.querySelector("#tabReview"),
-  tabAuthor: document.querySelector("#tabAuthor"),
-  tabSimilar: document.querySelector("#tabSimilar")
+  editionLanguage: document.querySelector("#editionLanguage")
 };
-
-const shelfEls = [els.shelfTop, els.shelfMiddle, els.shelfBottom];
-const fillerPalette = ["#44372d", "#2f3c37", "#5a4033", "#37323a", "#66513c", "#25363c", "#4b2e32"];
 
 function languageFromPath() {
   const parts = window.location.pathname.split("/").filter(Boolean);
-  return parts.find(function(part) {
-    return part === "fr" || part === "en";
-  }) || null;
+  return parts.find((part) => part === "fr" || part === "en") || null;
 }
 
 function languageUrl(lang) {
   const url = new URL(window.location.href);
   const parts = url.pathname.split("/");
-  const index = parts.findIndex(function(part) {
-    return part === "fr" || part === "en";
-  });
+  const current = parts.findIndex((part) => part === "fr" || part === "en");
 
-  if (index >= 0) {
-    parts[index] = lang;
+  if (current >= 0) {
+    parts[current] = lang;
+    url.pathname = parts.join("/");
   } else {
-    if (parts[parts.length - 1] !== "") parts.push("");
-    parts.splice(parts.length - 1, 0, lang);
+    const base = url.pathname.replace(/index\.html$/i, "").replace(/\/?$/, "/");
+    url.pathname = base + lang + "/";
   }
 
-  url.pathname = parts.join("/");
   url.search = "";
+  url.hash = "";
   return url.toString();
 }
 
-const stored = localStorage.getItem("libria-lang");
+const storedLang = localStorage.getItem("libria-lang");
 const browserLang = (navigator.language || "fr").slice(0, 2);
-const routedLang = languageFromPath();
-
 const state = {
-  lang: routedLang || ((stored || browserLang) === "en" ? "en" : "fr"),
-  genre: "fantasy",
-  search: "",
-  page: 0
+  lang: languageFromPath() || ((storedLang || browserLang) === "en" ? "en" : "fr"),
+  roomIndex: 0,
+  roomWidth: window.innerWidth,
+  cameraCurrent: 0,
+  cameraTarget: 0,
+  pointerId: null,
+  pointerStartX: 0,
+  pointerStartTarget: 0,
+  wheelLocked: false,
+  hasMoved: false
 };
 
+function t() {
+  return copy[state.lang];
+}
+
+function workAvailable(work) {
+  return Boolean(editionFor(work, state.lang));
+}
+
+function worksForGenre(genre) {
+  return works.filter((work) => work.genre === genre && workAvailable(work));
+}
+
+function availableGenres() {
+  return genreOrder.filter((genre) => worksForGenre(genre).length > 0);
+}
+
+function rooms() {
+  return ["hall", ...availableGenres()];
+}
+
 function gradient(work) {
-  return "linear-gradient(145deg," + work.colors[0] + "," + work.colors[1] + ")";
+  return `linear-gradient(145deg, ${work.colors[0]}, ${work.colors[1]})`;
 }
 
-function availableWorks(genre = state.genre) {
-  return works.filter(function(work) {
-    return work.genre === genre && editionFor(work, state.lang);
-  });
+function createHall() {
+  const room = document.createElement("section");
+  room.className = "room room--hall";
+  room.dataset.room = "hall";
+  room.innerHTML = `
+    <div class="room__backdrop" aria-hidden="true"></div>
+    <div class="room__light" aria-hidden="true"></div>
+    <div class="room__architecture" aria-hidden="true">
+      <span class="arch arch--left"></span>
+      <span class="arch arch--right"></span>
+    </div>
+    <div class="hall-copy">
+      <p class="room-marker">${t().hallEyebrow}</p>
+      <h1>${t().hallTitle}</h1>
+      <p class="hall-copy__intro">${t().hallIntro}</p>
+      <div class="hall-actions">
+        <button class="primary-action" id="enterLibrary" type="button">
+          <span>${t().enter}</span><span aria-hidden="true">→</span>
+        </button>
+        <button class="text-action" id="hallSearch" type="button">
+          <span aria-hidden="true">⌕</span><span>${t().search}</span>
+        </button>
+      </div>
+    </div>
+    <div class="hall-plaque" aria-hidden="true">
+      <span>EST.</span><strong>LIBRIA</strong><span>MMXXVI</span>
+    </div>
+    <div class="room__foreground room__foreground--left" aria-hidden="true"></div>
+    <div class="room__foreground room__foreground--right" aria-hidden="true"></div>
+  `;
+  return room;
 }
 
-function visibleWorks() {
-  const candidates = availableWorks();
-  if (!state.search) return candidates;
-
-  const q = state.search.toLowerCase();
-  return candidates.filter(function(work) {
-    const edition = editionFor(work, state.lang);
-    return edition.title.toLowerCase().includes(q) ||
-      work.author.toLowerCase().includes(q) ||
-      edition.tags.some(function(tag) {
-        return tag.toLowerCase().includes(q);
-      });
-  });
-}
-
-function genreKeys() {
-  return Object.keys(genres).filter(function(key) {
-    return availableWorks(key).length > 0;
-  });
-}
-
-function selectGenre(key) {
-  if (!genres[key] || !availableWorks(key).length) return;
-  state.genre = key;
-  state.page = 0;
-  state.search = "";
-  els.searchInput.value = "";
-  closeBook();
-  render();
-  applySceneOffset(true);
-}
-
-function renderNav() {
-  els.genreNav.innerHTML = "";
-  els.bottomRail.innerHTML = "";
-
-  genreKeys().forEach(function(key) {
-    const genre = genres[key];
-
-    const button = document.createElement("button");
-    button.className = "genre-button" + (state.genre === key ? " active" : "");
-    button.type = "button";
-    button.textContent = genre.label[state.lang];
-    button.addEventListener("click", function() {
-      selectGenre(key);
-    });
-    els.genreNav.appendChild(button);
-
-    const rail = document.createElement("button");
-    rail.className = "rail-button" + (state.genre === key ? " active" : "");
-    rail.type = "button";
-    rail.textContent = genre.label[state.lang];
-    rail.addEventListener("click", function() {
-      selectGenre(key);
-    });
-    els.bottomRail.appendChild(rail);
-  });
-}
-
-function makeFiller(index, shelfIndex) {
-  const filler = document.createElement("span");
-  filler.className = "book-filler";
-  const width = 15 + ((index * 7 + shelfIndex * 5) % 17);
-  const height = 76 + ((index * 17 + shelfIndex * 19) % 43);
-  filler.style.setProperty("--w", width + "px");
-  filler.style.setProperty("--h", height + "px");
-  filler.style.setProperty("--fill", fillerPalette[(index + shelfIndex * 2) % fillerPalette.length]);
-  filler.setAttribute("aria-hidden", "true");
-  return filler;
-}
-
-function makeBookCard(work, index, featured) {
+function createBookButton(work) {
   const edition = editionFor(work, state.lang);
   const button = document.createElement("button");
-  button.className = "book-card" + (featured ? " featured" : "");
   button.type = "button";
-  button.style.background = gradient(work);
-  button.setAttribute("aria-label", edition.title + " — " + work.author);
+  button.className = `display-book size-${work.size || "tall"}`;
+  button.dataset.workId = work.id;
+  button.setAttribute("aria-label", `${edition.title} — ${work.author}`);
+  button.style.setProperty("--book-a", work.colors[0]);
+  button.style.setProperty("--book-b", work.colors[1]);
 
-  const image = document.createElement("img");
-  image.loading = "lazy";
-  image.src = coverUrl(edition, "M");
-  image.alt = "";
-  image.addEventListener("error", function() {
-    image.remove();
-  });
+  const cover = document.createElement("span");
+  cover.className = "display-book__cover";
+  cover.style.background = gradient(work);
 
-  const tooltip = document.createElement("span");
-  tooltip.className = "book-tooltip";
-  tooltip.textContent = edition.title + " · " + work.author;
+  const imageUrl = coverUrl(edition, "L");
+  if (imageUrl) {
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = "";
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener("error", () => img.remove());
+    cover.appendChild(img);
+  }
 
-  button.appendChild(image);
-  button.appendChild(tooltip);
+  const caption = document.createElement("span");
+  caption.className = "display-book__caption";
+  caption.innerHTML = `<strong>${edition.title}</strong><small>${work.author}</small>`;
 
-  button.addEventListener("click", function(event) {
-    event.stopPropagation();
-    if (button.classList.contains("pulling")) return;
-    button.classList.add("pulling");
-    window.setTimeout(function() {
-      openBook(work);
-      button.classList.remove("pulling");
-    }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 220);
-  });
-
+  button.append(cover, caption);
+  button.addEventListener("click", () => openBook(work));
   return button;
 }
 
-function populateShelf(target, shelfIndex, candidates) {
-  target.innerHTML = "";
-  if (!candidates.length) return;
+function createGenreRoom(genre) {
+  const meta = t().rooms[genre];
+  const roomWorks = worksForGenre(genre);
+  const room = document.createElement("section");
+  room.className = `room room--${genre}`;
+  room.dataset.room = genre;
 
-  const realSlots = shelfIndex === 0 ? 7 : 8;
-  const items = [];
+  room.innerHTML = `
+    <div class="room__backdrop" aria-hidden="true"></div>
+    <div class="room__light" aria-hidden="true"></div>
+    <div class="room__architecture" aria-hidden="true">
+      <span class="arch arch--left"></span>
+      <span class="arch arch--right"></span>
+    </div>
+    <div class="room-copy">
+      <div class="room-copy__index">
+        <span>${meta.marker}</span>
+        <span class="room-copy__rule"></span>
+        <span>${String(roomWorks.length).padStart(2, "0")}</span>
+      </div>
+      <p class="room-marker">${t().roomEyebrow} · ${meta.label}</p>
+      <h2>${meta.title}</h2>
+      <p>${meta.intro}</p>
+    </div>
+    <div class="collection">
+      <div class="collection__heading">
+        <span>${t().shelfLabel}</span>
+        <small>${roomWorks.length} ${t().roomCount}</small>
+      </div>
+      <div class="display-books" data-books></div>
+      <div class="collection__shelf" aria-hidden="true"></div>
+    </div>
+    <div class="room-number" aria-hidden="true">${meta.marker}</div>
+    <div class="room__foreground room__foreground--left" aria-hidden="true"></div>
+    <div class="room__foreground room__foreground--right" aria-hidden="true"></div>
+  `;
 
-  for (let i = 0; i < realSlots; i++) {
-    const work = candidates[(i + shelfIndex) % candidates.length];
-    items.push({ type: "book", work: work, featured: i === 2 && shelfIndex === 0 });
-
-    if (i < realSlots - 1) {
-      items.push({ type: "filler", index: i });
-      if ((i + shelfIndex) % 2 === 0) items.push({ type: "filler", index: i + 8 });
-    }
-  }
-
-  items.forEach(function(item, index) {
-    if (item.type === "book") {
-      target.appendChild(makeBookCard(item.work, index, item.featured));
-    } else {
-      target.appendChild(makeFiller(item.index, shelfIndex));
-    }
-  });
+  const books = room.querySelector("[data-books]");
+  roomWorks.forEach((work) => books.appendChild(createBookButton(work)));
+  return room;
 }
 
-function renderShelves() {
-  const filtered = visibleWorks();
-  const all = availableWorks();
-  const source = state.search ? filtered : all;
+function renderWorld() {
+  els.world.innerHTML = "";
+  els.world.appendChild(createHall());
+  availableGenres().forEach((genre) => els.world.appendChild(createGenreRoom(genre)));
 
-  shelfEls.forEach(function(target, shelfIndex) {
-    let shelfWorks = source.filter(function(work) {
-      return work.shelf === shelfIndex;
+  const enter = document.querySelector("#enterLibrary");
+  const hallSearch = document.querySelector("#hallSearch");
+  enter?.addEventListener("click", () => goToRoom(1));
+  hallSearch?.addEventListener("click", openSearch);
+}
+
+function renderCompass() {
+  els.compassRooms.innerHTML = "";
+  rooms().forEach((key, index) => {
+    const label = key === "hall" ? t().locationHall : t().rooms[key].label;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "compass__room";
+    button.dataset.index = String(index);
+    button.setAttribute("aria-label", label);
+    button.innerHTML = `<span></span><small>${label}</small>`;
+    button.addEventListener("click", () => goToRoom(index));
+    els.compassRooms.appendChild(button);
+  });
+  updateNavigationState();
+}
+
+function renderStaticText() {
+  document.documentElement.lang = state.lang;
+  els.brandTagline.textContent = t().brand;
+  els.searchButtonLabel.textContent = t().searchButton;
+  els.walkHintText.textContent = t().walkHint;
+  els.searchEyebrow.textContent = t().searchEyebrow;
+  els.searchTitle.textContent = t().searchTitle;
+  els.searchInput.placeholder = t().searchPlaceholder;
+  els.bookKicker.textContent = t().selection;
+  els.reviewLabel.textContent = t().review;
+  els.editionLabel.textContent = t().edition;
+
+  const nextLang = state.lang === "fr" ? "en" : "fr";
+  els.languageButton.textContent = nextLang.toUpperCase();
+  els.languageButton.href = languageUrl(nextLang);
+  els.languageButton.hreflang = nextLang;
+}
+
+function resizeCamera() {
+  const oldWidth = state.roomWidth || window.innerWidth;
+  const fractional = oldWidth ? state.cameraTarget / oldWidth : state.roomIndex;
+  state.roomWidth = els.viewport.clientWidth || window.innerWidth;
+  state.roomIndex = Math.max(0, Math.min(rooms().length - 1, Math.round(fractional)));
+  state.cameraTarget = state.roomIndex * state.roomWidth;
+  state.cameraCurrent = state.cameraTarget;
+  applyCamera();
+}
+
+function maxCamera() {
+  return Math.max(0, (rooms().length - 1) * state.roomWidth);
+}
+
+function applyCamera() {
+  els.world.style.transform = `translate3d(${-state.cameraCurrent}px, 0, 0)`;
+
+  const roomEls = els.world.querySelectorAll(".room");
+  roomEls.forEach((room, index) => {
+    const local = (state.cameraCurrent - index * state.roomWidth) / state.roomWidth;
+    const bounded = Math.max(-1.5, Math.min(1.5, local));
+    room.style.setProperty("--room-offset", bounded.toFixed(3));
+    room.classList.toggle("is-current", Math.abs(local) < 0.5);
+  });
+
+  const nearest = Math.max(0, Math.min(rooms().length - 1, Math.round(state.cameraCurrent / state.roomWidth)));
+  if (nearest !== state.roomIndex) {
+    state.roomIndex = nearest;
+    updateNavigationState();
+  }
+}
+
+function animateCamera() {
+  const distance = state.cameraTarget - state.cameraCurrent;
+  if (Math.abs(distance) < 0.25) {
+    state.cameraCurrent = state.cameraTarget;
+  } else {
+    state.cameraCurrent += distance * 0.115;
+  }
+  applyCamera();
+  requestAnimationFrame(animateCamera);
+}
+
+function markMoved() {
+  if (state.hasMoved) return;
+  state.hasMoved = true;
+  document.body.classList.add("has-walked");
+}
+
+function goToRoom(index) {
+  const targetIndex = Math.max(0, Math.min(rooms().length - 1, index));
+  state.roomIndex = targetIndex;
+  state.cameraTarget = targetIndex * state.roomWidth;
+  markMoved();
+  updateNavigationState();
+}
+
+function updateNavigationState() {
+  const key = rooms()[state.roomIndex] || "hall";
+  const label = key === "hall" ? t().locationHall : t().rooms[key].label;
+  els.locationLabel.textContent = label;
+  els.body.dataset.room = key;
+
+  els.compassRooms.querySelectorAll(".compass__room").forEach((button, index) => {
+    const active = index === state.roomIndex;
+    button.classList.toggle("active", active);
+    if (active) button.setAttribute("aria-current", "location");
+    else button.removeAttribute("aria-current");
+  });
+
+  els.previousRoom.disabled = state.roomIndex === 0;
+  els.nextRoom.disabled = state.roomIndex === rooms().length - 1;
+}
+
+function openSearch() {
+  renderSearchResults("");
+  if (!els.searchDialog.open) els.searchDialog.showModal();
+  requestAnimationFrame(() => els.searchInput.focus());
+}
+
+function searchableText(work, edition) {
+  const room = t().rooms[work.genre]?.label || work.genre;
+  return [edition.title, edition.subtitle, work.author, room, ...edition.tags].join(" ").toLowerCase();
+}
+
+function renderSearchResults(query) {
+  const q = query.trim().toLowerCase();
+  const matches = works
+    .filter(workAvailable)
+    .filter((work) => {
+      const edition = editionFor(work, state.lang);
+      return !q || searchableText(work, edition).includes(q);
     });
-    if (!shelfWorks.length) shelfWorks = source;
-    populateShelf(target, shelfIndex, shelfWorks);
-  });
-}
 
-function applySceneOffset(instant) {
-  const maxPage = 3;
-  state.page = Math.max(0, Math.min(maxPage, state.page));
-
-  const shifts = [
-    -state.page * 68,
-    -state.page * 52,
-    -state.page * 82
-  ];
-
-  shelfEls.forEach(function(el, index) {
-    if (instant) el.style.transition = "none";
-    el.style.setProperty("--shelf-shift", shifts[index] + "px");
-    if (instant) {
-      requestAnimationFrame(function() {
-        el.style.transition = "";
-      });
-    }
-  });
-
-  document.documentElement.style.setProperty("--scene-pan", (-state.page * 7) + "px");
-  document.documentElement.style.setProperty("--scene-tilt", (state.page * -0.12) + "deg");
-
-  if (state.page > 0) {
-    els.sceneHint.style.opacity = ".45";
+  els.searchResults.innerHTML = "";
+  if (!matches.length) {
+    const empty = document.createElement("p");
+    empty.className = "search-empty";
+    empty.textContent = t().noResults;
+    els.searchResults.appendChild(empty);
+    return;
   }
-}
 
-function moveScene(direction) {
-  const previous = state.page;
-  state.page = Math.max(0, Math.min(3, state.page + direction));
-  if (state.page !== previous) applySceneOffset(false);
-}
+  matches.forEach((work) => {
+    const edition = editionFor(work, state.lang);
+    const result = document.createElement("button");
+    result.type = "button";
+    result.className = "search-result";
 
-function setPanelCover(work, edition) {
-  const fallback = gradient(work);
-  const url = coverUrl(edition, "L");
+    const thumb = document.createElement("span");
+    thumb.className = "search-result__cover";
+    thumb.style.background = gradient(work);
+    const url = coverUrl(edition, "S");
+    if (url) {
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = "";
+      img.loading = "lazy";
+      img.addEventListener("error", () => img.remove());
+      thumb.appendChild(img);
+    }
 
-  els.panelCover.classList.remove("has-cover");
-  els.panelCover.style.backgroundImage = fallback;
-  els.panelCover.dataset.title = edition.title;
+    const text = document.createElement("span");
+    text.className = "search-result__text";
+    text.innerHTML = `<strong>${edition.title}</strong><small>${work.author} · ${t().rooms[work.genre].label}</small>`;
 
-  if (!url) return;
+    const arrow = document.createElement("span");
+    arrow.className = "search-result__arrow";
+    arrow.textContent = "→";
 
-  const image = new Image();
-  image.onload = function() {
-    els.panelCover.style.backgroundImage =
-      "linear-gradient(rgba(0,0,0,.02),rgba(0,0,0,.02)),url('" + url + "')";
-    els.panelCover.classList.add("has-cover");
-  };
-  image.onerror = function() {
-    els.panelCover.classList.remove("has-cover");
-    els.panelCover.style.backgroundImage = fallback;
-  };
-  image.src = url;
+    result.append(thumb, text, arrow);
+    result.addEventListener("click", () => {
+      const target = rooms().indexOf(work.genre);
+      els.searchDialog.close();
+      if (target >= 0) goToRoom(target);
+      window.setTimeout(() => openBook(work), 620);
+    });
+    els.searchResults.appendChild(result);
+  });
 }
 
 function openBook(work) {
   const edition = editionFor(work, state.lang);
   if (!edition) return;
-  const t = i18n[state.lang];
 
-  setPanelCover(work, edition);
-  els.panelKicker.textContent = t.selection;
-  els.panelTitle.textContent = edition.title;
-  els.panelSubtitle.textContent = edition.subtitle || "";
-  els.panelAuthor.textContent = work.author;
-  els.panelTags.innerHTML = "";
+  els.bookKicker.textContent = `${t().selection} · ${t().rooms[work.genre].label}`;
+  els.bookTitle.textContent = edition.title;
+  els.bookSubtitle.textContent = edition.subtitle || "";
+  els.bookAuthor.textContent = work.author;
+  els.bookSummary.textContent = edition.summary;
+  els.bookReview.textContent = edition.review;
+  els.reviewLabel.textContent = t().review;
+  els.editionLabel.textContent = t().edition;
+  els.editionPublisher.textContent = edition.publisher || "";
+  els.editionLanguage.textContent = t().language;
 
-  edition.tags.forEach(function(tag) {
+  els.bookTags.innerHTML = "";
+  edition.tags.forEach((tag) => {
     const span = document.createElement("span");
     span.textContent = tag;
-    els.panelTags.appendChild(span);
+    els.bookTags.appendChild(span);
   });
 
-  els.panelSummary.textContent = edition.summary;
-  els.reviewLabel.textContent = t.review;
-  els.panelReview.textContent = edition.review;
-  els.editionLabel.textContent = t.edition;
-  els.editionPublisher.textContent = edition.publisher || "";
-  els.editionLanguage.textContent = t.languageName;
-  els.sourceNote.textContent = t.source;
+  els.bookCover.classList.remove("has-image");
+  els.bookCover.style.backgroundImage = gradient(work);
+  els.bookCover.dataset.title = edition.title;
 
-  els.bookPanel.classList.add("open");
-  els.panelBackdrop.classList.add("open");
-  els.bookPanel.setAttribute("aria-hidden", "false");
-}
-
-function closeBook() {
-  els.bookPanel.classList.remove("open");
-  els.panelBackdrop.classList.remove("open");
-  els.bookPanel.setAttribute("aria-hidden", "true");
-}
-
-function firstGenreWithBooks(lang) {
-  return Object.keys(genres).find(function(key) {
-    return works.some(function(work) {
-      return work.genre === key && editionFor(work, lang);
-    });
-  }) || "fantasy";
-}
-
-function renderText() {
-  const t = i18n[state.lang];
-  const genre = genres[state.genre];
-
-  els.body.dataset.theme = state.genre;
-  els.roomTitle.textContent = genre.label[state.lang];
-  els.roomIntro.textContent = genre.intro[state.lang];
-  els.shelfSignText.textContent = genre.sign[state.lang];
-  els.brandTagline.textContent = t.tagline;
-  els.eyebrow.textContent = t.eyebrow;
-  els.searchInput.placeholder = t.search;
-  els.scrollText.textContent = t.scroll;
-  els.languageButton.textContent = state.lang.toUpperCase();
-  els.menuCaption.textContent = t.menu;
-  els.genreNote.textContent = t.note;
-  els.discoverButton.textContent = t.discover;
-  els.tabOverview.textContent = t.overview;
-  els.tabReview.textContent = t.critique;
-  els.tabAuthor.textContent = t.author;
-  els.tabSimilar.textContent = t.similar;
-
-  document.documentElement.lang = state.lang;
-}
-
-function render() {
-  if (!availableWorks(state.genre).length) {
-    state.genre = firstGenreWithBooks(state.lang);
+  const url = coverUrl(edition, "L");
+  if (url) {
+    const image = new Image();
+    image.onload = () => {
+      els.bookCover.style.backgroundImage = `url("${url}")`;
+      els.bookCover.classList.add("has-image");
+    };
+    image.src = url;
   }
 
-  renderText();
-  renderNav();
-  renderShelves();
-  applySceneOffset(true);
+  if (!els.bookDialog.open) els.bookDialog.showModal();
 }
 
-els.searchInput.addEventListener("input", function(event) {
-  state.search = event.target.value.trim();
-  state.page = 0;
-  renderShelves();
-  applySceneOffset(true);
+els.searchInput.addEventListener("input", (event) => {
+  renderSearchResults(event.target.value);
 });
 
-els.languageButton.addEventListener("click", function() {
+els.searchButton.addEventListener("click", openSearch);
+els.homeButton.addEventListener("click", () => goToRoom(0));
+els.previousRoom.addEventListener("click", () => goToRoom(state.roomIndex - 1));
+els.nextRoom.addEventListener("click", () => goToRoom(state.roomIndex + 1));
+
+els.languageButton.addEventListener("click", () => {
   const nextLang = state.lang === "fr" ? "en" : "fr";
   localStorage.setItem("libria-lang", nextLang);
-  window.location.href = languageUrl(nextLang);
 });
 
-els.homeButton.addEventListener("click", function() {
-  const preferred = availableWorks("fantasy").length ? "fantasy" : firstGenreWithBooks(state.lang);
-  selectGenre(preferred);
-});
-
-els.discoverButton.addEventListener("click", function() {
-  const keys = genreKeys();
-  const currentIndex = keys.indexOf(state.genre);
-  const next = keys[(currentIndex + 1) % keys.length];
-  selectGenre(next);
-});
-
-els.panelClose.addEventListener("click", closeBook);
-els.panelBackdrop.addEventListener("click", closeBook);
-
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") closeBook();
-  if (event.key === "ArrowRight" && !els.bookPanel.classList.contains("open")) moveScene(1);
-  if (event.key === "ArrowLeft" && !els.bookPanel.classList.contains("open")) moveScene(-1);
-});
-
-let wheelLock = false;
-els.libraryScene.addEventListener("wheel", function(event) {
-  if (els.bookPanel.classList.contains("open")) return;
-  const amount = Math.abs(event.deltaY) > Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
-  if (Math.abs(amount) < 8) return;
+els.viewport.addEventListener("wheel", (event) => {
+  if (els.searchDialog.open || els.bookDialog.open) return;
+  const amount = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+  if (Math.abs(amount) < 7) return;
   event.preventDefault();
+  if (state.wheelLocked) return;
 
-  if (wheelLock) return;
-  wheelLock = true;
-  moveScene(amount > 0 ? 1 : -1);
-  window.setTimeout(function() {
-    wheelLock = false;
-  }, 230);
+  state.wheelLocked = true;
+  goToRoom(state.roomIndex + (amount > 0 ? 1 : -1));
+  window.setTimeout(() => {
+    state.wheelLocked = false;
+  }, 620);
 }, { passive: false });
 
-let pointerStartX = null;
-let pointerStartY = null;
-els.libraryScene.addEventListener("pointerdown", function(event) {
-  if (event.target.closest(".book-card") || event.target.closest("button")) return;
-  pointerStartX = event.clientX;
-  pointerStartY = event.clientY;
+els.viewport.addEventListener("pointerdown", (event) => {
+  if (event.target.closest("button, a")) return;
+  state.pointerId = event.pointerId;
+  state.pointerStartX = event.clientX;
+  state.pointerStartTarget = state.cameraTarget;
+  els.viewport.setPointerCapture?.(event.pointerId);
+  els.viewport.classList.add("is-dragging");
 });
 
-els.libraryScene.addEventListener("pointerup", function(event) {
-  if (pointerStartX === null) return;
-  const dx = event.clientX - pointerStartX;
-  const dy = event.clientY - pointerStartY;
-  pointerStartX = null;
-  pointerStartY = null;
+els.viewport.addEventListener("pointermove", (event) => {
+  if (state.pointerId !== event.pointerId) return;
+  const dx = event.clientX - state.pointerStartX;
+  state.cameraTarget = Math.max(0, Math.min(maxCamera(), state.pointerStartTarget - dx * 1.05));
+  markMoved();
+});
 
-  if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy)) {
-    moveScene(dx < 0 ? 1 : -1);
+function finishPointer(event) {
+  if (state.pointerId !== event.pointerId) return;
+  state.pointerId = null;
+  els.viewport.classList.remove("is-dragging");
+  const nearest = Math.round(state.cameraTarget / state.roomWidth);
+  goToRoom(nearest);
+}
+
+els.viewport.addEventListener("pointerup", finishPointer);
+els.viewport.addEventListener("pointercancel", finishPointer);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "/" && !els.searchDialog.open && !els.bookDialog.open) {
+    event.preventDefault();
+    openSearch();
+    return;
   }
+  if (els.searchDialog.open || els.bookDialog.open) return;
+  if (event.key === "ArrowRight") goToRoom(state.roomIndex + 1);
+  if (event.key === "ArrowLeft") goToRoom(state.roomIndex - 1);
+  if (event.key === "Home") goToRoom(0);
 });
 
-render();
+window.addEventListener("resize", resizeCamera);
+
+renderStaticText();
+renderWorld();
+renderCompass();
+resizeCamera();
+animateCamera();
