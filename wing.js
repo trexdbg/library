@@ -13,7 +13,7 @@ const labels={
     buy:"Où l’acheter",
     reviews:"Critiques externes",
     affiliate:"Lien affilié",
-    merchantNote:"Lorsqu’un lien est affilié, Libria peut percevoir une commission sans surcoût pour vous.",
+    merchantNote:"En tant que Partenaire Amazon, Libria réalise un bénéfice sur les achats remplissant les conditions requises. Les autres liens affiliés peuvent également générer une commission sans surcoût pour vous.",
     read:"Lire la critique",
     visit:"Voir chez"
   },
