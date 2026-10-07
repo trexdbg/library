@@ -157,3 +157,113 @@ dialog::backdrop{background:rgba(4,4,3,.72)}
   .book-dialog__body{padding:30px 24px 38px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+
+/* V10 — commerce & critiques externes */
+.book-links{
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.book-links__heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:12px;
+}
+.book-links__kicker{
+  color:var(--accent);
+  font-size:8px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.book-links__heading small{
+  max-width:360px;
+  color:#6f685f;
+  font-size:7px;
+  line-height:1.45;
+  text-align:right;
+}
+.merchant-links{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:8px;
+}
+.merchant-link{
+  min-height:58px;
+  padding:11px 12px;
+  border:1px solid rgba(var(--accent-rgb),.18);
+  border-radius:11px;
+  background:rgba(var(--accent-rgb),.045);
+  color:#efe4d6;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  transition:border-color .18s ease,background .18s ease,transform .18s ease;
+}
+.merchant-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(var(--accent-rgb),.42);
+  background:rgba(var(--accent-rgb),.08);
+}
+.merchant-link small{
+  display:block;
+  color:#756d64;
+  font-size:7px;
+  margin-bottom:3px;
+}
+.merchant-link strong{
+  display:block;
+  font:600 16px/1 "Cormorant Garamond",serif;
+}
+.merchant-link__meta{
+  color:var(--accent);
+  font-size:7px;
+  white-space:nowrap;
+}
+.external-reviews{
+  display:grid;
+  gap:8px;
+}
+.external-review{
+  position:relative;
+  padding:13px 38px 13px 14px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:11px;
+  background:rgba(255,255,255,.018);
+  color:inherit;
+  text-decoration:none;
+  transition:border-color .18s ease,background .18s ease;
+}
+.external-review:hover{
+  border-color:rgba(var(--accent-rgb),.3);
+  background:rgba(var(--accent-rgb),.04);
+}
+.external-review__source{
+  display:block;
+  color:var(--accent);
+  font-size:7px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.external-review strong{
+  display:block;
+  margin-top:5px;
+  color:#d8ccbc;
+  font:600 15px/1.15 "Cormorant Garamond",serif;
+}
+.external-review__cta{
+  display:block;
+  margin-top:7px;
+  color:#777068;
+  font-size:7px;
+}
+@media(max-width:720px){
+  .book-links__heading{display:block}
+  .book-links__heading small{display:block;margin-top:8px;text-align:left}
+  .merchant-links{grid-template-columns:1fr 1fr}
+}
