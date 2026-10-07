@@ -265,11 +265,11 @@ input:focus-visible {
   position: absolute;
   z-index: -3;
   inset: -5%;
-  background-image: url("./assets/library-scene.webp");
+  background-image: var(--room-image);
   background-size: cover;
   background-position: var(--room-position);
   filter: var(--room-filter);
-  transform: translate3d(calc(var(--room-offset) * -3.4%), 0, 0) scale(1.1);
+  transform: translate3d(calc(var(--room-offset) * -3.4%), 0, 0) scale(1.06);
   will-change: transform;
 }
 
@@ -375,36 +375,41 @@ input:focus-visible {
 .room--hall {
   --accent: #c2a06e;
   --accent-rgb: 194,160,110;
-  --room-position: 51% 44%;
-  --room-filter: saturate(.58) brightness(.58) contrast(1.09);
+  --room-image: url("./assets/rooms/hall.webp");
+  --room-position: 50% 50%;
+  --room-filter: saturate(.86) brightness(.68) contrast(1.04);
 }
 
 .room--fantasy {
   --accent: #c19b65;
   --accent-rgb: 193,155,101;
-  --room-position: 45% 46%;
-  --room-filter: saturate(.7) sepia(.05) brightness(.57) contrast(1.08);
+  --room-image: url("./assets/rooms/fantasy.webp");
+  --room-position: 50% 50%;
+  --room-filter: saturate(.82) brightness(.64) contrast(1.05);
 }
 
 .room--scifi {
   --accent: #8da9ae;
   --accent-rgb: 141,169,174;
-  --room-position: 58% 47%;
-  --room-filter: hue-rotate(13deg) saturate(.42) brightness(.54) contrast(1.13);
+  --room-image: url("./assets/rooms/scifi.webp");
+  --room-position: 53% 50%;
+  --room-filter: saturate(.76) brightness(.62) contrast(1.08);
 }
 
 .room--polar {
   --accent: #87988b;
   --accent-rgb: 135,152,139;
-  --room-position: 38% 50%;
-  --room-filter: saturate(.28) brightness(.44) contrast(1.22);
+  --room-image: url("./assets/rooms/polar.webp");
+  --room-position: 48% 50%;
+  --room-filter: saturate(.68) brightness(.53) contrast(1.12);
 }
 
 .room--jeunesse {
   --accent: #c89d78;
   --accent-rgb: 200,157,120;
-  --room-position: 63% 44%;
-  --room-filter: saturate(.72) brightness(.68) contrast(1.03);
+  --room-image: url("./assets/rooms/jeunesse.webp");
+  --room-position: 50% 50%;
+  --room-filter: saturate(.88) brightness(.72) contrast(1.02);
 }
 
 .hall-copy,
@@ -1235,7 +1240,7 @@ dialog::backdrop {
 
   .room__backdrop {
     inset: -8%;
-    transform: translate3d(calc(var(--room-offset) * -4%), 0, 0) scale(1.22);
+    transform: translate3d(calc(var(--room-offset) * -4%), 0, 0) scale(1.12);
   }
 
   .room__architecture::before {
