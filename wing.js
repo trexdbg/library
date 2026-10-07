@@ -1,11 +1,34 @@
 import { works, editionFor, coverUrl } from "./data/catalog.js";
+import { linksFor } from "./data/links.js";
 
 const body=document.body;
 const genre=body.dataset.genre;
 const lang=body.dataset.lang==="en"?"en":"fr";
 const labels={
-  fr:{books:"livres",search:"Rechercher dans cette aile…",empty:"Aucun livre ne correspond à cette recherche.",review:"Notre regard"},
-  en:{books:"books",search:"Search this wing…",empty:"No book matches this search.",review:"Our take"}
+  fr:{
+    books:"livres",
+    search:"Rechercher dans cette aile…",
+    empty:"Aucun livre ne correspond à cette recherche.",
+    review:"Notre regard",
+    buy:"Où l’acheter",
+    reviews:"Critiques externes",
+    affiliate:"Lien affilié",
+    merchantNote:"Lorsqu’un lien est affilié, Libria peut percevoir une commission sans surcoût pour vous.",
+    read:"Lire la critique",
+    visit:"Voir chez"
+  },
+  en:{
+    books:"books",
+    search:"Search this wing…",
+    empty:"No book matches this search.",
+    review:"Our take",
+    buy:"Where to buy",
+    reviews:"External reviews",
+    affiliate:"Affiliate link",
+    merchantNote:"When a link is affiliated, Libria may earn a commission at no extra cost to you.",
+    read:"Read review",
+    visit:"View at"
+  }
 }[lang];
 
 const genreLabels={
@@ -18,6 +41,36 @@ const grid=document.querySelector("#bookGrid");
 const count=document.querySelector("#bookCount");
 const search=document.querySelector("#wingSearch");
 const dialog=document.querySelector("#bookDialog");
+
+function ensureLinkSections(){
+  const bodyEl=dialog.querySelector(".book-dialog__body");
+  if(!bodyEl || bodyEl.querySelector("#dialogCommerce")) return;
+
+  const commerce=document.createElement("section");
+  commerce.className="book-links book-links--commerce";
+  commerce.id="dialogCommerce";
+  commerce.innerHTML=`
+    <div class="book-links__heading">
+      <span class="book-links__kicker">${labels.buy}</span>
+      <small>${labels.merchantNote}</small>
+    </div>
+    <div class="merchant-links" id="dialogOffers"></div>
+  `;
+
+  const external=document.createElement("section");
+  external.className="book-links book-links--reviews";
+  external.id="dialogExternalReviews";
+  external.innerHTML=`
+    <div class="book-links__heading">
+      <span class="book-links__kicker">${labels.reviews}</span>
+    </div>
+    <div class="external-reviews" id="dialogReviews"></div>
+  `;
+
+  bodyEl.append(commerce,external);
+}
+
+ensureLinkSections();
 
 count.textContent=`${list.length} ${labels.books}`;
 search.placeholder=labels.search;
@@ -75,6 +128,41 @@ function openBook(work){
   if(url){
     const img=new Image();img.onload=()=>cover.style.backgroundImage=`url("${url}")`;img.src=url;
   }
+
+  const links=linksFor(work,e,lang);
+  const offersEl=document.querySelector("#dialogOffers");
+  const reviewsEl=document.querySelector("#dialogReviews");
+  offersEl.innerHTML="";
+  reviewsEl.innerHTML="";
+
+  links.offers.forEach((offer)=>{
+    const a=document.createElement("a");
+    a.className="merchant-link";
+    a.href=offer.url;
+    a.target="_blank";
+    a.rel=offer.affiliate ? "sponsored noopener noreferrer" : "noopener noreferrer";
+    a.innerHTML=`
+      <span><small>${labels.visit}</small><strong>${offer.merchant}</strong></span>
+      <span class="merchant-link__meta">${offer.affiliate ? labels.affiliate : "↗"}</span>
+    `;
+    offersEl.appendChild(a);
+  });
+
+  links.reviews.forEach((review)=>{
+    const a=document.createElement("a");
+    a.className="external-review";
+    a.href=review.url;
+    a.target="_blank";
+    a.rel="noopener noreferrer";
+    a.innerHTML=`
+      <span class="external-review__source">${review.source} · ${review.kind}</span>
+      <strong>${review.title}</strong>
+      <span class="external-review__cta">${labels.read} ↗</span>
+    `;
+    reviewsEl.appendChild(a);
+  });
+
+  document.querySelector("#dialogExternalReviews").hidden=!links.reviews.length;
   if(!dialog.open)dialog.showModal();
 }
 search.addEventListener("input",e=>render(e.target.value));
