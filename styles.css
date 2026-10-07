@@ -690,7 +690,7 @@ input:focus-visible {
 .display-book__caption small {
   margin-top: 3px;
   color: rgba(235,226,215,.47);
-  font-size: 7px;
+  font-size: 8px;
 }
 
 .display-book:hover,
