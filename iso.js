@@ -37,6 +37,11 @@ const count=document.querySelector("#wingCount");
 const cta=document.querySelector("#wingCta");
 const idx=document.querySelector("#wingIndex");
 const wings=[...document.querySelectorAll("[data-wing]")];
+const mapWrap=document.querySelector(".iso-map-wrap");
+const totalBooks=works.filter(w=>editionFor(w,lang)).length;
+document.querySelectorAll("[data-library-count]").forEach(el=>{
+  el.textContent=`${totalBooks} ${lang==="fr" ? "livres" : "books"}`;
+});
 
 function selectWing(genre){
   const meta=copy[genre];
@@ -47,12 +52,16 @@ function selectWing(genre){
   cta.textContent=meta.cta+" →";
   cta.href=wingHref(genre);
   idx.textContent=String(["fantasy","scifi","polar","jeunesse","classics","romance","horror"].indexOf(genre)+1).padStart(2,"0");
+  wings.forEach(el=>el.classList.toggle("is-active",el.dataset.wing===genre));
+  if(mapWrap) mapWrap.dataset.activeWing=genre;
 }
 wings.forEach(el=>{
   const genre=el.dataset.wing;
   el.setAttribute("href",wingHref(genre));
+  el.setAttribute("aria-label",`${copy[genre].title} — ${copy[genre].desc}`);
   el.addEventListener("mouseenter",()=>selectWing(genre));
   el.addEventListener("focus",()=>selectWing(genre));
+  el.addEventListener("touchstart",()=>selectWing(genre),{passive:true});
 });
 document.querySelectorAll("[data-mobile-wing]").forEach(el=>{
   const genre=el.dataset.mobileWing;
