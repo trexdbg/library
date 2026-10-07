@@ -684,7 +684,7 @@ export const reviewsByWork = {
     {source:"Editorial Notes",kind:"Book review blog",title:"Dracula by Bram Stoker",url:"https://editorialnotes.wordpress.com/2017/08/10/dracula-by-bram-stoker/"}
   ],
   "it-stephen-king": [
-    {source:"Grub Street",kind:"Book review blog",title:"Book Review: It by Stephen King",url:"https://grubstreethack.wordpress.com/"}
+    {source:"Grub Street",kind:"Book review blog",title:"Book Review: It by Stephen King",url:"https://grubstreethack.wordpress.com/2026/09/29/book-review-it/"}
   ],
   "lies-locke-lamora": [
     {source:"SFF Book Reviews",kind:"SFF book blog",title:"The Lies of Locke Lamora — Scott Lynch",url:"https://sffbookreview.wordpress.com/2012/11/16/review-scott-lynch-the-lies-of-locke-lamora/"}
@@ -714,7 +714,7 @@ export const reviewsByWork = {
     {source:"Clues and Reviews",kind:"Crime book blog",title:"Book Review: The Dry — Jane Harper",url:"https://cluesandreviews.wordpress.com/2017/01/07/book-review-the-dry-jane-harper/"}
   ],
   "the-poet": [
-    {source:"D'encre et de papier",kind:"Blog littéraire",title:"Le Poète — Michael Connelly",url:"https://papierencre.wordpress.com/author/flobooks/"}
+    {source:"D'encre et de papier",kind:"Blog littéraire",title:"Le Poète — Michael Connelly",url:"https://papierencre.wordpress.com/2014/03/29/le-poete-de-michael-connelly-1996/"}
   ],
   "black-dahlia": [
     {source:"Mindful Pleasures",kind:"Literary blog",title:"The Black Dahlia by James Ellroy",url:"https://mindfulpleasures.blogspot.com/2011/08/black-dahlia-by-james-ellroy.html"}
@@ -723,7 +723,7 @@ export const reviewsByWork = {
     {source:"I Read, Therefore I Blog",kind:"Book review blog",title:"The Thursday Murder Club — Richard Osman",url:"https://ireadthereforeiblog.com/2020/12/31/the-thursday-murder-club-by-richard-osman/"}
   ],
   "before-i-go-to-sleep": [
-    {source:"ReviewsbyLola",kind:"Book blog",title:"Book Review: Before I Go to Sleep",url:"https://reviewsbylola.wordpress.com/2011/07/"}
+    {source:"ReviewsbyLola",kind:"Book blog",title:"Book Review: Before I Go to Sleep",url:"https://reviewsbylola.wordpress.com/2011/07/29/book-review-before-i-go-to-sleep/"}
   ],
   "lion-witch-wardrobe": [
     {source:"Kieran's Book Review Blog",kind:"Book blog",title:"The Lion, The Witch and The Wardrobe review",url:"https://kieransbookreviewblog.blogspot.com/2012/03/lion-witch-and-wardrobe-review.html"}
@@ -840,27 +840,10 @@ function standardOffers(work, edition, lang) {
   });
 }
 
-function blogReviewFallback(work, edition, lang) {
-  const query = lang === "fr"
-    ? `"${edition.title}" "${work.author}" critique blog littéraire`
-    : `"${edition.title}" "${work.author}" book review blog`;
-
-  return {
-    lang,
-    search: true,
-    source: lang === "fr" ? "Recherche ciblée" : "Targeted search",
-    kind: lang === "fr" ? "Blogs littéraires" : "Literary blogs",
-    title: lang === "fr"
-      ? `Rechercher des chroniques de ${edition.title}`
-      : `Search for blog reviews of ${edition.title}`,
-    url: `https://www.google.com/search?q=${encodeURIComponent(query)}`
-  };
-}
-
 export function linksFor(work, edition, lang) {
-  const curated = (reviewsByWork[work.id] || []).filter((review) => !review.lang || review.lang === lang);
+  const reviews = (reviewsByWork[work.id] || []).filter((review) => !review.lang || review.lang === lang);
   return {
     offers: standardOffers(work, edition, lang),
-    reviews: curated.length ? curated : [blogReviewFallback(work, edition, lang)]
+    reviews
   };
 }
