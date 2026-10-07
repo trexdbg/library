@@ -32,8 +32,8 @@ const labels={
 }[lang];
 
 const genreLabels={
-  fr:{fantasy:"Fantasy",scifi:"Science-fiction",polar:"Polar",jeunesse:"Jeunesse"},
-  en:{fantasy:"Fantasy",scifi:"Science fiction",polar:"Crime",jeunesse:"Young readers"}
+  fr:{fantasy:"Fantasy",scifi:"Science-fiction",polar:"Polar",jeunesse:"Jeunesse",classics:"Classiques",romance:"Romance",horror:"Horreur"},
+  en:{fantasy:"Fantasy",scifi:"Science fiction",polar:"Crime",jeunesse:"Young readers",classics:"Classics",romance:"Romance",horror:"Horror"}
 }[lang];
 
 const list=works.filter(w=>w.genre===genre && editionFor(w,lang));
@@ -167,7 +167,7 @@ function openBook(work){
 }
 search.addEventListener("input",e=>render(e.target.value));
 
-const order=["fantasy","scifi","polar","jeunesse"];
+const order=["fantasy","scifi","polar","jeunesse","classics","romance","horror"];
 document.querySelectorAll("[data-genre-link]").forEach(a=>{
   const g=a.dataset.genreLink;
   a.textContent=genreLabels[g];
