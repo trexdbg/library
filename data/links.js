@@ -5,6 +5,8 @@
 // Ne jamais inventer un identifiant partenaire : coller ici uniquement
 // les deeplinks fournis par le programme d'affiliation concerné.
 
+const AMAZON_FR_TAG = "zenretraite11-21";
+
 const AFFILIATE_OVERRIDES = {
   // Exemple :
   // "dune:fr:amazon": "https://...",
@@ -202,7 +204,12 @@ function standardOffers(work, edition, lang) {
   const query = encodeURIComponent(queryFor(work, edition));
   const offers = lang === "fr"
     ? [
-        { id: "amazon", merchant: "Amazon", url: `https://www.amazon.fr/s?k=${query}` },
+        {
+          id: "amazon",
+          merchant: "Amazon",
+          url: `https://www.amazon.fr/s?k=${query}&tag=${encodeURIComponent(AMAZON_FR_TAG)}`,
+          affiliate: true
+        },
         { id: "fnac", merchant: "Fnac", url: `https://www.fnac.com/SearchResult/ResultList.aspx?Search=${query}` },
         { id: "kobo", merchant: "Kobo", url: `https://www.kobo.com/fr/fr/search?query=${query}` }
       ]
@@ -216,7 +223,7 @@ function standardOffers(work, edition, lang) {
     return {
       ...offer,
       url: affiliateUrl || offer.url,
-      affiliate: Boolean(affiliateUrl)
+      affiliate: Boolean(affiliateUrl) || Boolean(offer.affiliate)
     };
   });
 }
