@@ -15,6 +15,7 @@ const labels={
     affiliate:"Lien affilié",
     merchantNote:"En tant que Partenaire Amazon, Libria réalise un bénéfice sur les achats remplissant les conditions requises. Les autres liens affiliés peuvent également générer une commission sans surcoût pour vous.",
     read:"Lire la critique",
+    fullPage:"Voir la fiche complète",
     searchReviews:"Rechercher des chroniques",
     visit:"Voir chez"
   },
@@ -28,6 +29,7 @@ const labels={
     affiliate:"Affiliate link",
     merchantNote:"When a link is affiliated, Libria may earn a commission at no extra cost to you.",
     read:"Read review",
+    fullPage:"Open full book page",
     searchReviews:"Search literary blogs",
     visit:"View at"
   }
@@ -69,7 +71,7 @@ function ensureLinkSections(){
     <div class="external-reviews" id="dialogReviews"></div>
   `;
 
-  bodyEl.append(commerce,external);
+  const full=document.createElement("a");full.className="book-full-page";full.id="dialogFullPage";full.textContent=labels.fullPage+" →";bodyEl.append(commerce,external,full);
 }
 
 ensureLinkSections();
@@ -374,6 +376,8 @@ function openBook(work){
   });
 
   document.querySelector("#dialogExternalReviews").hidden=!links.reviews.length;
+  const full=document.querySelector("#dialogFullPage");
+  if(full) full.href=`../${lang==="fr"?"livre":"book"}/${work.id}/`;
   if(!dialog.open)dialog.showModal();
 }
 search.addEventListener("input",e=>render(e.target.value));
