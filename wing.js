@@ -98,26 +98,32 @@ async function resolveCover(work,edition,size="L"){
     }
   }catch{}
 
-  const params=new URLSearchParams({
-    title:edition.title,
-    author:work.author,
-    fields:"cover_i,title,author_name",
-    limit:"6"
-  });
+  const titles=[edition.title,work.editions?.en?.title].filter((title,index,array)=>title&&array.indexOf(title)===index);
 
   try{
-    const response=await fetch(`https://openlibrary.org/search.json?${params.toString()}`,{
-      headers:{Accept:"application/json"}
-    });
-    if(!response.ok) throw new Error("cover lookup failed");
-    const data=await response.json();
-    const match=(data.docs||[]).find(doc=>doc.cover_i);
-    const resolved=match
-      ? `https://covers.openlibrary.org/b/id/${match.cover_i}-${size}.jpg?default=false`
-      : "";
-    dynamicCoverCache.set(cacheKey,resolved);
-    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,resolved||"none");}catch{}
-    return resolved;
+    for(const title of titles){
+      const params=new URLSearchParams({
+        title,
+        author:work.author,
+        fields:"cover_i,title,author_name",
+        limit:"6"
+      });
+      const response=await fetch(`https://openlibrary.org/search.json?${params.toString()}`,{
+        headers:{Accept:"application/json"}
+      });
+      if(!response.ok) continue;
+      const data=await response.json();
+      const match=(data.docs||[]).find(doc=>doc.cover_i);
+      if(match){
+        const resolved=`https://covers.openlibrary.org/b/id/${match.cover_i}-${size}.jpg?default=false`;
+        dynamicCoverCache.set(cacheKey,resolved);
+        try{sessionStorage.setItem(`libria-cover:${cacheKey}`,resolved);}catch{}
+        return resolved;
+      }
+    }
+    dynamicCoverCache.set(cacheKey,"");
+    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,"none");}catch{}
+    return "";
   }catch{
     dynamicCoverCache.set(cacheKey,"");
     return "";
