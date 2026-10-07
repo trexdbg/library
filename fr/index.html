@@ -4,12 +4,175 @@
 <body><div class="iso-shell">
 <header class="iso-header"><a class="iso-brand" href="../"><span class="iso-brand__seal">L</span><span><strong>LIBRIA</strong><small>La bibliothèque vivante</small></span></a><a class="iso-lang" href="../en/" hreflang="en" aria-label="English version">EN</a></header>
 <main class="iso-main"><section class="iso-copy"><p class="iso-eyebrow">Plan de la bibliothèque</p><h1>Choisissez une aile. Entrez dans un univers.</h1><p class="iso-copy__intro">Libria devient un lieu dans lequel on s’oriente : chaque aile possède son ambiance, son catalogue et ses découvertes.</p><div class="iso-current" aria-live="polite"><span class="iso-current__index" id="wingIndex">01</span><div><h2 id="wingTitle"></h2><p id="wingDesc"></p><p id="wingCount"></p></div><a id="wingCta" href="#"></a></div></section>
-<section class="iso-map-wrap"><svg class="iso-map" viewBox="0 0 900 720" role="img" aria-label="Carte isométrique interactive de Libria">
-<polygon class="iso-floor" points="450,70 835,300 450,650 65,420"/><polygon class="iso-corridor" points="450,235 645,350 450,465 255,350"/><polygon class="iso-corridor" points="310,270 450,350 380,392 240,312"/><polygon class="iso-corridor" points="590,270 660,312 520,392 450,350"/><polygon class="iso-corridor" points="310,430 380,388 450,430 380,472"/><polygon class="iso-corridor" points="520,388 590,430 520,472 450,430"/>
-<g aria-hidden="true"><polygon class="iso-hall-left" points="450,302 510,337 510,405 450,370"/><polygon class="iso-hall-right" points="390,337 450,302 450,370 390,405"/><polygon class="iso-hall-top" points="450,270 510,305 450,340 390,305"/><ellipse class="iso-hall-ring" cx="450" cy="307" rx="86" ry="50"/></g>
-<a class="iso-wing iso-wing--fantasy" data-wing="fantasy"><title>Fantasy</title><polygon class="left" points="150,245 295,330 295,445 150,360"/><polygon class="right" points="295,330 390,275 390,390 295,445"/><polygon class="top" points="150,245 245,190 390,275 295,330"/><path class="roof-line" d="M190 257 L285 202 M230 281 L325 226"/><circle class="iso-pin" cx="270" cy="237" r="5"/></a>
-<a class="iso-wing iso-wing--scifi" data-wing="scifi"><title>Science-fiction</title><polygon class="left" points="510,275 605,330 605,445 510,390"/><polygon class="right" points="605,330 750,245 750,360 605,445"/><polygon class="top" points="510,275 655,190 750,245 605,330"/><path class="roof-line" d="M560 286 L705 202 M600 310 L745 226"/><circle class="iso-pin" cx="650" cy="237" r="5"/></a>
-<a class="iso-wing iso-wing--polar" data-wing="polar"><title>Polar</title><polygon class="left" points="150,455 295,540 295,625 150,540"/><polygon class="right" points="295,540 390,485 390,570 295,625"/><polygon class="top" points="150,455 245,400 390,485 295,540"/><path class="roof-line" d="M195 466 L290 411 M235 490 L330 435"/><circle class="iso-pin" cx="270" cy="447" r="5"/></a>
-<a class="iso-wing iso-wing--jeunesse" data-wing="jeunesse"><title>Jeunesse</title><polygon class="left" points="510,485 605,540 605,625 510,570"/><polygon class="right" points="605,540 750,455 750,540 605,625"/><polygon class="top" points="510,485 655,400 750,455 605,540"/><path class="roof-line" d="M560 496 L705 411 M600 520 L745 435"/><circle class="iso-pin" cx="650" cy="447" r="5"/></a>
-<text class="iso-label" x="168" y="178">Fantasy</text><text class="iso-label-small" x="168" y="194">Aile I</text><text class="iso-label" x="640" y="178">Science-fiction</text><text class="iso-label-small" x="640" y="194">Aile II</text><text class="iso-label" x="163" y="665">Polar</text><text class="iso-label-small" x="163" y="681">Aile III</text><text class="iso-label" x="632" y="665">Jeunesse</text><text class="iso-label-small" x="632" y="681">Aile IV</text>
+<section class="iso-map-wrap"><svg class="iso-map iso-map--library" viewBox="0 0 900 720" role="img" aria-label="Carte isométrique interactive de Libria">
+  <defs>
+    <linearGradient id="stoneTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#675947"/><stop offset="1" stop-color="#3c332a"/>
+    </linearGradient>
+    <linearGradient id="woodTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#765336"/><stop offset="1" stop-color="#3f2a1d"/>
+    </linearGradient>
+    <linearGradient id="woodDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#402b1f"/><stop offset="1" stop-color="#17110d"/>
+    </linearGradient>
+    <linearGradient id="blueTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#466676"/><stop offset="1" stop-color="#263842"/>
+    </linearGradient>
+    <linearGradient id="honeyTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a47a51"/><stop offset="1" stop-color="#5f4430"/>
+    </linearGradient>
+    <linearGradient id="glassGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff4ff" stop-opacity=".8"/><stop offset=".45" stop-color="#79a8c0" stop-opacity=".42"/><stop offset="1" stop-color="#15232c" stop-opacity=".8"/>
+    </linearGradient>
+    <radialGradient id="hallGlow">
+      <stop offset="0" stop-color="#f4cc8d" stop-opacity=".58"/><stop offset="1" stop-color="#f4cc8d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <g class="map-ornament" aria-hidden="true">
+    <ellipse cx="450" cy="365" rx="360" ry="210"/>
+    <ellipse cx="450" cy="365" rx="275" ry="160"/>
+    <path d="M90 365H810M450 92V638M175 205L725 525M725 205L175 525"/>
+  </g>
+
+  <polygon class="library-shadow" points="450,102 818,316 450,650 82,436"/>
+  <polygon class="library-plinth" points="450,92 810,302 450,632 90,422"/>
+  <polygon class="library-plinth-side" points="90,422 450,632 450,654 90,444"/>
+  <polygon class="library-plinth-side library-plinth-side--right" points="450,632 810,302 810,324 450,654"/>
+
+  <g class="hall-group" aria-hidden="true">
+    <polygon class="hall-floor" points="450,270 560,334 450,398 340,334"/>
+    <ellipse class="hall-rug" cx="450" cy="343" rx="70" ry="39"/>
+    <ellipse class="hall-rug hall-rug--inner" cx="450" cy="343" rx="52" ry="28"/>
+    <polygon class="hall-wall hall-wall--left" points="340,334 450,398 450,455 340,391"/>
+    <polygon class="hall-wall hall-wall--right" points="450,398 560,334 560,391 450,455"/>
+    <path class="hall-arch" d="M371 351V318 Q400 282 429 318V385"/>
+    <path class="hall-arch hall-arch--right" d="M471 385V318 Q500 282 529 318V351"/>
+    <ellipse class="hall-dome" cx="450" cy="287" rx="57" ry="31"/>
+    <path class="hall-dome-line" d="M402 287Q450 232 498 287M418 301Q450 251 482 301M450 255V318"/>
+    <ellipse class="hall-table" cx="450" cy="346" rx="32" ry="17"/>
+    <ellipse class="hall-table-top" cx="450" cy="341" rx="32" ry="17"/>
+    <circle class="hall-globe" cx="450" cy="330" r="8"/>
+    <path class="hall-globe-ring" d="M439 330a11 6 0 1 0 22 0a11 6 0 1 0-22 0M450 319V341"/>
+    <g class="hall-chairs">
+      <ellipse cx="412" cy="343" rx="7" ry="4"/><ellipse cx="488" cy="343" rx="7" ry="4"/>
+      <ellipse cx="431" cy="365" rx="7" ry="4"/><ellipse cx="469" cy="365" rx="7" ry="4"/>
+    </g>
+    <g class="hall-shelves">
+      <rect x="390" y="301" width="10" height="42"/><rect x="405" y="293" width="9" height="44"/>
+      <rect x="486" y="293" width="9" height="44"/><rect x="500" y="301" width="10" height="42"/>
+    </g>
+    <circle class="hall-light" cx="450" cy="286" r="92"/>
+    <text class="room-sign room-sign--hall" x="450" y="425">Hall</text>
+  </g>
+
+  <a class="iso-wing iso-wing--fantasy" data-wing="fantasy">
+    <title>Fantasy</title>
+    <polygon class="wing-floor fantasy-floor" points="120,225 285,130 420,208 255,305"/>
+    <polygon class="wing-wall wing-wall--back fantasy-wall" points="120,225 285,130 285,220 120,315"/>
+    <polygon class="wing-wall wing-wall--side fantasy-wall-side" points="285,130 420,208 420,298 285,220"/>
+    <polygon class="wing-front-edge" points="120,315 285,410 420,333 420,298 255,375 120,280"/>
+    <g class="shelf shelf--fantasy shelf--back">
+      <rect x="143" y="206" width="118" height="66" rx="2"/>
+      <path d="M143 228H261M143 250H261M169 206V272M205 206V272M236 206V272"/>
+      <g class="book-spines">
+        <rect x="150" y="210" width="5" height="16"/><rect x="157" y="209" width="7" height="17"/><rect x="173" y="232" width="5" height="16"/>
+        <rect x="181" y="231" width="7" height="17"/><rect x="211" y="210" width="6" height="16"/><rect x="219" y="208" width="4" height="18"/>
+        <rect x="242" y="231" width="7" height="17"/><rect x="231" y="254" width="6" height="15"/>
+      </g>
+    </g>
+    <g class="shelf shelf--fantasy shelf--side">
+      <polygon points="300,166 399,223 399,276 300,220"/>
+      <path d="M300 185L399 242M300 202L399 259M329 183V236M360 201V253"/>
+    </g>
+    <polygon class="fantasy-rug" points="183,294 270,244 337,282 248,333"/>
+    <polygon class="reading-table reading-table--fantasy" points="208,270 257,241 304,268 255,297"/>
+    <polygon class="reading-table-leg" points="250,296 260,290 260,315 250,321"/>
+    <circle class="table-lamp table-lamp--amber" cx="240" cy="263" r="5"/>
+    <path class="ladder" d="M276 164L250 259M286 170L260 265M271 184L282 190M266 202L277 208M261 220L272 226M256 238L267 244"/>
+    <circle class="globe" cx="176" cy="281" r="12"/><path class="globe-line" d="M164 281h24M176 269v24M165 276q11 10 22 0"/>
+    <g class="plant"><circle cx="126" cy="257" r="8"/><circle cx="134" cy="250" r="7"/><circle cx="139" cy="260" r="6"/><rect x="131" y="262" width="6" height="12"/></g>
+    <path class="gothic-window" d="M307 164V213H342V164Q324 140 307 164Z"/>
+    <path class="gothic-window-line" d="M324 149V213M307 180H342"/>
+    <rect class="wall-map" x="348" y="201" width="43" height="29" transform="skewY(30)"/>
+    <text class="room-sign" x="210" y="153">Fantasy</text>
+    <text class="room-sign-small" x="211" y="169">Aile I</text>
+  </a>
+
+  <a class="iso-wing iso-wing--scifi" data-wing="scifi">
+    <title>Science-fiction</title>
+    <polygon class="wing-floor scifi-floor" points="480,208 615,130 780,225 645,305"/>
+    <polygon class="wing-wall wing-wall--back scifi-wall" points="615,130 780,225 780,315 615,220"/>
+    <polygon class="wing-wall wing-wall--side scifi-wall-side" points="480,208 615,130 615,220 480,298"/>
+    <polygon class="wing-front-edge scifi-edge" points="480,298 645,393 780,315 780,280 645,357 480,263"/>
+    <path class="observatory-window" d="M674 176V260H750V176Q712 126 674 176Z"/>
+    <path class="observatory-grid" d="M712 148V260M674 205H750M687 174Q712 197 737 174"/>
+    <circle class="planet planet--large" cx="725" cy="178" r="17"/><circle class="planet planet--small" cx="689" cy="163" r="6"/>
+    <g class="shelf shelf--scifi">
+      <polygon points="501,210 592,158 592,214 501,266"/>
+      <path d="M501 228L592 176M501 246L592 194M530 193V249M559 176V232"/>
+    </g>
+    <ellipse class="scifi-rug" cx="636" cy="274" rx="71" ry="36"/>
+    <g class="orrery">
+      <ellipse cx="636" cy="260" rx="38" ry="18"/><ellipse cx="636" cy="260" rx="28" ry="36" transform="rotate(70 636 260)"/>
+      <ellipse cx="636" cy="260" rx="15" ry="42" transform="rotate(-58 636 260)"/>
+      <circle cx="636" cy="260" r="8"/><circle cx="666" cy="250" r="5"/><circle cx="610" cy="277" r="4"/>
+      <path d="M636 278V305M622 305H650"/>
+    </g>
+    <polygon class="reading-table reading-table--scifi" points="520,278 565,252 596,270 550,296"/>
+    <circle class="table-lamp table-lamp--blue" cx="548" cy="267" r="5"/>
+    <g class="instrument">
+      <path d="M747 266l-31 18M730 258l16 28M715 284h34"/><circle cx="732" cy="270" r="4"/>
+    </g>
+    <text class="room-sign" x="663" y="153">Science-fiction</text>
+    <text class="room-sign-small" x="664" y="169">Aile II</text>
+  </a>
+
+  <a class="iso-wing iso-wing--polar" data-wing="polar">
+    <title>Polar</title>
+    <polygon class="wing-floor polar-floor" points="120,420 255,342 420,437 285,515"/>
+    <polygon class="wing-wall wing-wall--back polar-wall" points="120,420 255,342 255,432 120,510"/>
+    <polygon class="wing-wall wing-wall--side polar-wall-side" points="255,342 420,437 420,527 255,432"/>
+    <polygon class="wing-front-edge polar-edge" points="120,510 285,605 420,527 420,492 285,570 120,475"/>
+    <g class="shelf shelf--polar">
+      <rect x="141" y="407" width="95" height="66" rx="2"/>
+      <path d="M141 429H236M141 451H236M170 407V473M202 407V473"/>
+    </g>
+    <g class="shelf shelf--polar shelf--polar-side">
+      <polygon points="274,371 395,440 395,496 274,427"/>
+      <path d="M274 389L395 458M274 408L395 477M309 391V447M348 413V469"/>
+    </g>
+    <polygon class="polar-rug" points="179,496 272,442 352,488 258,543"/>
+    <polygon class="reading-table reading-table--polar" points="196,473 269,431 335,469 262,512"/>
+    <circle class="table-lamp table-lamp--green" cx="224" cy="469" r="6"/><circle class="table-lamp table-lamp--green" cx="293" cy="468" r="6"/>
+    <polygon class="paper" points="246,460 268,448 282,456 260,469"/><polygon class="paper" points="279,476 296,466 309,473 291,484"/>
+    <path class="ladder" d="M260 370L236 462M270 376L246 468M254 393L265 399M250 411L261 417M245 429L256 435"/>
+    <circle class="globe globe--dark" cx="157" cy="482" r="11"/>
+    <text class="room-sign" x="169" y="571">Polar</text>
+    <text class="room-sign-small" x="170" y="587">Aile III</text>
+  </a>
+
+  <a class="iso-wing iso-wing--jeunesse" data-wing="jeunesse">
+    <title>Jeunesse</title>
+    <polygon class="wing-floor youth-floor" points="480,437 645,342 780,420 615,515"/>
+    <polygon class="wing-wall wing-wall--back youth-wall" points="645,342 780,420 780,510 645,432"/>
+    <polygon class="wing-wall wing-wall--side youth-wall-side" points="480,437 645,342 645,432 480,527"/>
+    <polygon class="wing-front-edge youth-edge" points="480,527 615,605 780,510 780,475 615,570 480,492"/>
+    <g class="shelf shelf--youth">
+      <polygon points="665,374 758,428 758,482 665,428"/>
+      <path d="M665 392L758 446M665 410L758 464M695 391V446M726 409V464"/>
+    </g>
+    <path class="youth-window" d="M510 426V479H562V426Q536 391 510 426Z"/>
+    <path class="youth-window-line" d="M536 401V479M510 449H562"/>
+    <ellipse class="youth-rug" cx="613" cy="500" rx="67" ry="34"/>
+    <ellipse class="youth-rug-inner" cx="613" cy="500" rx="49" ry="24"/>
+    <ellipse class="youth-table" cx="613" cy="488" rx="27" ry="14"/>
+    <ellipse class="youth-table-top" cx="613" cy="483" rx="27" ry="14"/>
+    <g class="youth-chairs"><circle cx="577" cy="493" r="7"/><circle cx="650" cy="493" r="7"/><circle cx="613" cy="520" r="7"/></g>
+    <g class="reading-nook"><polygon points="685,469 734,441 754,452 705,481"/><circle cx="700" cy="458" r="8"/><circle cx="718" cy="451" r="7"/></g>
+    <g class="tree"><rect x="649" y="392" width="7" height="46"/><circle cx="645" cy="389" r="13"/><circle cx="660" cy="382" r="12"/><circle cx="671" cy="396" r="11"/></g>
+    <g class="plant"><circle cx="495" cy="483" r="8"/><circle cx="503" cy="477" r="7"/><rect x="498" y="488" width="6" height="11"/></g>
+    <text class="room-sign" x="676" y="571">Jeunesse</text>
+    <text class="room-sign-small" x="677" y="587">Aile IV</text>
+  </a>
 </svg><div class="iso-mobile-list"><a class="iso-mobile-card" data-mobile-wing="fantasy"><small>Aile 1</small><strong>Fantasy</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="scifi"><small>Aile 2</small><strong>Science-fiction</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="polar"><small>Aile 3</small><strong>Polar</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="jeunesse"><small>Aile 4</small><strong>Jeunesse</strong><span data-count></span></a></div></section></main></div><script type="module" src="../iso.js"></script></body></html>
