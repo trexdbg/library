@@ -570,9 +570,26 @@ function standardOffers(work, edition, lang) {
   });
 }
 
+function blogReviewFallback(work, edition, lang) {
+  const query = lang === "fr"
+    ? `"${edition.title}" "${work.author}" critique blog littéraire`
+    : `"${edition.title}" "${work.author}" book review blog`;
+
+  return {
+    lang,
+    source: lang === "fr" ? "Recherche de blogs" : "Blog review search",
+    kind: lang === "fr" ? "Chroniques littéraires" : "Literary blogs",
+    title: lang === "fr"
+      ? `Trouver des chroniques de ${edition.title}`
+      : `Find blog reviews of ${edition.title}`,
+    url: `https://www.google.com/search?q=${encodeURIComponent(query)}`
+  };
+}
+
 export function linksFor(work, edition, lang) {
+  const curated = (reviewsByWork[work.id] || []).filter((review) => !review.lang || review.lang === lang);
   return {
     offers: standardOffers(work, edition, lang),
-    reviews: (reviewsByWork[work.id] || []).filter((review) => !review.lang || review.lang === lang)
+    reviews: curated.length ? curated : [blogReviewFallback(work, edition, lang)]
   };
 }
