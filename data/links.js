@@ -621,6 +621,34 @@ export const reviewsByWork = {
   ],
   "wuthering-heights": [
     {lang:"fr",source:"Mon odyssée littéraire",kind:"Blog littéraire",title:"Les Hauts de Hurlevent — Emily Brontë",url:"https://odysseelitteraire.blogspot.com/2026/05/les-hauts-de-hurlevent-emily-bronte.html?m=0"}
+  ],
+  "book-lovers": [
+    {lang:"en",source:"Heather McReads",kind:"Book blog",title:"Book Lovers — Book Review / Analysis",url:"https://heathermcreads.wordpress.com/2024/12/13/book-lovers-by-emily-henry-book-review-analysis/"}
+  ],
+  "it-ends-with-us": [
+    {lang:"en",source:"Aestas Book Blog",kind:"Book blog",title:"It Ends With Us — Book Review",url:"https://aestasbookblog.com/it-ends-with-us-review/"}
+  ],
+  "one-day": [
+    {lang:"en",source:"The Brontë Sister",kind:"Book blog",title:"Book Review: One Day by David Nicholls",url:"https://thebrontesister.wordpress.com/2012/05/31/book-review-one-day-by-david-nicholls/"},
+    {lang:"en",source:"It's All About Books",kind:"Book blog",title:"One Day — Book Review",url:"https://melovebooks.wordpress.com/2014/10/30/one-day-by-david-nicholls/"}
+  ],
+  "call-me-by-your-name": [
+    {lang:"en",source:"A Blog of Books and Musicals",kind:"Book blog",title:"Call Me By Your Name — Mini Book Review",url:"https://funfandomblog.wordpress.com/2020/07/15/call-me-by-your-name-mini-book-review/"},
+    {lang:"en",source:"Mariaku Reads",kind:"Book blog",title:"Book Review: Call Me by Your Name",url:"https://mariakureads.wordpress.com/2026/02/12/book-review-call-me-by-your-name/"}
+  ],
+  "carrie": [
+    {lang:"en",source:"Ched Chichester",kind:"Book blog",title:"Book Review of Stephen King's Carrie",url:"https://chedchichester.substack.com/p/book-review-of-stephen-kings-carrie"}
+  ],
+  "pet-sematary": [
+    {lang:"en",source:"Books of Magic",kind:"Book blog",title:"Book Review: Pet Sematary",url:"https://booksofmagic.wordpress.com/2019/08/29/book-review-pet-sematary/"}
+  ],
+  "house-of-leaves": [
+    {lang:"en",source:"Milam's Musings",kind:"Book blog",title:"Book Review: House of Leaves",url:"https://brettmilam.com/2026/02/21/book-review-house-of-leaves/"},
+    {lang:"en",source:"Amy Suto",kind:"Book blog",title:"House of Leaves Review",url:"https://www.amysuto.com/desk-of-amy-suto/book-review-house-of-leaves-by-mark-z-danielewski"}
+  ],
+  "beloved": [
+    {lang:"en",source:"Leeswammes' Blog",kind:"Book blog",title:"Book Review: Beloved by Toni Morrison",url:"https://leeswammes.wordpress.com/2012/07/18/book-review-beloved-by-toni-morrison/"},
+    {lang:"en",source:"Joel Swagman",kind:"Book blog",title:"Beloved by Toni Morrison — Book Review",url:"https://joelswagman.blogspot.com/2017/10/beloved-by-toni-morrison.html"}
   ]
 };
 
