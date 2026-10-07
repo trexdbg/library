@@ -900,6 +900,2337 @@ export const works = [
       fr:{title:"L'Exorciste",subtitle:"Roman",publisher:"Robert Laffont",coverIsbn:"9780061007224",tags:["Horreur","possession","foi"],summary:"Lorsque le comportement d'une enfant devient inexplicable malgré les examens médicaux, sa mère finit par demander l'aide de prêtres confrontés à leurs propres doutes.",review:"Plus ambigu et plus lent que sa réputation spectaculaire : un roman sur la peur, mais aussi sur le doute et la possibilité de croire."},
       en:{title:"The Exorcist",subtitle:"A novel",publisher:"Harper",isbn:"9780061007224",tags:["Horror","possession","faith"],summary:"When a child's behaviour becomes inexplicable despite medical examination, her mother turns to priests who face doubts of their own.",review:"More ambiguous and deliberate than its sensational reputation suggests — a novel about fear, doubt and the possibility of belief."}
     }
+  },
+  {
+    "id": "lies-locke-lamora",
+    "genre": "fantasy",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b4d39",
+      "#241a18"
+    ],
+    "author": "Scott Lynch",
+    "editions": {
+      "fr": {
+        "title": "Les Mensonges de Locke Lamora",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "voleurs",
+          "Camorr"
+        ],
+        "summary": "À Camorr, Locke Lamora dirige une bande de voleurs raffinés qui escroque les puissants jusqu'à ce qu'une guerre criminelle bouleverse ses règles.",
+        "review": "Une fantasy de cambriolage vive, drôle et très urbaine."
+      },
+      "en": {
+        "title": "The Lies of Locke Lamora",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "thieves",
+          "Camorr"
+        ],
+        "summary": "In Camorr, Locke Lamora leads a refined gang of thieves who con the wealthy until a criminal war breaks the rules they live by.",
+        "review": "Fast, witty urban fantasy built around confidence tricks, friendship and criminal politics."
+      }
+    }
+  },
+  {
+    "id": "blade-itself",
+    "genre": "fantasy",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#4f5f47",
+      "#1f2820"
+    ],
+    "author": "Joe Abercrombie",
+    "editions": {
+      "fr": {
+        "title": "Premier Sang",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dark fantasy",
+          "guerre",
+          "anti-héros"
+        ],
+        "summary": "Un guerrier brutal, un noble vaniteux et un tortionnaire cynique se croisent dans un royaume où la guerre et la magie reviennent au premier plan.",
+        "review": "Une fantasy noire qui dynamite les archétypes héroïques avec beaucoup d'ironie."
+      },
+      "en": {
+        "title": "The Blade Itself",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dark fantasy",
+          "war",
+          "antiheroes"
+        ],
+        "summary": "A brutal warrior, a vain nobleman and a cynical torturer collide in a kingdom where war and old magic are returning.",
+        "review": "Dark fantasy that undercuts heroic archetypes with sharp humour and morally messy characters."
+      }
+    }
+  },
+  {
+    "id": "poppy-war",
+    "genre": "fantasy",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#70414f",
+      "#261a22"
+    ],
+    "author": "R. F. Kuang",
+    "editions": {
+      "fr": {
+        "title": "La Guerre du pavot",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "guerre",
+          "chamanisme"
+        ],
+        "summary": "Rin, orpheline pauvre, entre dans une académie militaire d'élite et découvre un pouvoir chamanique au moment où la guerre menace son empire.",
+        "review": "Une fantasy militaire intense qui devient progressivement beaucoup plus sombre."
+      },
+      "en": {
+        "title": "The Poppy War",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "war",
+          "shamanism"
+        ],
+        "summary": "Poor orphan Rin enters an elite military academy and discovers shamanic power just as war threatens her empire.",
+        "review": "An intense military fantasy that grows increasingly dark as power and war reshape its heroine."
+      }
+    }
+  },
+  {
+    "id": "fifth-season",
+    "genre": "fantasy",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b4d39",
+      "#241a18"
+    ],
+    "author": "N. K. Jemisin",
+    "editions": {
+      "fr": {
+        "title": "La Cinquième Saison",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "cataclysme",
+          "pouvoir"
+        ],
+        "summary": "Sur une planète régulièrement ravagée par des catastrophes géologiques, plusieurs destins révèlent le prix d'un pouvoir capable de déplacer la terre.",
+        "review": "Une fantasy structurellement audacieuse qui mêle intime, oppression et fin du monde."
+      },
+      "en": {
+        "title": "The Fifth Season",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "cataclysm",
+          "power"
+        ],
+        "summary": "On a planet repeatedly devastated by geological catastrophes, several lives reveal the cost of a power capable of moving the earth.",
+        "review": "Structurally daring fantasy combining intimacy, oppression and planetary catastrophe."
+      }
+    }
+  },
+  {
+    "id": "jonathan-strange",
+    "genre": "fantasy",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#4f5f47",
+      "#1f2820"
+    ],
+    "author": "Susanna Clarke",
+    "editions": {
+      "fr": {
+        "title": "Jonathan Strange & Mr Norrell",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy historique",
+          "magie",
+          "Angleterre"
+        ],
+        "summary": "Dans une Angleterre alternative du XIXe siècle, deux magiciens rivaux ramènent la magie pratique au cœur de la société et réveillent des forces anciennes.",
+        "review": "Un immense roman de magie érudite, sec, drôle et délicieusement étrange."
+      },
+      "en": {
+        "title": "Jonathan Strange & Mr Norrell",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Historical fantasy",
+          "magic",
+          "England"
+        ],
+        "summary": "In an alternate nineteenth-century England, two rival magicians restore practical magic and awaken older forces.",
+        "review": "A vast, dryly funny novel of scholarly magic and wonderfully strange English folklore."
+      }
+    }
+  },
+  {
+    "id": "bear-nightingale",
+    "genre": "fantasy",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#70414f",
+      "#261a22"
+    ],
+    "author": "Katherine Arden",
+    "editions": {
+      "fr": {
+        "title": "L'Ours et le Rossignol",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Conte",
+          "folklore",
+          "Russie"
+        ],
+        "summary": "Dans une Russie médiévale où les esprits domestiques côtoient la foi chrétienne, Vassia refuse de renoncer aux créatures qu'elle seule semble encore voir.",
+        "review": "Une fantasy hivernale très atmosphérique, inspirée des contes slaves."
+      },
+      "en": {
+        "title": "The Bear and the Nightingale",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Folklore",
+          "winter",
+          "Russia"
+        ],
+        "summary": "In medieval Russia, where household spirits coexist uneasily with Christianity, Vasya refuses to abandon the creatures only she still seems to see.",
+        "review": "Atmospheric winter fantasy steeped in Slavic folklore and old household spirits."
+      }
+    }
+  },
+  {
+    "id": "eye-of-world",
+    "genre": "fantasy",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b4d39",
+      "#241a18"
+    ],
+    "author": "Robert Jordan",
+    "editions": {
+      "fr": {
+        "title": "L'Œil du monde",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy épique",
+          "quête",
+          "destin"
+        ],
+        "summary": "Lorsque des créatures attaquent leur village, plusieurs jeunes gens partent avec une mystérieuse Aes Sedai et découvrent qu'un destin ancien les poursuit.",
+        "review": "Le départ classique d'une très grande fresque, idéal pour les amateurs de longues sagas."
+      },
+      "en": {
+        "title": "The Eye of the World",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Epic fantasy",
+          "quest",
+          "destiny"
+        ],
+        "summary": "After monsters attack their village, several young people flee with a mysterious Aes Sedai and learn that an ancient destiny is following them.",
+        "review": "A classic opening to an enormous saga, ideal for readers who want a long immersive journey."
+      }
+    }
+  },
+  {
+    "id": "gardens-of-moon",
+    "genre": "fantasy",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#4f5f47",
+      "#1f2820"
+    ],
+    "author": "Steven Erikson",
+    "editions": {
+      "fr": {
+        "title": "Les Jardins de la Lune",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy épique",
+          "empire",
+          "dieux"
+        ],
+        "summary": "L'Empire malazéen poursuit ses conquêtes tandis que soldats, mages, dieux et assassins s'affrontent autour d'une cité stratégique.",
+        "review": "Une fantasy exigeante et gigantesque qui plonge le lecteur dans un monde déjà en mouvement."
+      },
+      "en": {
+        "title": "Gardens of the Moon",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Epic fantasy",
+          "empire",
+          "gods"
+        ],
+        "summary": "The Malazan Empire continues its conquests as soldiers, mages, gods and assassins converge on a strategic city.",
+        "review": "Demanding, enormous fantasy that drops the reader into a world already in full motion."
+      }
+    }
+  },
+  {
+    "id": "last-unicorn",
+    "genre": "fantasy",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#70414f",
+      "#261a22"
+    ],
+    "author": "Peter S. Beagle",
+    "editions": {
+      "fr": {
+        "title": "La Dernière Licorne",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Conte",
+          "licorne",
+          "mélancolie"
+        ],
+        "summary": "Une licorne découvre qu'elle pourrait être la dernière de son espèce et quitte sa forêt pour chercher les autres.",
+        "review": "Un conte élégant et mélancolique, aussi adulte que merveilleux."
+      },
+      "en": {
+        "title": "The Last Unicorn",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fairy tale",
+          "unicorn",
+          "melancholy"
+        ],
+        "summary": "A unicorn learns she may be the last of her kind and leaves her forest to search for the others.",
+        "review": "An elegant, melancholy fairy tale that remains as adult as it is magical."
+      }
+    }
+  },
+  {
+    "id": "the-martian",
+    "genre": "scifi",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#466576",
+      "#17252e"
+    ],
+    "author": "Andy Weir",
+    "editions": {
+      "fr": {
+        "title": "Seul sur Mars",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "Mars",
+          "survie"
+        ],
+        "summary": "Abandonné par erreur sur Mars, Mark Watney doit utiliser la science, l'humour et toutes les ressources disponibles pour survivre jusqu'à un possible secours.",
+        "review": "De la hard SF accessible, drôle et entièrement tournée vers la résolution de problèmes."
+      },
+      "en": {
+        "title": "The Martian",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "Mars",
+          "survival"
+        ],
+        "summary": "Accidentally left behind on Mars, Mark Watney uses science, humour and every available resource to survive until rescue might be possible.",
+        "review": "Accessible hard science fiction driven by humour and problem solving."
+      }
+    }
+  },
+  {
+    "id": "androids-dream",
+    "genre": "scifi",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6b6e78",
+      "#252a31"
+    ],
+    "author": "Philip K. Dick",
+    "editions": {
+      "fr": {
+        "title": "Les androïdes rêvent-ils de moutons électriques ?",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "androïdes",
+          "identité"
+        ],
+        "summary": "Dans un monde ravagé, Rick Deckard traque des androïdes fugitifs tout en doutant de plus en plus de la frontière entre humain et artificiel.",
+        "review": "Une SF courte et vertigineuse sur l'empathie, l'identité et ce qui définit l'humain."
+      },
+      "en": {
+        "title": "Do Androids Dream of Electric Sheep?",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "androids",
+          "identity"
+        ],
+        "summary": "In a damaged world, Rick Deckard hunts fugitive androids while increasingly doubting the line between human and artificial life.",
+        "review": "A compact, unsettling exploration of empathy, identity and what makes someone human."
+      }
+    }
+  },
+  {
+    "id": "brave-new-world",
+    "genre": "scifi",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#355e66",
+      "#152429"
+    ],
+    "author": "Aldous Huxley",
+    "editions": {
+      "fr": {
+        "title": "Le Meilleur des mondes",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dystopie",
+          "société",
+          "conditionnement"
+        ],
+        "summary": "Une société stable a remplacé la famille, la liberté et le conflit par le conditionnement, la consommation et le plaisir obligatoire.",
+        "review": "Une dystopie majeure qui reste dérangeante précisément parce qu'elle ne repose pas seulement sur la peur."
+      },
+      "en": {
+        "title": "Brave New World",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dystopia",
+          "society",
+          "conditioning"
+        ],
+        "summary": "A stable society has replaced family, freedom and conflict with conditioning, consumption and compulsory pleasure.",
+        "review": "A major dystopia whose power comes from control through comfort rather than fear alone."
+      }
+    }
+  },
+  {
+    "id": "fahrenheit-451",
+    "genre": "scifi",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#466576",
+      "#17252e"
+    ],
+    "author": "Ray Bradbury",
+    "editions": {
+      "fr": {
+        "title": "Fahrenheit 451",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dystopie",
+          "livres",
+          "censure"
+        ],
+        "summary": "Guy Montag brûle les livres pour le compte d'une société qui les interdit jusqu'au jour où il commence à se demander ce qu'ils contiennent.",
+        "review": "Impossible de ne pas le mettre dans une bibliothèque virtuelle : c'est un roman sur ce qu'on perd quand les livres disparaissent."
+      },
+      "en": {
+        "title": "Fahrenheit 451",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dystopia",
+          "books",
+          "censorship"
+        ],
+        "summary": "Guy Montag burns books for a society that bans them until he begins wondering what those books actually contain.",
+        "review": "Essential in a virtual library: a novel about what is lost when books themselves disappear."
+      }
+    }
+  },
+  {
+    "id": "solaris",
+    "genre": "scifi",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6b6e78",
+      "#252a31"
+    ],
+    "author": "Stanisław Lem",
+    "editions": {
+      "fr": {
+        "title": "Solaris",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "contact",
+          "mémoire"
+        ],
+        "summary": "Des scientifiques en orbite autour de Solaris tentent de comprendre un océan intelligent qui répond à leurs recherches en matérialisant leurs souvenirs.",
+        "review": "Un premier contact étrange et philosophique où le véritable inconnu est peut-être l'esprit humain."
+      },
+      "en": {
+        "title": "Solaris",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "contact",
+          "memory"
+        ],
+        "summary": "Scientists orbiting Solaris try to understand an intelligent ocean that answers their experiments by materialising private memories.",
+        "review": "A philosophical first-contact novel where the true unknown may be the human mind."
+      }
+    }
+  },
+  {
+    "id": "forever-war",
+    "genre": "scifi",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#355e66",
+      "#152429"
+    ],
+    "author": "Joe Haldeman",
+    "editions": {
+      "fr": {
+        "title": "La Guerre éternelle",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "guerre",
+          "relativité"
+        ],
+        "summary": "Des soldats partent combattre une espèce extraterrestre tandis que la relativité transforme chaque retour sur Terre en saut vers une société méconnaissable.",
+        "review": "Une grande SF antimilitariste qui utilise la relativité comme une machine à produire de l'aliénation."
+      },
+      "en": {
+        "title": "The Forever War",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "war",
+          "relativity"
+        ],
+        "summary": "Soldiers fight an alien species while relativity turns each return to Earth into a jump toward an increasingly unfamiliar society.",
+        "review": "A classic anti-war novel that uses relativity as a machine for producing alienation."
+      }
+    }
+  },
+  {
+    "id": "rendezvous-rama",
+    "genre": "scifi",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#466576",
+      "#17252e"
+    ],
+    "author": "Arthur C. Clarke",
+    "editions": {
+      "fr": {
+        "title": "Rendez-vous avec Rama",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "exploration",
+          "mystère"
+        ],
+        "summary": "Un immense objet cylindrique traverse le système solaire et une équipe humaine dispose de quelques jours pour l'explorer avant son départ.",
+        "review": "De la SF d'exploration pure, fascinée par l'échelle, l'ingénierie et l'inconnu."
+      },
+      "en": {
+        "title": "Rendezvous with Rama",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "exploration",
+          "mystery"
+        ],
+        "summary": "A vast cylindrical object enters the solar system and a human crew has only days to explore it before it leaves.",
+        "review": "Pure exploration science fiction fascinated by scale, engineering and the unknown."
+      }
+    }
+  },
+  {
+    "id": "ancillary-justice",
+    "genre": "scifi",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6b6e78",
+      "#252a31"
+    ],
+    "author": "Ann Leckie",
+    "editions": {
+      "fr": {
+        "title": "La Justice de l'ancillaire",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Space opera",
+          "IA",
+          "empire"
+        ],
+        "summary": "Autrefois intelligence d'un immense vaisseau de guerre, Breq n'occupe plus qu'un seul corps et poursuit une vengeance contre le pouvoir qui l'a détruite.",
+        "review": "Un space opera brillant qui déplace la question de l'identité à l'échelle d'un empire."
+      },
+      "en": {
+        "title": "Ancillary Justice",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Space opera",
+          "AI",
+          "empire"
+        ],
+        "summary": "Once the intelligence of a vast warship, Breq now inhabits a single body and pursues revenge against the power that destroyed her.",
+        "review": "A brilliant space opera that pushes questions of identity to imperial scale."
+      }
+    }
+  },
+  {
+    "id": "memory-called-empire",
+    "genre": "scifi",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#355e66",
+      "#152429"
+    ],
+    "author": "Arkady Martine",
+    "editions": {
+      "fr": {
+        "title": "Un souvenir nommé empire",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science-fiction",
+          "diplomatie",
+          "empire"
+        ],
+        "summary": "Une ambassadrice arrive au cœur d'un empire fascinant pour découvrir pourquoi son prédécesseur est mort et préserver l'indépendance de sa station.",
+        "review": "Une SF politique élégante où la culture impériale est aussi dangereuse qu'attirante."
+      },
+      "en": {
+        "title": "A Memory Called Empire",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Science fiction",
+          "diplomacy",
+          "empire"
+        ],
+        "summary": "An ambassador enters the heart of a seductive empire to learn why her predecessor died and protect her station's independence.",
+        "review": "Elegant political science fiction where imperial culture is as seductive as it is dangerous."
+      }
+    }
+  },
+  {
+    "id": "murder-orient-express",
+    "genre": "polar",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#474f4f",
+      "#171a1a"
+    ],
+    "author": "Agatha Christie",
+    "editions": {
+      "fr": {
+        "title": "Le Crime de l'Orient-Express",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Mystère",
+          "Poirot",
+          "huis clos"
+        ],
+        "summary": "Un meurtre est commis dans un train immobilisé par la neige et Hercule Poirot doit comprendre lequel des passagers ment.",
+        "review": "Un mécanisme de déduction presque parfait et l'un des huis clos les plus célèbres du genre."
+      },
+      "en": {
+        "title": "Murder on the Orient Express",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Mystery",
+          "Poirot",
+          "locked room"
+        ],
+        "summary": "A murder is committed aboard a train trapped by snow, and Hercule Poirot must determine which passenger is lying.",
+        "review": "A near-perfect deduction puzzle and one of the genre's most famous closed settings."
+      }
+    }
+  },
+  {
+    "id": "maltese-falcon",
+    "genre": "polar",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#65504a",
+      "#22191a"
+    ],
+    "author": "Dashiell Hammett",
+    "editions": {
+      "fr": {
+        "title": "Le Faucon maltais",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Noir",
+          "détective",
+          "San Francisco"
+        ],
+        "summary": "Le détective Sam Spade se retrouve au centre d'une chasse à une statuette convoitée par plusieurs criminels prêts à tout.",
+        "review": "Un pilier du roman noir sec, rapide et moralement trouble."
+      },
+      "en": {
+        "title": "The Maltese Falcon",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Noir",
+          "detective",
+          "San Francisco"
+        ],
+        "summary": "Detective Sam Spade becomes trapped in a hunt for a coveted statuette pursued by several ruthless criminals.",
+        "review": "A foundational hard-boiled noir: dry, fast and morally slippery."
+      }
+    }
+  },
+  {
+    "id": "talented-mr-ripley",
+    "genre": "polar",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#3c4a43",
+      "#171c19"
+    ],
+    "author": "Patricia Highsmith",
+    "editions": {
+      "fr": {
+        "title": "Monsieur Ripley",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Psychologique",
+          "identité",
+          "crime"
+        ],
+        "summary": "Tom Ripley est envoyé en Europe pour convaincre un jeune héritier de rentrer chez lui, mais l'envie et l'imitation prennent rapidement une tournure criminelle.",
+        "review": "Un thriller d'identité froid et élégant qui fait de son criminel le centre magnétique du livre."
+      },
+      "en": {
+        "title": "The Talented Mr Ripley",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Psychological",
+          "identity",
+          "crime"
+        ],
+        "summary": "Tom Ripley is sent to Europe to persuade a young heir to come home, but envy and imitation quickly turn criminal.",
+        "review": "A cool, elegant identity thriller that makes its criminal the magnetic centre of the novel."
+      }
+    }
+  },
+  {
+    "id": "the-dry",
+    "genre": "polar",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#474f4f",
+      "#171a1a"
+    ],
+    "author": "Jane Harper",
+    "editions": {
+      "fr": {
+        "title": "Canicule",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Polar",
+          "Australie",
+          "sécheresse"
+        ],
+        "summary": "Un policier revient dans sa ville natale frappée par la sécheresse pour des funérailles et se retrouve à rouvrir un vieux traumatisme.",
+        "review": "Un polar atmosphérique où la chaleur et la sécheresse deviennent presque des personnages."
+      },
+      "en": {
+        "title": "The Dry",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Crime",
+          "Australia",
+          "drought"
+        ],
+        "summary": "A federal agent returns to his drought-stricken hometown for a funeral and is drawn back into an older trauma.",
+        "review": "Atmospheric crime fiction where heat and drought become part of the investigation."
+      }
+    }
+  },
+  {
+    "id": "the-poet",
+    "genre": "polar",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#65504a",
+      "#22191a"
+    ],
+    "author": "Michael Connelly",
+    "editions": {
+      "fr": {
+        "title": "Le Poète",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Thriller",
+          "journalisme",
+          "tueur en série"
+        ],
+        "summary": "Après la mort de son frère policier, un journaliste découvre une série de suicides suspects liés par des citations d'Edgar Allan Poe.",
+        "review": "Un thriller très efficace qui mêle enquête journalistique, FBI et jeu littéraire."
+      },
+      "en": {
+        "title": "The Poet",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Thriller",
+          "journalism",
+          "serial killer"
+        ],
+        "summary": "After his police-officer brother dies, a journalist uncovers a series of suspicious suicides linked by quotations from Edgar Allan Poe.",
+        "review": "A highly effective thriller mixing investigative journalism, the FBI and literary clues."
+      }
+    }
+  },
+  {
+    "id": "black-dahlia",
+    "genre": "polar",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#3c4a43",
+      "#171c19"
+    ],
+    "author": "James Ellroy",
+    "editions": {
+      "fr": {
+        "title": "Le Dahlia noir",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Noir",
+          "Los Angeles",
+          "obsession"
+        ],
+        "summary": "Deux policiers de Los Angeles sont aspirés par l'affaire du meurtre d'Elizabeth Short, jusqu'à laisser l'enquête contaminer leur propre vie.",
+        "review": "Un noir fiévreux et brutal où l'obsession compte autant que la résolution du crime."
+      },
+      "en": {
+        "title": "The Black Dahlia",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Noir",
+          "Los Angeles",
+          "obsession"
+        ],
+        "summary": "Two Los Angeles cops become consumed by the murder of Elizabeth Short until the case contaminates their own lives.",
+        "review": "Feverish, brutal noir where obsession matters as much as solving the crime."
+      }
+    }
+  },
+  {
+    "id": "name-of-rose",
+    "genre": "polar",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#474f4f",
+      "#171a1a"
+    ],
+    "author": "Umberto Eco",
+    "editions": {
+      "fr": {
+        "title": "Le Nom de la rose",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Mystère historique",
+          "abbaye",
+          "livres"
+        ],
+        "summary": "Dans une abbaye médiévale, une série de morts conduit Guillaume de Baskerville vers une bibliothèque labyrinthique et des conflits théologiques.",
+        "review": "Le polar idéal pour Libria : meurtre, érudition et bibliothèque interdite."
+      },
+      "en": {
+        "title": "The Name of the Rose",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Historical mystery",
+          "abbey",
+          "books"
+        ],
+        "summary": "In a medieval abbey, a series of deaths leads William of Baskerville toward a labyrinthine library and theological conflict.",
+        "review": "An ideal Libria mystery: murder, scholarship and a forbidden labyrinthine library."
+      }
+    }
+  },
+  {
+    "id": "thursday-murder-club",
+    "genre": "polar",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#65504a",
+      "#22191a"
+    ],
+    "author": "Richard Osman",
+    "editions": {
+      "fr": {
+        "title": "Le Murder Club du jeudi",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Cosy mystery",
+          "retraités",
+          "humour"
+        ],
+        "summary": "Quatre retraités passionnés d'affaires criminelles voient enfin une véritable enquête arriver jusqu'à leur paisible résidence.",
+        "review": "Un cosy crime chaleureux et drôle, parfait pour varier le ton de l'aile Polar."
+      },
+      "en": {
+        "title": "The Thursday Murder Club",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Cosy mystery",
+          "retirees",
+          "humour"
+        ],
+        "summary": "Four retirees who enjoy discussing cold cases finally find a real murder arriving at their quiet retirement village.",
+        "review": "Warm, witty cosy crime that gives the mystery wing a lighter register."
+      }
+    }
+  },
+  {
+    "id": "before-i-go-to-sleep",
+    "genre": "polar",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#3c4a43",
+      "#171c19"
+    ],
+    "author": "S. J. Watson",
+    "editions": {
+      "fr": {
+        "title": "Avant d'aller dormir",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Thriller psychologique",
+          "mémoire",
+          "secret"
+        ],
+        "summary": "Chaque matin, Christine oublie les années passées et doit reconstruire sa vie à partir de notes qu'elle cache à son mari.",
+        "review": "Un dispositif simple et très efficace qui transforme la mémoire en moteur de suspense."
+      },
+      "en": {
+        "title": "Before I Go to Sleep",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Psychological thriller",
+          "memory",
+          "secret"
+        ],
+        "summary": "Every morning Christine forgets the years behind her and must rebuild her life from notes she hides from her husband.",
+        "review": "A simple, effective premise that turns memory itself into the engine of suspense."
+      }
+    }
+  },
+  {
+    "id": "lion-witch-wardrobe",
+    "genre": "jeunesse",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#587c8f",
+      "#d2a45f"
+    ],
+    "author": "C. S. Lewis",
+    "editions": {
+      "fr": {
+        "title": "Le Lion, la Sorcière blanche et l'Armoire magique",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy jeunesse",
+          "Narnia",
+          "aventure"
+        ],
+        "summary": "Quatre enfants traversent une armoire et découvrent Narnia, pays plongé dans un hiver sans fin sous le règne d'une sorcière.",
+        "review": "Une porte littérale vers un autre monde : difficile de rêver meilleur symbole pour Libria."
+      },
+      "en": {
+        "title": "The Lion, the Witch and the Wardrobe",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Children's fantasy",
+          "Narnia",
+          "adventure"
+        ],
+        "summary": "Four children step through a wardrobe into Narnia, a land trapped in endless winter under a witch's rule.",
+        "review": "A literal doorway into another world: almost the perfect symbol for Libria."
+      }
+    }
+  },
+  {
+    "id": "graveyard-book",
+    "genre": "jeunesse",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6f5c91",
+      "#2d2d45"
+    ],
+    "author": "Neil Gaiman",
+    "editions": {
+      "fr": {
+        "title": "L'Étrange Vie de Nobody Owens",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Jeunesse",
+          "fantastique",
+          "cimetière"
+        ],
+        "summary": "Après le meurtre de sa famille, un bébé est élevé par les habitants surnaturels d'un cimetière et grandit entre morts et vivants.",
+        "review": "Une histoire sombre mais tendre, parfaite pour les jeunes lecteurs qui aiment frissonner."
+      },
+      "en": {
+        "title": "The Graveyard Book",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Young readers",
+          "fantasy",
+          "graveyard"
+        ],
+        "summary": "After his family is murdered, a baby is raised by the supernatural residents of a graveyard and grows up between the living and the dead.",
+        "review": "Dark but tender, ideal for younger readers who enjoy a little fear with their wonder."
+      }
+    }
+  },
+  {
+    "id": "neverending-story",
+    "genre": "jeunesse",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#5f7c5d",
+      "#d5b16d"
+    ],
+    "author": "Michael Ende",
+    "editions": {
+      "fr": {
+        "title": "L'Histoire sans fin",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Imaginaire",
+          "livre",
+          "quête"
+        ],
+        "summary": "Bastien lit un livre mystérieux sur le royaume de Fantasia et découvre peu à peu que sa propre lecture fait partie de l'histoire.",
+        "review": "Un grand roman sur le pouvoir de lire, d'imaginer et de participer aux histoires."
+      },
+      "en": {
+        "title": "The Neverending Story",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy",
+          "book",
+          "quest"
+        ],
+        "summary": "Bastian reads a mysterious book about the realm of Fantastica and slowly discovers that his own reading is part of the story.",
+        "review": "A major novel about the power of reading, imagination and becoming part of a story."
+      }
+    }
+  },
+  {
+    "id": "howls-moving-castle",
+    "genre": "jeunesse",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#587c8f",
+      "#d2a45f"
+    ],
+    "author": "Diana Wynne Jones",
+    "editions": {
+      "fr": {
+        "title": "Le Château de Hurle",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantasy jeunesse",
+          "sorcière",
+          "château"
+        ],
+        "summary": "Transformée en vieille femme par une sorcière, Sophie trouve refuge dans le château ambulant du magicien Hurle.",
+        "review": "Une fantasy pleine de charme, d'humour et de personnages merveilleusement imprévisibles."
+      },
+      "en": {
+        "title": "Howl's Moving Castle",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Young fantasy",
+          "witch",
+          "castle"
+        ],
+        "summary": "Cursed into an old woman's body, Sophie seeks refuge in the moving castle of the wizard Howl.",
+        "review": "Charming, witty fantasy with wonderfully unpredictable characters."
+      }
+    }
+  },
+  {
+    "id": "the-giver",
+    "genre": "jeunesse",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6f5c91",
+      "#2d2d45"
+    ],
+    "author": "Lois Lowry",
+    "editions": {
+      "fr": {
+        "title": "Le Passeur",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Dystopie jeunesse",
+          "mémoire",
+          "liberté"
+        ],
+        "summary": "Jonas grandit dans une société sans douleur ni choix jusqu'à ce qu'il reçoive la mémoire des émotions et du passé supprimés.",
+        "review": "Une dystopie jeunesse limpide qui pose de grandes questions sans jamais alourdir son récit."
+      },
+      "en": {
+        "title": "The Giver",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Young dystopia",
+          "memory",
+          "freedom"
+        ],
+        "summary": "Jonas grows up in a society without pain or choice until he inherits the memories of everything his community removed.",
+        "review": "Clear, accessible young dystopia that asks large questions without losing narrative force."
+      }
+    }
+  },
+  {
+    "id": "wind-in-willows",
+    "genre": "jeunesse",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#5f7c5d",
+      "#d5b16d"
+    ],
+    "author": "Kenneth Grahame",
+    "editions": {
+      "fr": {
+        "title": "Le Vent dans les saules",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique jeunesse",
+          "animaux",
+          "rivière"
+        ],
+        "summary": "Taupe, Rat, Blaireau et le fantasque Crapaud vivent aventures, disputes et réconciliations au bord de la rivière.",
+        "review": "Un classique doux et pastoral qui apporte un vrai coin de calme à la bibliothèque."
+      },
+      "en": {
+        "title": "The Wind in the Willows",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Children's classic",
+          "animals",
+          "river"
+        ],
+        "summary": "Mole, Rat, Badger and reckless Toad share adventures, quarrels and reconciliations along the riverbank.",
+        "review": "A gentle pastoral classic that brings a quieter mood to the young-readers wing."
+      }
+    }
+  },
+  {
+    "id": "bfg",
+    "genre": "jeunesse",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#587c8f",
+      "#d2a45f"
+    ],
+    "author": "Roald Dahl",
+    "editions": {
+      "fr": {
+        "title": "Le Bon Gros Géant",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Jeunesse",
+          "géants",
+          "humour"
+        ],
+        "summary": "Sophie est enlevée par un géant qui, contrairement aux autres, refuse de manger les humains et collectionne les rêves.",
+        "review": "Roald Dahl dans ce qu'il a de plus inventif : drôle, bizarre et délicieusement verbal."
+      },
+      "en": {
+        "title": "The BFG",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Young readers",
+          "giants",
+          "humour"
+        ],
+        "summary": "Sophie is taken by a giant who, unlike the others, refuses to eat humans and collects dreams instead.",
+        "review": "Roald Dahl at his most inventive: funny, strange and delightfully playful with language."
+      }
+    }
+  },
+  {
+    "id": "girl-drank-moon",
+    "genre": "jeunesse",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#6f5c91",
+      "#2d2d45"
+    ],
+    "author": "Kelly Barnhill",
+    "editions": {
+      "fr": {
+        "title": "La Fille qui avait bu la lune",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Conte",
+          "magie",
+          "enfance"
+        ],
+        "summary": "Une sorcière bienveillante nourrit accidentellement un bébé avec la lumière de la lune et lui transmet une magie immense.",
+        "review": "Un conte moderne tendre et lumineux, construit comme une légende qu'on se transmet."
+      },
+      "en": {
+        "title": "The Girl Who Drank the Moon",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fairy tale",
+          "magic",
+          "childhood"
+        ],
+        "summary": "A kind witch accidentally feeds a baby moonlight and gives her enormous magical power.",
+        "review": "A tender modern fairy tale that feels like a legend passed from one generation to another."
+      }
+    }
+  },
+  {
+    "id": "tale-despereaux",
+    "genre": "jeunesse",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#5f7c5d",
+      "#d5b16d"
+    ],
+    "author": "Kate DiCamillo",
+    "editions": {
+      "fr": {
+        "title": "La Légende de Despereaux",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Conte",
+          "souris",
+          "courage"
+        ],
+        "summary": "Une petite souris passionnée de musique et de récits chevaleresques décide de sauver une princesse malgré tout ce que son monde attend d'elle.",
+        "review": "Un récit délicat sur le courage, la lumière et la puissance des histoires."
+      },
+      "en": {
+        "title": "The Tale of Despereaux",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fairy tale",
+          "mouse",
+          "courage"
+        ],
+        "summary": "A tiny mouse who loves music and chivalric stories decides to rescue a princess despite everything his world expects of him.",
+        "review": "A delicate story about courage, light and the power of stories."
+      }
+    }
+  },
+  {
+    "id": "wuthering-heights",
+    "genre": "classics",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b5847",
+      "#2d2520"
+    ],
+    "author": "Emily Brontë",
+    "editions": {
+      "fr": {
+        "title": "Les Hauts de Hurlevent",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "gothique",
+          "passion"
+        ],
+        "summary": "L'amour destructeur entre Heathcliff et Catherine marque plusieurs générations dans une lande anglaise battue par le vent.",
+        "review": "Un classique sauvage et inconfortable, beaucoup plus sombre qu'une simple histoire d'amour."
+      },
+      "en": {
+        "title": "Wuthering Heights",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "gothic",
+          "passion"
+        ],
+        "summary": "The destructive bond between Heathcliff and Catherine scars generations on the windswept Yorkshire moors.",
+        "review": "A wild, uncomfortable classic far darker than a conventional love story."
+      }
+    }
+  },
+  {
+    "id": "madame-bovary",
+    "genre": "classics",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#58455d",
+      "#211c24"
+    ],
+    "author": "Gustave Flaubert",
+    "editions": {
+      "fr": {
+        "title": "Madame Bovary",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "province",
+          "désillusion"
+        ],
+        "summary": "Emma Bovary rêve d'une vie plus intense que celle que lui offrent son mariage, sa province et les conventions sociales.",
+        "review": "Un roman d'une précision implacable sur le désir, l'ennui et les illusions romanesques."
+      },
+      "en": {
+        "title": "Madame Bovary",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "provincial life",
+          "disillusion"
+        ],
+        "summary": "Emma Bovary longs for a life more intense than marriage, provincial routine and social convention can offer.",
+        "review": "A ruthlessly precise novel about desire, boredom and the illusions created by stories themselves."
+      }
+    }
+  },
+  {
+    "id": "crime-punishment",
+    "genre": "classics",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#49606a",
+      "#20292d"
+    ],
+    "author": "Fiodor Dostoïevski",
+    "editions": {
+      "fr": {
+        "title": "Crime et Châtiment",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "culpabilité",
+          "Saint-Pétersbourg"
+        ],
+        "summary": "Raskolnikov commet un meurtre qu'il croit pouvoir justifier intellectuellement, puis découvre que la culpabilité résiste aux théories.",
+        "review": "Un immense roman psychologique qui transforme une idée abstraite en fièvre morale."
+      },
+      "en": {
+        "title": "Crime and Punishment",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "guilt",
+          "St Petersburg"
+        ],
+        "summary": "Raskolnikov commits a murder he believes he can justify intellectually, then discovers that guilt resists theory.",
+        "review": "A towering psychological novel that turns an abstract theory into moral fever."
+      }
+    }
+  },
+  {
+    "id": "war-and-peace",
+    "genre": "classics",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b5847",
+      "#2d2520"
+    ],
+    "author": "Léon Tolstoï",
+    "editions": {
+      "fr": {
+        "title": "Guerre et Paix",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "Russie",
+          "guerre"
+        ],
+        "summary": "Plusieurs familles russes traversent les guerres napoléoniennes tandis que leurs histoires privées se mêlent aux bouleversements de l'Histoire.",
+        "review": "Un roman-monde où l'intime et l'Histoire deviennent impossibles à séparer."
+      },
+      "en": {
+        "title": "War and Peace",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "Russia",
+          "war"
+        ],
+        "summary": "Several Russian families live through the Napoleonic wars as private lives become entangled with history.",
+        "review": "A true world-novel in which private life and history become impossible to separate."
+      }
+    }
+  },
+  {
+    "id": "brothers-karamazov",
+    "genre": "classics",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#58455d",
+      "#211c24"
+    ],
+    "author": "Fiodor Dostoïevski",
+    "editions": {
+      "fr": {
+        "title": "Les Frères Karamazov",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "famille",
+          "foi"
+        ],
+        "summary": "Trois frères aux tempéraments opposés se retrouvent liés par la mort de leur père et par des questions de foi, de désir et de responsabilité.",
+        "review": "Une somme romanesque vertigineuse sur la liberté, la culpabilité et la foi."
+      },
+      "en": {
+        "title": "The Brothers Karamazov",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "family",
+          "faith"
+        ],
+        "summary": "Three very different brothers become bound by their father's death and by questions of faith, desire and responsibility.",
+        "review": "A dizzying novel of freedom, guilt, faith and family conflict."
+      }
+    }
+  },
+  {
+    "id": "dorian-gray",
+    "genre": "classics",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#49606a",
+      "#20292d"
+    ],
+    "author": "Oscar Wilde",
+    "editions": {
+      "fr": {
+        "title": "Le Portrait de Dorian Gray",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique",
+          "décadence",
+          "beauté"
+        ],
+        "summary": "Dorian conserve sa jeunesse tandis qu'un portrait caché porte à sa place les marques de ses choix et de sa corruption.",
+        "review": "Spirituel, gothique et cruel : Wilde transforme la beauté en piège moral."
+      },
+      "en": {
+        "title": "The Picture of Dorian Gray",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classic",
+          "decadence",
+          "beauty"
+        ],
+        "summary": "Dorian remains young while a hidden portrait bears the visible consequences of his choices and corruption.",
+        "review": "Witty, Gothic and cruel: Wilde turns beauty itself into a moral trap."
+      }
+    }
+  },
+  {
+    "id": "beloved",
+    "genre": "classics",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#6b5847",
+      "#2d2520"
+    ],
+    "author": "Toni Morrison",
+    "editions": {
+      "fr": {
+        "title": "Beloved",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Classique moderne",
+          "mémoire",
+          "esclavage"
+        ],
+        "summary": "Une ancienne esclave vit avec sa fille dans une maison hantée par un passé qui refuse de rester enfoui.",
+        "review": "Un roman puissant où histoire, mémoire et fantôme deviennent une seule matière."
+      },
+      "en": {
+        "title": "Beloved",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Modern classic",
+          "memory",
+          "slavery"
+        ],
+        "summary": "A formerly enslaved woman lives with her daughter in a house haunted by a past that refuses to remain buried.",
+        "review": "A powerful novel in which history, memory and haunting become one substance."
+      }
+    }
+  },
+  {
+    "id": "hundred-years-solitude",
+    "genre": "classics",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#58455d",
+      "#211c24"
+    ],
+    "author": "Gabriel García Márquez",
+    "editions": {
+      "fr": {
+        "title": "Cent ans de solitude",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Réalisme magique",
+          "famille",
+          "Macondo"
+        ],
+        "summary": "La famille Buendía fonde Macondo et traverse plusieurs générations où guerres, amours, répétitions et miracles semblent tourner en cercle.",
+        "review": "Une fresque où le quotidien et le merveilleux deviennent indissociables."
+      },
+      "en": {
+        "title": "One Hundred Years of Solitude",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Magical realism",
+          "family",
+          "Macondo"
+        ],
+        "summary": "The Buendía family founds Macondo and passes through generations of wars, loves, repetitions and miracles.",
+        "review": "A sweeping family saga where the everyday and the miraculous become inseparable."
+      }
+    }
+  },
+  {
+    "id": "master-margarita",
+    "genre": "classics",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#49606a",
+      "#20292d"
+    ],
+    "author": "Mikhaïl Boulgakov",
+    "editions": {
+      "fr": {
+        "title": "Le Maître et Marguerite",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Satire",
+          "Moscou",
+          "fantastique"
+        ],
+        "summary": "Le diable arrive à Moscou avec une suite extravagante tandis qu'une histoire d'amour et un roman interdit ouvrent d'autres dimensions du récit.",
+        "review": "Un classique explosif, drôle et impossible à ranger dans une seule catégorie."
+      },
+      "en": {
+        "title": "The Master and Margarita",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Satire",
+          "Moscow",
+          "fantasy"
+        ],
+        "summary": "The devil arrives in Moscow with an extravagant entourage while a love story and forbidden manuscript open other dimensions of the novel.",
+        "review": "Explosive, funny and impossible to confine to a single genre."
+      }
+    }
+  },
+  {
+    "id": "love-hypothesis",
+    "genre": "romance",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#b6787f",
+      "#4d2d36"
+    ],
+    "author": "Ali Hazelwood",
+    "editions": {
+      "fr": {
+        "title": "The Love Hypothesis",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "université",
+          "fake dating"
+        ],
+        "summary": "Une doctorante simule une relation avec un professeur réputé glacial et découvre que leur expérience sociale devient vite beaucoup moins théorique.",
+        "review": "Une romance universitaire très lisible, portée par un trope parfaitement assumé."
+      },
+      "en": {
+        "title": "The Love Hypothesis",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "academia",
+          "fake dating"
+        ],
+        "summary": "A PhD student fakes a relationship with a famously intimidating professor and finds their social experiment becoming far less theoretical.",
+        "review": "Highly readable academic romance that embraces its central trope with confidence."
+      }
+    }
+  },
+  {
+    "id": "book-lovers",
+    "genre": "romance",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#d19b7d",
+      "#5d4034"
+    ],
+    "author": "Emily Henry",
+    "editions": {
+      "fr": {
+        "title": "Book Lovers",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "livres",
+          "édition"
+        ],
+        "summary": "Une agente littéraire habituée aux histoires des autres retrouve un éditeur qu'elle déteste dans une petite ville où rien ne se passe comme prévu.",
+        "review": "Une romance idéale pour Libria puisqu'elle joue directement avec les clichés du monde du livre."
+      },
+      "en": {
+        "title": "Book Lovers",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "books",
+          "publishing"
+        ],
+        "summary": "A literary agent who knows every story trope runs into an editor she dislikes in a small town where nothing unfolds as expected.",
+        "review": "Perfect for Libria: a romance that knowingly plays with publishing and bookish conventions."
+      }
+    }
+  },
+  {
+    "id": "it-ends-with-us",
+    "genre": "romance",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#7c697f",
+      "#362d3a"
+    ],
+    "author": "Colleen Hoover",
+    "editions": {
+      "fr": {
+        "title": "Jamais plus",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "relation",
+          "choix"
+        ],
+        "summary": "Lily construit une nouvelle vie et une relation intense, mais doit bientôt confronter des comportements qu'elle ne peut plus excuser.",
+        "review": "Une romance populaire qui aborde aussi les mécanismes d'une relation abusive."
+      },
+      "en": {
+        "title": "It Ends with Us",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "relationship",
+          "choices"
+        ],
+        "summary": "Lily builds a new life and an intense relationship, but must confront behaviour she can no longer excuse.",
+        "review": "A popular romance that also addresses the dynamics of an abusive relationship."
+      }
+    }
+  },
+  {
+    "id": "hating-game",
+    "genre": "romance",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#b6787f",
+      "#4d2d36"
+    ],
+    "author": "Sally Thorne",
+    "editions": {
+      "fr": {
+        "title": "Meilleurs Ennemis",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "enemies to lovers",
+          "bureau"
+        ],
+        "summary": "Deux collègues rivaux se livrent une guerre quotidienne au bureau jusqu'à ce que leur compétition commence à changer de nature.",
+        "review": "Une comédie romantique nerveuse et efficace, construite autour du plaisir du duel verbal."
+      },
+      "en": {
+        "title": "The Hating Game",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "enemies to lovers",
+          "office"
+        ],
+        "summary": "Two rival coworkers wage a daily office war until their competition starts changing shape.",
+        "review": "A sharp, efficient romantic comedy built around verbal sparring."
+      }
+    }
+  },
+  {
+    "id": "one-day",
+    "genre": "romance",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#d19b7d",
+      "#5d4034"
+    ],
+    "author": "David Nicholls",
+    "editions": {
+      "fr": {
+        "title": "Un jour",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "temps",
+          "amitié"
+        ],
+        "summary": "Emma et Dexter sont retrouvés à la même date pendant vingt ans, à mesure que leur amitié, leurs ambitions et leur relation évoluent.",
+        "review": "Une construction simple qui transforme le temps lui-même en personnage de l'histoire d'amour."
+      },
+      "en": {
+        "title": "One Day",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "time",
+          "friendship"
+        ],
+        "summary": "Emma and Dexter are revisited on the same date across twenty years as friendship, ambition and love evolve.",
+        "review": "A simple structure that makes time itself part of the love story."
+      }
+    }
+  },
+  {
+    "id": "call-me-by-your-name",
+    "genre": "romance",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#7c697f",
+      "#362d3a"
+    ],
+    "author": "André Aciman",
+    "editions": {
+      "fr": {
+        "title": "Appelle-moi par ton nom",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance queer",
+          "Italie",
+          "été"
+        ],
+        "summary": "Durant un été en Italie, Elio se rapproche d'Oliver, invité de sa famille, dans une relation aussi intense que brève.",
+        "review": "Une histoire sensuelle et introspective sur le désir, le temps et la mémoire."
+      },
+      "en": {
+        "title": "Call Me by Your Name",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Queer romance",
+          "Italy",
+          "summer"
+        ],
+        "summary": "During a summer in Italy, Elio grows close to Oliver, a guest of his family, in a relationship as intense as it is brief.",
+        "review": "A sensual, introspective story about desire, time and memory."
+      }
+    }
+  },
+  {
+    "id": "rosie-project",
+    "genre": "romance",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#b6787f",
+      "#4d2d36"
+    ],
+    "author": "Graeme Simsion",
+    "editions": {
+      "fr": {
+        "title": "Le Théorème du homard",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "comédie",
+          "science"
+        ],
+        "summary": "Un professeur de génétique élabore un questionnaire pour trouver la partenaire idéale et rencontre Rosie, qui ne correspond à aucun de ses critères.",
+        "review": "Une comédie sentimentale légère fondée sur le contraste entre méthode et imprévu."
+      },
+      "en": {
+        "title": "The Rosie Project",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "comedy",
+          "science"
+        ],
+        "summary": "A genetics professor designs a questionnaire to find the perfect partner and meets Rosie, who matches none of his criteria.",
+        "review": "A light romantic comedy built on the collision between method and unpredictability."
+      }
+    }
+  },
+  {
+    "id": "outlander",
+    "genre": "romance",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#d19b7d",
+      "#5d4034"
+    ],
+    "author": "Diana Gabaldon",
+    "editions": {
+      "fr": {
+        "title": "Le Chardon et le Tartan",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance historique",
+          "Écosse",
+          "voyage temporel"
+        ],
+        "summary": "Une infirmière de 1945 est projetée dans l'Écosse du XVIIIe siècle où elle doit survivre à la politique des clans et à une nouvelle relation.",
+        "review": "Un mélange massif de romance, aventure historique et voyage temporel."
+      },
+      "en": {
+        "title": "Outlander",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Historical romance",
+          "Scotland",
+          "time travel"
+        ],
+        "summary": "A nurse from 1945 is thrown into eighteenth-century Scotland, where she must survive clan politics and a new relationship.",
+        "review": "A huge blend of romance, historical adventure and time travel."
+      }
+    }
+  },
+  {
+    "id": "bridges-madison-county",
+    "genre": "romance",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#7c697f",
+      "#362d3a"
+    ],
+    "author": "Robert James Waller",
+    "editions": {
+      "fr": {
+        "title": "Sur la route de Madison",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "choix",
+          "mémoire"
+        ],
+        "summary": "Une femme mariée rencontre un photographe de passage et vit avec lui quelques jours qui redéfinissent silencieusement toute sa vie.",
+        "review": "Une romance courte, adulte et mélancolique sur les vies qu'on choisit et celles qu'on laisse derrière."
+      },
+      "en": {
+        "title": "The Bridges of Madison County",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Romance",
+          "choice",
+          "memory"
+        ],
+        "summary": "A married woman meets a travelling photographer and shares a few days that quietly redefine the rest of her life.",
+        "review": "A brief, mature and melancholy romance about chosen lives and unlived alternatives."
+      }
+    }
+  },
+  {
+    "id": "carrie",
+    "genre": "horror",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#4b4944",
+      "#171615"
+    ],
+    "author": "Stephen King",
+    "editions": {
+      "fr": {
+        "title": "Carrie",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "télékinésie",
+          "adolescence"
+        ],
+        "summary": "Une adolescente humiliée par ses camarades découvre des pouvoirs télékinésiques qui rendent leur cruauté soudain beaucoup plus dangereuse.",
+        "review": "Le premier King reste une bombe courte sur l'humiliation, la violence collective et la revanche."
+      },
+      "en": {
+        "title": "Carrie",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "telekinesis",
+          "adolescence"
+        ],
+        "summary": "A bullied teenager discovers telekinetic powers that make the cruelty around her suddenly far more dangerous.",
+        "review": "King's debut remains a compact explosion of humiliation, group cruelty and revenge."
+      }
+    }
+  },
+  {
+    "id": "misery",
+    "genre": "horror",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#622d32",
+      "#211417"
+    ],
+    "author": "Stephen King",
+    "editions": {
+      "fr": {
+        "title": "Misery",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "écrivain",
+          "captivité"
+        ],
+        "summary": "Après un accident, un romancier est recueilli par sa plus grande admiratrice, qui refuse absolument la direction qu'il a donnée à sa série préférée.",
+        "review": "Un huis clos terrifiant sur la création, le contrôle et la relation entre auteur et lecteur."
+      },
+      "en": {
+        "title": "Misery",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "writer",
+          "captivity"
+        ],
+        "summary": "After an accident, a novelist is rescued by his biggest fan, who violently rejects what he has done with her favourite series.",
+        "review": "A terrifying chamber piece about creation, control and the author-reader relationship."
+      }
+    }
+  },
+  {
+    "id": "pet-sematary",
+    "genre": "horror",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#38443f",
+      "#151a18"
+    ],
+    "author": "Stephen King",
+    "editions": {
+      "fr": {
+        "title": "Simetierre",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "deuil",
+          "retour des morts"
+        ],
+        "summary": "Une famille découvre près de sa nouvelle maison un lieu capable de ramener les morts, mais jamais exactement comme ils étaient.",
+        "review": "L'un des King les plus sombres, parce que toute l'horreur naît d'un désir parfaitement humain."
+      },
+      "en": {
+        "title": "Pet Sematary",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "grief",
+          "resurrection"
+        ],
+        "summary": "A family discovers a place near their new home that can return the dead, though never exactly as they were.",
+        "review": "One of King's darkest novels because every horror grows from a completely human desire."
+      }
+    }
+  },
+  {
+    "id": "bird-box",
+    "genre": "horror",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#4b4944",
+      "#171615"
+    ],
+    "author": "Josh Malerman",
+    "editions": {
+      "fr": {
+        "title": "Bird Box",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "survie",
+          "invisible"
+        ],
+        "summary": "Une présence inconnue pousse ceux qui la voient au suicide et une mère doit traverser un monde dangereux les yeux bandés avec deux enfants.",
+        "review": "Un concept simple rendu très efficace par la privation du sens le plus rassurant : la vue."
+      },
+      "en": {
+        "title": "Bird Box",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "survival",
+          "unseen threat"
+        ],
+        "summary": "An unknown presence drives anyone who sees it to suicide, forcing a mother to cross a dangerous world blindfolded with two children.",
+        "review": "A simple premise made extremely effective by removing the sense we trust most: sight."
+      }
+    }
+  },
+  {
+    "id": "let-right-one-in",
+    "genre": "horror",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#622d32",
+      "#211417"
+    ],
+    "author": "John Ajvide Lindqvist",
+    "editions": {
+      "fr": {
+        "title": "Laisse-moi entrer",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "vampire",
+          "enfance"
+        ],
+        "summary": "Un garçon solitaire se lie d'amitié avec une nouvelle voisine qui ne sort que la nuit et semble liée à une série de morts.",
+        "review": "Un roman de vampire brutal mais étonnamment tendre sur deux enfances isolées."
+      },
+      "en": {
+        "title": "Let the Right One In",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "vampire",
+          "childhood"
+        ],
+        "summary": "A lonely boy befriends a new neighbour who only comes out at night and seems connected to a series of deaths.",
+        "review": "A brutal yet unexpectedly tender vampire novel about two isolated childhoods."
+      }
+    }
+  },
+  {
+    "id": "turn-of-screw",
+    "genre": "horror",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#38443f",
+      "#151a18"
+    ],
+    "author": "Henry James",
+    "editions": {
+      "fr": {
+        "title": "Le Tour d'écrou",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Fantastique",
+          "fantômes",
+          "ambiguïté"
+        ],
+        "summary": "Une gouvernante s'occupe de deux enfants dans une grande maison et croit bientôt y voir des présences liées à d'anciens domestiques.",
+        "review": "Un classique de l'ambiguïté : hantise réelle ou regard qui se dérègle, le texte refuse de trancher."
+      },
+      "en": {
+        "title": "The Turn of the Screw",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Gothic",
+          "ghosts",
+          "ambiguity"
+        ],
+        "summary": "A governess cares for two children in a country house and begins seeing figures connected to former servants.",
+        "review": "A classic of ambiguity: genuine haunting or a mind losing its grip, the text refuses to settle the question."
+      }
+    }
+  },
+  {
+    "id": "rosemarys-baby",
+    "genre": "horror",
+    "shelf": 0,
+    "size": "tall",
+    "colors": [
+      "#4b4944",
+      "#171615"
+    ],
+    "author": "Ira Levin",
+    "editions": {
+      "fr": {
+        "title": "Rosemary's Baby",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur",
+          "paranoïa",
+          "grossesse"
+        ],
+        "summary": "Un jeune couple emménage dans un immeuble prestigieux où les voisins se montrent étrangement intéressés par la grossesse de Rosemary.",
+        "review": "Une horreur lente et quotidienne qui transforme la politesse des voisins en menace permanente."
+      },
+      "en": {
+        "title": "Rosemary's Baby",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horror",
+          "paranoia",
+          "pregnancy"
+        ],
+        "summary": "A young couple moves into a prestigious apartment building where the neighbours become disturbingly interested in Rosemary's pregnancy.",
+        "review": "Slow domestic horror that turns neighbourly politeness into sustained menace."
+      }
+    }
+  },
+  {
+    "id": "woman-in-black",
+    "genre": "horror",
+    "shelf": 1,
+    "size": "short",
+    "colors": [
+      "#622d32",
+      "#211417"
+    ],
+    "author": "Susan Hill",
+    "editions": {
+      "fr": {
+        "title": "La Dame en noir",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Gothique",
+          "fantôme",
+          "manoir"
+        ],
+        "summary": "Un jeune notaire se rend dans une demeure isolée pour régler une succession et découvre une présence dont les apparitions annoncent le malheur.",
+        "review": "Une histoire de fantôme classique, précise et très efficace dans son économie."
+      },
+      "en": {
+        "title": "The Woman in Black",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Gothic",
+          "ghost",
+          "house"
+        ],
+        "summary": "A young solicitor visits an isolated house to settle an estate and encounters a presence whose appearances foretell tragedy.",
+        "review": "A precise, economical ghost story that uses classic Gothic machinery extremely well."
+      }
+    }
+  },
+  {
+    "id": "house-of-leaves",
+    "genre": "horror",
+    "shelf": 2,
+    "size": "wide",
+    "colors": [
+      "#38443f",
+      "#151a18"
+    ],
+    "author": "Mark Z. Danielewski",
+    "editions": {
+      "fr": {
+        "title": "La Maison des feuilles",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Horreur expérimentale",
+          "maison",
+          "labyrinthe"
+        ],
+        "summary": "Un manuscrit analyse un film impossible sur une maison dont l'intérieur est plus grand que l'extérieur et finit par contaminer celui qui le lit.",
+        "review": "Un livre-labyrinthe qui fait de sa propre mise en page une partie de l'horreur."
+      },
+      "en": {
+        "title": "House of Leaves",
+        "subtitle": "",
+        "publisher": "",
+        "tags": [
+          "Experimental horror",
+          "house",
+          "labyrinth"
+        ],
+        "summary": "A manuscript analyses an impossible film about a house larger inside than outside, gradually infecting the person reading it.",
+        "review": "A labyrinthine novel that turns typography and page design into part of the horror."
+      }
+    }
   }
 ];
 
