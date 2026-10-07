@@ -1,93 +1,15 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0a0908">
-  <meta name="description" content="Libria, une bibliothèque virtuelle immersive où l’on se promène de salle en salle pour découvrir des livres.">
-  <title>Libria — La bibliothèque vivante</title>
-  <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-  <div class="app" id="app">
-    <header class="site-header">
-      <button class="brand" id="homeButton" type="button" aria-label="Retour au hall">
-        <span class="brand__seal" aria-hidden="true">L</span>
-        <span class="brand__copy">
-          <strong>LIBRIA</strong>
-          <small id="brandTagline">La bibliothèque vivante</small>
-        </span>
-      </button>
-      <div class="location" aria-live="polite">
-        <span class="location__line" aria-hidden="true"></span>
-        <span id="locationLabel">Hall</span>
-      </div>
-      <div class="header-actions">
-        <button class="header-button" id="searchButton" type="button" aria-haspopup="dialog">
-          <span aria-hidden="true">⌕</span>
-          <span id="searchButtonLabel">Rechercher</span>
-        </button>
-        <a class="language-button" id="languageButton" href="../en/" hreflang="en">EN</a>
-      </div>
-    </header>
-
-    <main class="viewport" id="viewport" tabindex="0" aria-label="Bibliothèque virtuelle">
-      <div class="world" id="world"></div>
-      <div class="edge-shade edge-shade--left" aria-hidden="true"></div>
-      <div class="edge-shade edge-shade--right" aria-hidden="true"></div>
-      <div class="walk-hint" id="walkHint" aria-hidden="true">
-        <span>←</span><span id="walkHintText">Molette, glisser ou balayer pour se promener</span><span>→</span>
-      </div>
-    </main>
-
-    <nav class="compass" id="compass" aria-label="Navigation dans la bibliothèque">
-      <button class="compass__arrow" id="previousRoom" type="button" aria-label="Salle précédente">←</button>
-      <div class="compass__rooms" id="compassRooms"></div>
-      <button class="compass__arrow" id="nextRoom" type="button" aria-label="Salle suivante">→</button>
-    </nav>
-
-    <dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
-      <form method="dialog" class="dialog-close-form">
-        <button class="dialog-close" type="submit" aria-label="Close">×</button>
-      </form>
-      <p class="dialog-eyebrow" id="searchEyebrow">Catalogue Libria</p>
-      <h2 id="searchTitle">Trouver un livre</h2>
-      <label class="search-field">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="Titre, auteur, univers…">
-      </label>
-      <div class="search-results" id="searchResults"></div>
-    </dialog>
-
-    <dialog class="book-dialog" id="bookDialog" aria-labelledby="bookTitle">
-      <form method="dialog" class="dialog-close-form">
-        <button class="dialog-close" type="submit" aria-label="Close">×</button>
-      </form>
-      <div class="book-dialog__layout">
-        <div class="book-dialog__cover-wrap">
-          <div class="book-dialog__cover" id="bookCover"></div>
-        </div>
-        <div class="book-dialog__content">
-          <p class="dialog-eyebrow" id="bookKicker">Sélection Libria</p>
-          <h2 id="bookTitle"></h2>
-          <p class="book-dialog__subtitle" id="bookSubtitle"></p>
-          <p class="book-dialog__author" id="bookAuthor"></p>
-          <div class="book-tags" id="bookTags"></div>
-          <p class="book-dialog__summary" id="bookSummary"></p>
-          <blockquote class="book-review">
-            <span id="reviewLabel">Notre regard</span>
-            <p id="bookReview"></p>
-          </blockquote>
-          <div class="edition-meta">
-            <span id="editionLabel">Édition présentée</span>
-            <strong id="editionPublisher"></strong>
-            <small id="editionLanguage"></small>
-          </div>
-        </div>
-      </div>
-    </dialog>
-  </div>
-  <noscript>Cette bibliothèque interactive nécessite JavaScript.</noscript>
-  <script type="module" src="../app.js"></script>
-</body>
-</html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"><meta name="theme-color" content="#0b0a08"><meta name="description" content="Explorez Libria depuis une carte isométrique et entrez dans une aile littéraire."><title>Libria — Choisissez une aile</title><link rel="stylesheet" href="../iso.css"></head>
+<body><div class="iso-shell">
+<header class="iso-header"><a class="iso-brand" href="../"><span class="iso-brand__seal">L</span><span><strong>LIBRIA</strong><small>La bibliothèque vivante</small></span></a><a class="iso-lang" href="../en/" hreflang="en" aria-label="English version">EN</a></header>
+<main class="iso-main"><section class="iso-copy"><p class="iso-eyebrow">Plan de la bibliothèque</p><h1>Choisissez une aile. Entrez dans un univers.</h1><p class="iso-copy__intro">Libria devient un lieu dans lequel on s’oriente : chaque aile possède son ambiance, son catalogue et ses découvertes.</p><div class="iso-current" aria-live="polite"><span class="iso-current__index" id="wingIndex">01</span><div><h2 id="wingTitle"></h2><p id="wingDesc"></p><p id="wingCount"></p></div><a id="wingCta" href="#"></a></div></section>
+<section class="iso-map-wrap"><svg class="iso-map" viewBox="0 0 900 720" role="img" aria-label="Carte isométrique interactive de Libria">
+<polygon class="iso-floor" points="450,70 835,300 450,650 65,420"/><polygon class="iso-corridor" points="450,235 645,350 450,465 255,350"/><polygon class="iso-corridor" points="310,270 450,350 380,392 240,312"/><polygon class="iso-corridor" points="590,270 660,312 520,392 450,350"/><polygon class="iso-corridor" points="310,430 380,388 450,430 380,472"/><polygon class="iso-corridor" points="520,388 590,430 520,472 450,430"/>
+<g aria-hidden="true"><polygon class="iso-hall-left" points="450,302 510,337 510,405 450,370"/><polygon class="iso-hall-right" points="390,337 450,302 450,370 390,405"/><polygon class="iso-hall-top" points="450,270 510,305 450,340 390,305"/><ellipse class="iso-hall-ring" cx="450" cy="307" rx="86" ry="50"/></g>
+<a class="iso-wing iso-wing--fantasy" data-wing="fantasy"><title>Fantasy</title><polygon class="left" points="150,245 295,330 295,445 150,360"/><polygon class="right" points="295,330 390,275 390,390 295,445"/><polygon class="top" points="150,245 245,190 390,275 295,330"/><path class="roof-line" d="M190 257 L285 202 M230 281 L325 226"/><circle class="iso-pin" cx="270" cy="237" r="5"/></a>
+<a class="iso-wing iso-wing--scifi" data-wing="scifi"><title>Science-fiction</title><polygon class="left" points="510,275 605,330 605,445 510,390"/><polygon class="right" points="605,330 750,245 750,360 605,445"/><polygon class="top" points="510,275 655,190 750,245 605,330"/><path class="roof-line" d="M560 286 L705 202 M600 310 L745 226"/><circle class="iso-pin" cx="650" cy="237" r="5"/></a>
+<a class="iso-wing iso-wing--polar" data-wing="polar"><title>Polar</title><polygon class="left" points="150,455 295,540 295,625 150,540"/><polygon class="right" points="295,540 390,485 390,570 295,625"/><polygon class="top" points="150,455 245,400 390,485 295,540"/><path class="roof-line" d="M195 466 L290 411 M235 490 L330 435"/><circle class="iso-pin" cx="270" cy="447" r="5"/></a>
+<a class="iso-wing iso-wing--jeunesse" data-wing="jeunesse"><title>Jeunesse</title><polygon class="left" points="510,485 605,540 605,625 510,570"/><polygon class="right" points="605,540 750,455 750,540 605,625"/><polygon class="top" points="510,485 655,400 750,455 605,540"/><path class="roof-line" d="M560 496 L705 411 M600 520 L745 435"/><circle class="iso-pin" cx="650" cy="447" r="5"/></a>
+<text class="iso-label" x="168" y="178">Fantasy</text><text class="iso-label-small" x="168" y="194">Aile I</text><text class="iso-label" x="640" y="178">Science-fiction</text><text class="iso-label-small" x="640" y="194">Aile II</text><text class="iso-label" x="163" y="665">Polar</text><text class="iso-label-small" x="163" y="681">Aile III</text><text class="iso-label" x="632" y="665">Jeunesse</text><text class="iso-label-small" x="632" y="681">Aile IV</text>
+</svg><div class="iso-mobile-list"><a class="iso-mobile-card" data-mobile-wing="fantasy"><small>Aile 1</small><strong>Fantasy</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="scifi"><small>Aile 2</small><strong>Science-fiction</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="polar"><small>Aile 3</small><strong>Polar</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="jeunesse"><small>Aile 4</small><strong>Jeunesse</strong><span data-count></span></a></div></section></main></div><script type="module" src="../iso.js"></script></body></html>
