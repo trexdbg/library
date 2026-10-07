@@ -3231,6 +3231,62 @@ export const works = [
         "review": "A labyrinthine novel that turns typography and page design into part of the horror."
       }
     }
+  },
+  {
+    id:"uprooted", genre:"fantasy", shelf:0, size:"tall",
+    colors:["#4f6a4f","#2b1f21"], author:"Naomi Novik",
+    editions:{
+      fr:{title:"Déracinée",subtitle:"Roman",publisher:"J'ai Lu",coverIsbn:"9780804179058",tags:["Fantasy","folklore","forêt"],summary:"Agnieszka vit dans une vallée protégée par un puissant magicien surnommé le Dragon. Tous les dix ans, il choisit une jeune fille du village pour le servir, mais son choix surprend tout le monde.",review:"Une fantasy de conte sombre et organique, portée par une forêt presque vivante et une héroïne qui apprend une magie instinctive."},
+      en:{title:"Uprooted",subtitle:"A novel",publisher:"Del Rey",coverIsbn:"9780804179058",tags:["Fantasy","folklore","forest"],summary:"Agnieszka lives in a valley protected by a powerful wizard called the Dragon. Every ten years he chooses a village girl to serve him, but his latest choice surprises everyone.",review:"Dark, organic fairy-tale fantasy driven by a nearly living forest and an instinctive kind of magic."}
+    }
+  },
+  {
+    id:"leviathan-wakes", genre:"scifi", shelf:0, size:"tall",
+    colors:["#405c68","#17242a"], author:"James S. A. Corey",
+    editions:{
+      fr:{title:"L'Éveil du Léviathan",subtitle:"The Expanse — Tome 1",publisher:"Actes Sud",coverIsbn:"9780316129084",tags:["Space opera","système solaire","conspiration"],summary:"Après la destruction de son vaisseau, Jim Holden découvre une piste capable d'embraser tout le système solaire tandis que l'inspecteur Miller enquête sur une disparition liée au même mystère.",review:"Un space opera très lisible, spectaculaire sans sacrifier la politique, les tensions sociales et le sentiment d'échelle."},
+      en:{title:"Leviathan Wakes",subtitle:"The Expanse — Book 1",publisher:"Orbit",coverIsbn:"9780316129084",tags:["Space opera","solar system","conspiracy"],summary:"After his ship is destroyed, Jim Holden uncovers evidence that could ignite the solar system while detective Miller investigates a disappearance tied to the same mystery.",review:"Highly readable space opera that balances spectacle with politics, social tension and a strong sense of scale."}
+    }
+  },
+  {
+    id:"and-then-there-were-none", genre:"polar", shelf:0, size:"short",
+    colors:["#433d39","#171615"], author:"Agatha Christie",
+    editions:{
+      fr:{title:"Ils étaient dix",subtitle:"Roman policier",publisher:"Le Livre de Poche",coverIsbn:"9780062073488",tags:["Mystère","île","huis clos"],summary:"Dix personnes sans lien apparent sont invitées sur une île isolée. Leur hôte reste invisible et, bientôt, les invités commencent à mourir un par un.",review:"Un mécanisme criminel presque parfait : simple à comprendre, impossible à lâcher et remarquablement difficile à résoudre."},
+      en:{title:"And Then There Were None",subtitle:"A mystery",publisher:"William Morrow",coverIsbn:"9780062073488",tags:["Mystery","island","closed circle"],summary:"Ten apparently unrelated people are invited to an isolated island. Their host never appears, and soon the guests begin dying one by one.",review:"An almost perfect murder mechanism: simple to grasp, impossible to put down and extraordinarily difficult to solve."}
+    }
+  },
+  {
+    id:"wonder-rj-palacio", genre:"jeunesse", shelf:0, size:"short",
+    colors:["#4e83a8","#ece9df"], author:"R. J. Palacio",
+    editions:{
+      fr:{title:"Wonder",subtitle:"Roman jeunesse",publisher:"Pocket Jeunesse",coverIsbn:"9780375869020",tags:["École","différence","empathie"],summary:"Auggie, né avec une malformation faciale, entre pour la première fois dans une école ordinaire et doit apprendre à trouver sa place parmi les autres.",review:"Un roman jeunesse très accessible sur le regard des autres, l'empathie et la manière dont une communauté apprend à accueillir la différence."},
+      en:{title:"Wonder",subtitle:"A novel",publisher:"Knopf Books for Young Readers",coverIsbn:"9780375869020",tags:["School","difference","empathy"],summary:"Auggie, born with a facial difference, attends a mainstream school for the first time and must find his place among other students.",review:"An accessible young-readers novel about empathy, social perception and how a community learns to accept difference."}
+    }
+  },
+  {
+    id:"to-kill-a-mockingbird", genre:"classics", shelf:0, size:"tall",
+    colors:["#6c745c","#302b28"], author:"Harper Lee",
+    editions:{
+      fr:{title:"Ne tirez pas sur l'oiseau moqueur",subtitle:"Roman",publisher:"Le Livre de Poche",coverIsbn:"9780061120084",tags:["Classique","justice","enfance"],summary:"Scout Finch grandit dans l'Alabama des années 1930 tandis que son père avocat défend un homme noir accusé à tort dans une ville profondément marquée par le racisme.",review:"Un classique raconté à hauteur d'enfant qui confronte innocence, préjugés, courage moral et injustice institutionnelle."},
+      en:{title:"To Kill a Mockingbird",subtitle:"A novel",publisher:"Harper Perennial",coverIsbn:"9780061120084",tags:["Classic","justice","childhood"],summary:"Scout Finch grows up in 1930s Alabama while her lawyer father defends a Black man falsely accused in a town shaped by racism.",review:"A childhood perspective on prejudice, moral courage and institutional injustice that remains central to the American canon."}
+    }
+  },
+  {
+    id:"beach-read", genre:"romance", shelf:0, size:"wide",
+    colors:["#e7b063","#557e8d"], author:"Emily Henry",
+    editions:{
+      fr:{title:"Beach Read",subtitle:"Roman",publisher:"Hauteville",coverIsbn:"9781984806734",tags:["Romance","écrivains","été"],summary:"Deux écrivains voisins, en panne d'inspiration et opposés dans leur manière d'écrire, décident d'échanger leurs genres littéraires le temps d'un été.",review:"Une romance consciente des codes du genre, drôle et plus mélancolique qu'elle n'en a l'air, idéale pour une bibliothèque centrée sur les livres."},
+      en:{title:"Beach Read",subtitle:"A novel",publisher:"Berkley",coverIsbn:"9781984806734",tags:["Romance","writers","summer"],summary:"Two neighbouring writers with opposite approaches to fiction and matching creative blocks agree to swap genres for the summer.",review:"A self-aware romance about writers and genre expectations, funny on the surface and more melancholy underneath."}
+    }
+  },
+  {
+    id:"only-good-indians", genre:"horror", shelf:0, size:"tall",
+    colors:["#5b493c","#1b1918"], author:"Stephen Graham Jones",
+    editions:{
+      fr:{title:"Un bon Indien est un Indien mort",subtitle:"Roman",publisher:"Rivages",coverIsbn:"9781982136451",tags:["Horreur","vengeance","mémoire"],summary:"Quatre hommes liés par une chasse interdite commise des années plus tôt découvrent qu'une présence ancienne revient réclamer une dette qu'ils pensaient enterrée.",review:"Une horreur contemporaine violente et intelligente qui mêle culpabilité, identité, tradition et retour du passé."},
+      en:{title:"The Only Good Indians",subtitle:"A novel",publisher:"Saga Press",coverIsbn:"9781982136451",tags:["Horror","revenge","memory"],summary:"Four men connected by an illegal hunt years earlier discover that an old presence has returned to collect a debt they thought was buried.",review:"Contemporary horror blending guilt, identity, tradition and the violent return of the past."}
+    }
   }
 ];
 
