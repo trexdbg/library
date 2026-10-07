@@ -43,7 +43,17 @@ document.querySelectorAll("[data-library-count]").forEach(el=>{
   el.textContent=`${totalBooks} ${lang==="fr" ? "livres" : "books"}`;
 });
 
-function selectWing(genre){
+const focusOffsets={
+  fantasy:[70,18],
+  scifi:[-62,18],
+  polar:[72,-30],
+  jeunesse:[-64,-30],
+  classics:[0,54],
+  romance:[0,-58],
+  horror:[-96,0]
+};
+
+function selectWing(genre,{focus=true}={}){
   const meta=copy[genre];
   const n=countFor(genre);
   title.textContent=meta.title;
@@ -52,8 +62,21 @@ function selectWing(genre){
   cta.textContent=meta.cta+" →";
   cta.href=wingHref(genre);
   idx.textContent=String(["fantasy","scifi","polar","jeunesse","classics","romance","horror"].indexOf(genre)+1).padStart(2,"0");
-  wings.forEach(el=>el.classList.toggle("is-active",el.dataset.wing===genre));
-  if(mapWrap) mapWrap.dataset.activeWing=genre;
+  wings.forEach(el=>el.classList.toggle("is-active",focus&&el.dataset.wing===genre));
+  if(mapWrap){
+    if(focus){
+      const [x,y]=focusOffsets[genre]||[0,0];
+      mapWrap.dataset.activeWing=genre;
+      mapWrap.style.setProperty("--focus-x",x+"px");
+      mapWrap.style.setProperty("--focus-y",y+"px");
+      mapWrap.style.setProperty("--focus-scale","1.09");
+    }else{
+      delete mapWrap.dataset.activeWing;
+      mapWrap.style.setProperty("--focus-x","0px");
+      mapWrap.style.setProperty("--focus-y","0px");
+      mapWrap.style.setProperty("--focus-scale","1.045");
+    }
+  }
 }
 wings.forEach(el=>{
   const genre=el.dataset.wing;
@@ -63,9 +86,29 @@ wings.forEach(el=>{
   el.addEventListener("focus",()=>selectWing(genre));
   el.addEventListener("touchstart",()=>selectWing(genre),{passive:true});
 });
+
+if(mapWrap){
+  mapWrap.addEventListener("pointermove",event=>{
+    if(event.pointerType==="touch") return;
+    const r=mapWrap.getBoundingClientRect();
+    const nx=(event.clientX-r.left)/r.width-.5;
+    const ny=(event.clientY-r.top)/r.height-.5;
+    mapWrap.style.setProperty("--cam-x",(nx*-15).toFixed(1)+"px");
+    mapWrap.style.setProperty("--cam-y",(ny*-10).toFixed(1)+"px");
+  });
+  mapWrap.addEventListener("pointerleave",()=>{
+    mapWrap.style.setProperty("--cam-x","0px");
+    mapWrap.style.setProperty("--cam-y","0px");
+    delete mapWrap.dataset.activeWing;
+    mapWrap.style.setProperty("--focus-x","0px");
+    mapWrap.style.setProperty("--focus-y","0px");
+    mapWrap.style.setProperty("--focus-scale","1.045");
+    wings.forEach(el=>el.classList.remove("is-active"));
+  });
+}
 document.querySelectorAll("[data-mobile-wing]").forEach(el=>{
   const genre=el.dataset.mobileWing;
   el.href=wingHref(genre);
   el.querySelector("[data-count]").textContent=`${countFor(genre)} ${lang==="fr"?"livres":"books"}`;
 });
-selectWing("fantasy");
+selectWing("fantasy",{focus:false});
