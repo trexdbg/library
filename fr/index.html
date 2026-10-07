@@ -27,6 +27,22 @@
     <radialGradient id="hallGlow">
       <stop offset="0" stop-color="#f4cc8d" stop-opacity=".58"/><stop offset="1" stop-color="#f4cc8d" stop-opacity="0"/>
     </radialGradient>
+
+    <linearGradient id="galleryStone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#40372d"/><stop offset=".55" stop-color="#2b241d"/><stop offset="1" stop-color="#17130f"/>
+    </linearGradient>
+    <linearGradient id="runnerGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8e6337"/><stop offset=".5" stop-color="#5c3e27"/><stop offset="1" stop-color="#362419"/>
+    </linearGradient>
+    <radialGradient id="lampPool">
+      <stop offset="0" stop-color="#f1c77d" stop-opacity=".28"/><stop offset="1" stop-color="#f1c77d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="parquet" width="14" height="8" patternUnits="userSpaceOnUse" patternTransform="skewY(30)">
+      <rect width="14" height="8" fill="#4a3120"/><path d="M0 0H14M7 0V8" stroke="#7c5332" stroke-opacity=".38" stroke-width=".7"/>
+    </pattern>
+    <filter id="softWingShadow" x="-35%" y="-35%" width="170%" height="190%">
+      <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#000" flood-opacity=".48"/>
+    </filter>
   </defs>
 
   <g class="map-ornament" aria-hidden="true">
@@ -39,6 +55,29 @@
   <polygon class="library-plinth" points="450,92 810,302 450,632 90,422"/>
   <polygon class="library-plinth-side" points="90,422 450,632 450,654 90,444"/>
   <polygon class="library-plinth-side library-plinth-side--right" points="450,632 810,302 810,324 450,654"/>
+
+  <g class="library-circulation" aria-hidden="true">
+    <polygon class="gallery gallery--classics" points="423,193 477,193 492,247 450,272 408,247"/>
+    <polygon class="gallery gallery--fantasy" points="276,267 306,249 363,282 376,317 340,338 311,320"/>
+    <polygon class="gallery gallery--scifi" points="624,267 594,249 537,282 524,317 560,338 589,320"/>
+    <polygon class="gallery gallery--polar" points="282,385 315,366 365,395 382,431 340,455 309,438"/>
+    <polygon class="gallery gallery--youth" points="618,385 585,366 535,395 518,431 560,455 591,438"/>
+    <polygon class="gallery gallery--romance" points="420,448 480,448 493,487 450,512 407,487"/>
+    <polygon class="gallery gallery--horror" points="557,310 590,291 757,327 757,365 590,336 558,354"/>
+    <path class="gallery-runner" d="M450 205L450 272M298 272L348 302M602 272L552 302M310 397L354 422M590 397L546 422M450 451L450 502M580 320L745 347"/>
+    <path class="gallery-rail" d="M410 246L450 270L490 246M291 260L365 303M609 260L535 303M298 378L371 420M602 378L529 420M413 477L450 499L487 477M578 304L751 341"/>
+    <g class="gallery-lamps">
+      <circle cx="450" cy="232" r="18"/><circle cx="326" cy="291" r="16"/><circle cx="574" cy="291" r="16"/>
+      <circle cx="333" cy="408" r="16"/><circle cx="567" cy="408" r="16"/><circle cx="450" cy="478" r="18"/>
+      <circle cx="650" cy="334" r="17"/>
+    </g>
+    <g class="gallery-thresholds">
+      <path d="M414 249L450 270L486 249"/><path d="M327 323L341 331L362 319"/>
+      <path d="M538 319L559 331L573 323"/><path d="M325 438L340 447L360 436"/>
+      <path d="M540 436L560 447L575 438"/><path d="M419 486L450 504L481 486"/>
+      <path d="M741 337L756 346L756 361"/>
+    </g>
+  </g>
 
   <g class="hall-group" aria-hidden="true">
     <polygon class="hall-floor" points="450,270 560,334 450,398 340,334"/>
@@ -63,6 +102,15 @@
       <rect x="486" y="293" width="9" height="44"/><rect x="500" y="301" width="10" height="42"/>
     </g>
     <circle class="hall-light" cx="450" cy="286" r="92"/>
+
+    <g class="hall-balustrade">
+      <path d="M372 344L450 389L528 344"/>
+      <path d="M381 350V361M397 359V370M413 368V379M429 377V388M471 377V388M487 368V379M503 359V370M519 350V361"/>
+    </g>
+    <g class="hall-book-island">
+      <polygon points="421,326 450,309 479,326 450,343"/>
+      <path d="M429 324L450 312L471 324M435 329L450 320L465 329"/>
+    </g>
     <text class="room-sign room-sign--hall" x="450" y="425">Hall</text>
   </g>
 
@@ -95,6 +143,14 @@
     <path class="gothic-window" d="M307 164V213H342V164Q324 140 307 164Z"/>
     <path class="gothic-window-line" d="M324 149V213M307 180H342"/>
     <rect class="wall-map" x="348" y="201" width="43" height="29" transform="skewY(30)"/>
+
+    <g class="wing-detail wing-detail--fantasy">
+      <path class="fireplace" d="M153 242V215H190V242M160 242V225Q171 212 183 225V242"/>
+      <path class="fire-glow" d="M167 238Q171 225 176 237Q181 226 184 239"/>
+      <polygon class="armchair" points="315,283 330,274 344,282 329,291"/>
+      <polygon class="book-stack" points="292,292 307,283 318,289 303,298"/>
+      <polygon class="book-stack book-stack--2" points="295,287 308,279 319,285 306,293"/>
+    </g>
     <text class="room-sign" x="210" y="153">Fantasy</text>
     <text class="room-sign-small" x="211" y="169">Aile I</text>
   </a>
@@ -124,6 +180,12 @@
     <g class="instrument">
       <path d="M747 266l-31 18M730 258l16 28M715 284h34"/><circle cx="732" cy="270" r="4"/>
     </g>
+
+    <g class="wing-detail wing-detail--scifi">
+      <polygon class="console" points="686,282 724,260 750,275 711,298"/>
+      <path class="console-lines" d="M699 282L714 273M715 289L731 280M700 276L726 291"/>
+      <g class="star-chart"><circle cx="532" cy="221" r="2"/><circle cx="548" cy="211" r="1.8"/><circle cx="563" cy="224" r="1.6"/><circle cx="577" cy="207" r="1.8"/><path d="M532 221L548 211L563 224L577 207"/></g>
+    </g>
     <text class="room-sign" x="663" y="153">Science-fiction</text>
     <text class="room-sign-small" x="664" y="169">Aile II</text>
   </a>
@@ -148,6 +210,12 @@
     <polygon class="paper" points="246,460 268,448 282,456 260,469"/><polygon class="paper" points="279,476 296,466 309,473 291,484"/>
     <path class="ladder" d="M260 370L236 462M270 376L246 468M254 393L265 399M250 411L261 417M245 429L256 435"/>
     <circle class="globe globe--dark" cx="157" cy="482" r="11"/>
+
+    <g class="wing-detail wing-detail--polar">
+      <polygon class="evidence-board" points="313,389 371,422 371,453 313,420"/>
+      <path class="evidence-lines" d="M322 397L354 432M347 408L325 417M361 421L338 428"/>
+      <g class="file-cabinet"><polygon points="135,475 158,462 176,472 153,486"/><path d="M143 474L160 464M149 479L166 469"/></g>
+    </g>
     <text class="room-sign" x="169" y="571">Polar</text>
     <text class="room-sign-small" x="170" y="587">Aile III</text>
   </a>
@@ -172,6 +240,13 @@
     <g class="reading-nook"><polygon points="685,469 734,441 754,452 705,481"/><circle cx="700" cy="458" r="8"/><circle cx="718" cy="451" r="7"/></g>
     <g class="tree"><rect x="649" y="392" width="7" height="46"/><circle cx="645" cy="389" r="13"/><circle cx="660" cy="382" r="12"/><circle cx="671" cy="396" r="11"/></g>
     <g class="plant"><circle cx="495" cy="483" r="8"/><circle cx="503" cy="477" r="7"/><rect x="498" y="488" width="6" height="11"/></g>
+
+    <g class="wing-detail wing-detail--youth">
+      <circle class="floor-cushion" cx="553" cy="488" r="10"/><circle class="floor-cushion floor-cushion--2" cx="674" cy="500" r="9"/>
+      <polygon class="book-stack youth-stack" points="697,486 713,477 726,484 710,493"/>
+      <polygon class="book-stack youth-stack youth-stack--2" points="701,481 716,472 728,479 713,487"/>
+      <path class="wall-stars" d="M580 413l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z"/>
+    </g>
     <text class="room-sign" x="676" y="571">Jeunesse</text>
     <text class="room-sign-small" x="677" y="587">Aile IV</text>
   </a>
@@ -187,6 +262,11 @@
     </g>
     <g class="annex-columns"><rect x="438" y="96" width="6" height="58"/><rect x="456" y="96" width="6" height="58"/></g>
     <polygon class="annex-table" points="418,142 450,124 482,142 450,160"/>
+
+    <g class="wing-detail wing-detail--classics">
+      <circle class="marble-bust" cx="450" cy="127" r="7"/><path class="marble-bust-base" d="M440 139H460L457 129H443Z"/>
+      <path class="classics-rail" d="M378 158L450 198L522 158"/>
+    </g>
     <text class="room-sign annex-sign" x="450" y="101">Classiques</text>
     <text class="room-sign-small annex-sign-small" x="450" y="114">Aile V</text>
   </a>
@@ -201,6 +281,12 @@
     <polygon class="romance-sofa romance-sofa--right" points="449,555 477,539 503,554 474,571"/>
     <circle class="romance-lamp" cx="505" cy="536" r="5"/><path class="romance-lamp-stand" d="M505 541V569"/>
     <g class="annex-shelves annex-shelves--romance"><rect x="382" y="554" width="9" height="38"/><rect x="509" y="554" width="9" height="38"/></g>
+
+    <g class="wing-detail wing-detail--romance">
+      <ellipse class="side-table" cx="450" cy="579" rx="10" ry="5"/><path class="side-table-leg" d="M450 581V595"/>
+      <g class="romance-plant"><circle cx="385" cy="568" r="7"/><circle cx="392" cy="562" r="6"/><circle cx="394" cy="572" r="6"/><path d="M390 572V589"/></g>
+      <g class="romance-plant romance-plant--right"><circle cx="514" cy="568" r="7"/><circle cx="507" cy="562" r="6"/><circle cx="505" cy="572" r="6"/><path d="M510 572V589"/></g>
+    </g>
     <text class="room-sign annex-sign" x="450" y="627">Romance</text>
     <text class="room-sign-small annex-sign-small" x="450" y="640">Aile VI</text>
   </a>
@@ -213,7 +299,12 @@
     <path class="horror-arch" d="M771 370V342Q780 326 790 342V381"/>
     <g class="horror-candles"><circle cx="829" cy="356" r="3"/><circle cx="842" cy="349" r="3"/><path d="M829 359V377M842 352V370"/></g>
     <g class="annex-shelves annex-shelves--horror"><rect x="820" y="369" width="8" height="36"/><rect x="835" y="361" width="8" height="36"/><rect x="850" y="352" width="8" height="36"/></g>
+
+    <g class="wing-detail wing-detail--horror">
+      <ellipse class="horror-rune" cx="805" cy="375" rx="29" ry="15"/><path class="horror-rune-lines" d="M782 375H828M805 360V390M789 365L821 385M821 365L789 385"/>
+      <path class="horror-chain" d="M856 335V355M850 355H862M853 359L850 368M859 359L862 368"/>
+    </g>
     <text class="room-sign annex-sign" x="810" y="315">Horreur</text>
     <text class="room-sign-small annex-sign-small" x="810" y="327">Aile VII</text>
   </a>
-</svg><div class="iso-mobile-list"><a class="iso-mobile-card" data-mobile-wing="fantasy"><small>Aile 1</small><strong>Fantasy</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="scifi"><small>Aile 2</small><strong>Science-fiction</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="polar"><small>Aile 3</small><strong>Polar</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="jeunesse"><small>Aile 4</small><strong>Jeunesse</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="classics"><small>Aile 5</small><strong>Classiques</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="romance"><small>Aile 6</small><strong>Romance</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="horror"><small>Aile 7</small><strong>Horreur</strong><span data-count></span></a></div></section></main></div><script type="module" src="../iso.js"></script><footer class="site-seo-footer"><a href="https://trexdbg.github.io/library/fr/livres/">Tous les livres</a><a href="https://trexdbg.github.io/library/fr/a-propos/">À propos & méthode</a><a href="https://trexdbg.github.io/library/fr/affiliation/">Affiliation & transparence</a></footer></body></html>
+</svg><div class="iso-map-hud" aria-hidden="true"><div class="iso-compass"><span>N</span><i></i></div><div class="iso-map-hud__copy"><strong data-library-count></strong><small>7 ailes · survolez une salle pour l’explorer</small></div></div><div class="iso-mobile-list"><a class="iso-mobile-card" data-mobile-wing="fantasy"><small>Aile 1</small><strong>Fantasy</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="scifi"><small>Aile 2</small><strong>Science-fiction</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="polar"><small>Aile 3</small><strong>Polar</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="jeunesse"><small>Aile 4</small><strong>Jeunesse</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="classics"><small>Aile 5</small><strong>Classiques</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="romance"><small>Aile 6</small><strong>Romance</strong><span data-count></span></a><a class="iso-mobile-card" data-mobile-wing="horror"><small>Aile 7</small><strong>Horreur</strong><span data-count></span></a></div></section></main></div><script type="module" src="../iso.js"></script><footer class="site-seo-footer"><a href="https://trexdbg.github.io/library/fr/livres/">Tous les livres</a><a href="https://trexdbg.github.io/library/fr/a-propos/">À propos & méthode</a><a href="https://trexdbg.github.io/library/fr/affiliation/">Affiliation & transparence</a></footer></body></html>
