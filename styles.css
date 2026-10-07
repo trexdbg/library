@@ -512,7 +512,7 @@ input:focus-visible {
 
 .hall-plaque span {
   display: block;
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: .25em;
 }
 
@@ -575,10 +575,10 @@ input:focus-visible {
 }
 
 .collection {
-  right: clamp(28px, 7vw, 108px);
-  bottom: 13%;
-  width: min(56vw, 760px);
-  min-height: 230px;
+  right: clamp(24px, 4vw, 72px);
+  bottom: 11%;
+  width: min(63vw, 940px);
+  min-height: 286px;
   transform: translateX(calc(var(--room-offset) * -1.6%));
 }
 
@@ -604,19 +604,25 @@ input:focus-visible {
 .display-books {
   position: relative;
   z-index: 3;
-  min-height: 178px;
+  min-height: 226px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: clamp(14px, 1.65vw, 27px);
-  padding: 0 18px;
+  gap: clamp(15px, 1.45vw, 24px);
+  padding: 0 10px 3px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
 }
 
+.display-books::-webkit-scrollbar { display: none; }
+
 .display-book {
-  width: clamp(94px, 8vw, 128px);
+  flex: 0 0 auto;
+  width: clamp(112px, 8.2vw, 148px);
   display: grid;
-  grid-template-rows: auto 38px;
-  gap: 9px;
+  grid-template-rows: auto 42px;
+  gap: 10px;
   padding: 0;
   border: 0;
   background: none;
@@ -625,15 +631,17 @@ input:focus-visible {
   transition: transform .24s cubic-bezier(.2,.8,.2,1), filter .2s ease;
 }
 
-.display-book.size-short { width: clamp(84px, 7.2vw, 116px); }
-.display-book.size-wide { width: clamp(102px, 8.7vw, 138px); }
+.display-book.size-short { width: clamp(106px, 7.8vw, 140px); }
+.display-book.size-wide { width: clamp(118px, 8.7vw, 156px); }
 
 .display-book__cover {
   position: relative;
-  display: block;
+  display: grid;
+  place-items: center;
   width: 100%;
-  aspect-ratio: .67;
+  aspect-ratio: .665;
   overflow: hidden;
+  background: #14120f;
   border-radius: 2px 5px 5px 2px;
   box-shadow:
     0 18px 28px rgba(0,0,0,.5),
@@ -655,8 +663,9 @@ input:focus-visible {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  filter: saturate(.82) contrast(1.03);
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.92) contrast(1.015);
 }
 
 .display-book__caption {
@@ -675,7 +684,7 @@ input:focus-visible {
 
 .display-book__caption strong {
   color: rgba(245,238,228,.9);
-  font: 600 12px/1.2 "Cormorant Garamond", serif;
+  font: 600 14px/1.2 "Cormorant Garamond", serif;
 }
 
 .display-book__caption small {
@@ -705,7 +714,7 @@ input:focus-visible {
   z-index: 1;
   left: 0;
   right: 0;
-  bottom: 43px;
+  bottom: 47px;
   height: 16px;
   border-top: 1px solid rgba(var(--accent-rgb), .6);
   background:
@@ -1175,12 +1184,12 @@ dialog::backdrop {
   }
 
   .collection {
-    width: 58vw;
-    right: 4vw;
+    width: 62vw;
+    right: 3vw;
   }
 
   .display-book {
-    width: clamp(82px, 9vw, 108px);
+    width: clamp(106px, 9vw, 132px);
   }
 
   .hall-plaque { opacity: .62; }
@@ -1323,15 +1332,15 @@ dialog::backdrop {
   .display-book,
   .display-book.size-short,
   .display-book.size-wide {
-    flex: 0 0 78px;
-    width: 78px;
-    grid-template-rows: auto 30px;
+    flex: 0 0 96px;
+    width: 96px;
+    grid-template-rows: auto 34px;
   }
 
-  .display-book__caption strong { font-size: 10px; }
-  .display-book__caption small { font-size: 6px; }
+  .display-book__caption strong { font-size: 12px; }
+  .display-book__caption small { font-size: 7px; }
 
-  .collection__shelf { bottom: 35px; }
+  .collection__shelf { bottom: 39px; }
 
   .walk-hint {
     display: none;
