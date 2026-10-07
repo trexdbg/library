@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  --bg:#0b0a08;
+  --bg:#090907;
   --paper:#f3ecdf;
-  --muted:#9d9488;
-  --brass:#c4a06a;
+  --muted:#9c9284;
+  --brass:#c7a168;
   --line:rgba(255,255,255,.10);
-  --panel:rgba(17,15,12,.82);
 }
 *{box-sizing:border-box}
 html{background:var(--bg)}
@@ -14,335 +13,259 @@ body{
   margin:0;min-height:100dvh;color:var(--paper);
   font-family:Inter,system-ui,sans-serif;
   background:
-    radial-gradient(circle at 50% 34%,rgba(175,133,77,.12),transparent 32%),
-    linear-gradient(180deg,#0d0c0a,#080706 78%);
+    radial-gradient(circle at 70% 40%,rgba(174,129,69,.10),transparent 34%),
+    radial-gradient(circle at 30% 80%,rgba(77,89,75,.06),transparent 28%),
+    #090907;
 }
 a{color:inherit}
-button,input{font:inherit}
-button:focus-visible,a:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+a:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
 .iso-shell{min-height:100dvh;overflow:hidden;position:relative}
 .iso-shell::before{
-  content:"";position:fixed;inset:0;pointer-events:none;opacity:.11;
-  background-image:
-    radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 1.2px),
-    radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 1.2px);
-  background-size:180px 180px,240px 240px;
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;
+  background-image:radial-gradient(circle,#fff 0 1px,transparent 1.2px);
+  background-size:170px 170px;
+  mask-image:linear-gradient(to bottom,#000,transparent 82%);
 }
 .iso-header{
-  height:76px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 clamp(18px,4vw,58px);position:relative;z-index:10;
+  height:74px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(18px,4vw,62px);position:relative;z-index:30;
+  border-bottom:1px solid rgba(255,255,255,.045);
+  background:linear-gradient(180deg,rgba(9,9,7,.96),rgba(9,9,7,.72),transparent);
 }
 .iso-brand{text-decoration:none;display:flex;align-items:center;gap:12px}
 .iso-brand__seal{
-  width:38px;height:38px;border:1px solid rgba(196,160,106,.65);border-radius:50%;
-  display:grid;place-items:center;font:600 20px/1 "Cormorant Garamond",serif;color:#e4c79a
+  width:38px;height:38px;border:1px solid rgba(199,161,104,.68);border-radius:50%;
+  display:grid;place-items:center;font:600 20px/1 "Cormorant Garamond",serif;color:#e6ca9f;
+  box-shadow:0 0 30px rgba(199,161,104,.08)
 }
 .iso-brand strong{display:block;font:600 20px/1 "Cormorant Garamond",serif;letter-spacing:.18em}
 .iso-brand small{display:block;margin-top:5px;color:#8e857a;font-size:9px}
 .iso-lang{
   width:40px;height:40px;border:1px solid var(--line);border-radius:50%;
-  display:grid;place-items:center;text-decoration:none;font-size:10px;background:rgba(255,255,255,.025)
+  display:grid;place-items:center;text-decoration:none;font-size:9px;background:rgba(255,255,255,.02)
 }
+
 .iso-main{
-  width:min(1500px,100%);margin:0 auto;
-  min-height:calc(100dvh - 76px);
-  display:grid;grid-template-columns:minmax(300px,.72fr) minmax(600px,1.3fr);
-  align-items:center;gap:clamp(20px,4vw,80px);padding:24px clamp(22px,5vw,84px) 54px;
+  position:relative;width:100%;min-height:calc(100dvh - 74px);
+  padding:8px clamp(12px,2.4vw,34px) 26px;
 }
-.iso-copy{position:relative;z-index:4;max-width:560px}
-.iso-eyebrow{margin:0 0 14px;color:var(--brass);font-size:9px;letter-spacing:.22em;text-transform:uppercase}
+.iso-copy{
+  position:absolute;z-index:20;left:clamp(22px,4vw,64px);top:clamp(26px,5vh,58px);
+  width:min(350px,30vw);padding:20px 0 22px;
+  pointer-events:none;
+}
+.iso-copy::before{
+  content:"";position:absolute;inset:-20px -28px -26px -28px;z-index:-1;
+  background:linear-gradient(90deg,rgba(9,9,7,.94) 0%,rgba(9,9,7,.72) 70%,transparent 100%);
+  filter:blur(8px);
+}
+.iso-eyebrow{margin:0 0 12px;color:var(--brass);font-size:8px;letter-spacing:.23em;text-transform:uppercase}
 .iso-copy h1{
-  margin:0;font:600 clamp(52px,6vw,92px)/.88 "Cormorant Garamond",serif;
-  letter-spacing:-.035em;text-wrap:balance
+  margin:0;font:600 clamp(52px,5.2vw,82px)/.86 "Cormorant Garamond",serif;
+  letter-spacing:-.04em;text-wrap:balance
 }
 .iso-copy__intro{
-  max-width:500px;margin:24px 0 0;color:#b5ab9d;
-  font:500 clamp(18px,1.5vw,22px)/1.5 "Cormorant Garamond",serif
+  max-width:320px;margin:19px 0 0;color:#b5aa9c;
+  font:500 clamp(17px,1.25vw,20px)/1.45 "Cormorant Garamond",serif
 }
 .iso-current{
-  margin-top:36px;padding:18px 0;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:auto 1fr;gap:14px 18px;align-items:start
+  pointer-events:auto;margin-top:26px;padding-top:17px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:12px 15px;align-items:start
 }
 .iso-current__index{
-  width:34px;height:34px;border:1px solid rgba(196,160,106,.35);border-radius:50%;
-  display:grid;place-items:center;color:var(--brass);font-size:9px
+  width:32px;height:32px;border:1px solid rgba(199,161,104,.36);border-radius:50%;
+  display:grid;place-items:center;color:var(--brass);font-size:8px
 }
-.iso-current h2{margin:0;font:600 26px/1 "Cormorant Garamond",serif}
-.iso-current p{margin:8px 0 0;color:#8f877e;font-size:11px;line-height:1.55}
+.iso-current h2{margin:0;font:600 24px/1 "Cormorant Garamond",serif}
+.iso-current p{margin:6px 0 0;color:#847c72;font-size:9px;line-height:1.5}
 .iso-current a{
-  grid-column:2;justify-self:start;margin-top:3px;text-decoration:none;color:#dbc29b;
-  font-size:10px;letter-spacing:.04em
+  grid-column:2;justify-self:start;margin-top:2px;text-decoration:none;color:#dfc292;
+  font-size:9px;letter-spacing:.04em
 }
-.iso-map-wrap{position:relative;min-width:0;filter:drop-shadow(0 45px 45px rgba(0,0,0,.45))}
-.iso-map{display:block;width:100%;max-height:78dvh;overflow:visible}
-.iso-floor{fill:#17130f;stroke:rgba(209,177,130,.16);stroke-width:1}
-.iso-corridor{fill:#251e17;stroke:rgba(201,162,105,.18);stroke-width:1}
-.iso-hall-top{fill:#3a2d20}
-.iso-hall-left{fill:#1f1812}
-.iso-hall-right{fill:#2a2017}
-.iso-hall-ring{fill:none;stroke:rgba(220,184,127,.36);stroke-width:2}
+
+.iso-map-wrap{
+  position:relative;z-index:1;width:100%;height:calc(100dvh - 110px);min-height:620px;
+  display:grid;place-items:center;padding-left:clamp(140px,16vw,240px);
+  overflow:visible;
+}
+.iso-map{
+  display:block;width:min(1180px,calc(100vw - 110px));height:100%;max-height:860px;
+  overflow:visible;filter:drop-shadow(0 48px 42px rgba(0,0,0,.50))
+}
+.v21-backdrop{pointer-events:none}
+.v21-aura{fill:rgba(190,145,82,.055);filter:url(#v21Soft)}
+.v21-grid{fill:none;stroke:rgba(200,164,108,.055);stroke-width:1;stroke-dasharray:3 10}
+.v21-base-shadow{fill:rgba(0,0,0,.52);transform:translateY(18px)}
+.v21-base{fill:url(#v21Base);stroke:rgba(226,191,137,.22);stroke-width:1.3}
+.v21-base-side{fill:#070605;stroke:rgba(255,255,255,.025);stroke-width:1}
+.v21-base-side--right{fill:#0d0b09}
+.v21-corridors{filter:drop-shadow(0 7px 7px rgba(0,0,0,.36));pointer-events:none}
+.v21-corridor{fill:#302820;stroke:rgba(206,169,112,.20);stroke-width:1}
+.v21-corridor-line{fill:none;stroke:#8f673d;stroke-width:12;stroke-linecap:round;opacity:.30}
+.v21-floor-lamps circle{fill:url(#v21Lamp)}
+.v21-room-shadow polygon{fill:rgba(0,0,0,.35);transform:translateY(8px)}
+
 .iso-wing{
-  transform-box:fill-box;transform-origin:center;transition:transform .24s ease,filter .24s ease;
-  cursor:pointer;outline:none
+  cursor:pointer;outline:none;transform-box:fill-box;transform-origin:center;
+  transition:transform .28s cubic-bezier(.2,.75,.2,1),filter .28s ease;
+  filter:drop-shadow(0 9px 9px rgba(0,0,0,.38))
 }
-.iso-wing:hover,.iso-wing:focus{transform:translateY(-10px);filter:brightness(1.16)}
-.iso-wing .top{stroke:rgba(255,255,255,.17);stroke-width:1}
-.iso-wing .left{filter:brightness(.58)}
-.iso-wing .right{filter:brightness(.76)}
-.iso-wing .roof-line{stroke:rgba(255,255,255,.16);stroke-width:1;fill:none}
-.iso-wing .window{fill:rgba(245,217,167,.4)}
-.iso-wing--fantasy{--wing:#7b5a37}
-.iso-wing--scifi{--wing:#4b6670}
-.iso-wing--polar{--wing:#4b5650}
-.iso-wing--jeunesse{--wing:#947052}
-.iso-wing .top,.iso-wing .left,.iso-wing .right{fill:var(--wing)}
-.iso-label{pointer-events:none;font:600 14px Inter,sans-serif;fill:#eee5d7;letter-spacing:.08em}
-.iso-label-small{pointer-events:none;font:500 8px Inter,sans-serif;fill:#9f9588;letter-spacing:.16em;text-transform:uppercase}
-.iso-pin{fill:#d2ad76;opacity:.78}
+.iso-wing:hover,.iso-wing:focus,.iso-wing.is-active{
+  transform:translateY(-9px);
+  filter:brightness(1.1) saturate(1.06) drop-shadow(0 18px 15px rgba(0,0,0,.48))
+}
+.iso-wing.is-active .v21-room-floor{
+  stroke:rgba(244,207,150,.86);stroke-width:2
+}
+.v21-room-floor,.v21-room-wall{
+  stroke:rgba(255,255,255,.12);stroke-width:1.1
+}
+.v21-fantasy-floor{fill:url(#v21Wood)}
+.v21-fantasy-wall-left{fill:#3b291d}.v21-fantasy-wall-right{fill:#261a13}
+.v21-scifi-floor{fill:url(#v21Blue)}
+.v21-scifi-wall-left{fill:#243b46}.v21-scifi-wall-right{fill:#182833}
+.v21-polar-floor{fill:url(#v21Noir)}
+.v21-polar-wall-left{fill:#25221e}.v21-polar-wall-right{fill:#171513}
+.v21-youth-floor{fill:url(#v21Honey)}
+.v21-youth-wall-left{fill:#60462f}.v21-youth-wall-right{fill:#3c2b20}
+.v21-classics-floor{fill:url(#v21Stone)}
+.v21-classics-wall-left{fill:#40372d}.v21-classics-wall-right{fill:#2a241e}
+.v21-romance-floor{fill:url(#v21Rose)}
+.v21-romance-wall-left{fill:#593841}.v21-romance-wall-right{fill:#352128}
+.v21-horror-floor{fill:url(#v21Horror)}
+.v21-horror-wall-left{fill:#23191d}.v21-horror-wall-right{fill:#100c0e}
+
+.room-sign{
+  pointer-events:none;text-anchor:middle;font:600 15px "Cormorant Garamond",serif;
+  fill:#f7ead8;letter-spacing:.045em;paint-order:stroke;stroke:#090806;stroke-width:4px
+}
+.room-sign-small{
+  pointer-events:none;text-anchor:middle;font:500 6.5px Inter,sans-serif;
+  fill:#c0ae96;letter-spacing:.18em;text-transform:uppercase;
+  paint-order:stroke;stroke:#090806;stroke-width:3px
+}
+.room-sign--hall{font-size:13px;fill:#efd3a5}
+.annex-sign{font-size:12px}.annex-sign-small{font-size:6px}
+
+.v21-classic-pediment{fill:#756854;stroke:#d0b890;stroke-width:1}
+.v21-columns rect{fill:#c0aa88;stroke:#e1ceb0;stroke-width:.8}
+.v21-classic-shelves rect{fill:#39271c;stroke:#876141;stroke-width:1}
+.v21-bust,.v21-bust-base{fill:#d5c7b1;stroke:#f0e3cf;stroke-width:.7}
+
+.v21-gothic-window,.v21-youth-window{fill:#d8bd84;stroke:#f0ddb2;stroke-width:1.2}
+.v21-gothic-grid,.v21-youth-grid{fill:none;stroke:#8f663f;stroke-width:1}
+.v21-tall-shelves rect{fill:#3a2418;stroke:#9a653d;stroke-width:1.2}
+.v21-tall-shelves path{fill:none;stroke:#aa7446;stroke-width:1}
+.v21-rug{stroke-width:1.5}.v21-rug--fantasy{fill:#773d30;stroke:#c99c63}.v21-rug--polar{fill:#4a3127;stroke:#8c6d50}
+.v21-table{fill:#754c2d;stroke:#ca9255;stroke-width:1}.v21-table--polar{fill:#403024}
+.v21-lamp{fill:#efb55e;stroke:#ffe0a5;stroke-width:1}
+.v21-ladder{fill:none;stroke:#c38b52;stroke-width:2}
+.v21-fireplace{fill:#2b1d15;stroke:#a87548;stroke-width:1.4}
+.v21-flame{fill:none;stroke:#f3a650;stroke-width:2.3;filter:drop-shadow(0 0 4px #d77e31)}
+
+.v21-observatory{fill:url(#v21Glass);stroke:#9fc6d6;stroke-width:1.4}
+.v21-observatory-grid{fill:none;stroke:rgba(230,246,251,.56);stroke-width:1}
+.v21-planet{stroke:#e1f0f6;stroke-width:1}.v21-planet--one{fill:#789ab1}.v21-planet--two{fill:#c9bb91}
+.v21-scifi-shelves polygon{fill:#223741;stroke:#6f92a3;stroke-width:1}
+.v21-scifi-shelves path{fill:none;stroke:#7497a7;stroke-width:1}
+.v21-orrery ellipse,.v21-orrery path{fill:none;stroke:#d9aa62;stroke-width:1.5}
+.v21-orrery circle{fill:#c7924a;stroke:#f1d29b;stroke-width:1}
+.v21-console{fill:#20343d;stroke:#8baebb;stroke-width:1}
+.v21-console-lines{fill:none;stroke:#afd2dc;stroke-width:.8}
+
+.v21-noir-shelves rect{fill:#1c1713;stroke:#65503c;stroke-width:1}
+.v21-noir-shelves path{fill:none;stroke:#67513e;stroke-width:1}
+.v21-bankers-lamp{fill:#477960;stroke:#b7d7b9;stroke-width:1}
+.v21-evidence{fill:#574431;stroke:#967655;stroke-width:1}
+.v21-evidence-lines{fill:none;stroke:#d2bea0;stroke-width:.8}
+
+.v21-youth-shelves polygon{fill:#68472f;stroke:#b9824d;stroke-width:1}
+.v21-youth-shelves path{fill:none;stroke:#bc8550;stroke-width:1}
+.v21-youth-rug{fill:#496d84;stroke:#e1b36d;stroke-width:2}
+.v21-youth-rug-inner{fill:none;stroke:#edc37a;stroke-width:1.5;stroke-dasharray:4 5}
+.v21-youth-table{fill:#9a6742;stroke:#dca873;stroke-width:1}
+.v21-cushion{fill:#c47b53;stroke:#e5a977;stroke-width:1}.v21-cushion--blue{fill:#557d9a}.v21-cushion--green{fill:#657c52}
+.v21-tree rect{fill:#60442d}.v21-tree circle{fill:#5c7548}
+
+.v21-romance-rug{fill:#7f4755;stroke:#d69ca2;stroke-width:2}
+.v21-sofa{fill:#a76c75;stroke:#dca1a8;stroke-width:1}.v21-sofa--right{fill:#8e5965}
+.v21-side-table{fill:#6c472f;stroke:#c58a5e;stroke-width:1}.v21-side-table-leg{stroke:#9c6d48;stroke-width:2}
+.v21-romance-plants circle{fill:#687b56}.v21-romance-plants path{stroke:#8a6848;stroke-width:2}
+
+.v21-crypt-arch{fill:none;stroke:#755057;stroke-width:8}
+.v21-horror-shelves rect{fill:#211619;stroke:#604248;stroke-width:1}
+.v21-rune{fill:none;stroke:#87535d;stroke-width:1.4}.v21-rune-lines{fill:none;stroke:#9c606c;stroke-width:.8}
+.v21-candles circle{fill:#f0c779}.v21-candles path{stroke:#d7a75f;stroke-width:1.4}
+
+.v21-rotunda{pointer-events:none;filter:drop-shadow(0 13px 12px rgba(0,0,0,.44))}
+.v21-hall-floor{fill:url(#v21Stone);stroke:#d5b78a;stroke-width:1.5}
+.v21-hall-wall{stroke:rgba(229,199,151,.18);stroke-width:1}
+.v21-hall-wall--left{fill:#312820}.v21-hall-wall--right{fill:#241d18}
+.v21-hall-rug{fill:#74382d;stroke:#cc9b5f;stroke-width:2}
+.v21-hall-rug-inner{fill:none;stroke:#2c566a;stroke-width:5;stroke-dasharray:4 4}
+.v21-hall-arch{fill:none;stroke:#967c5f;stroke-width:9;stroke-linejoin:round}
+.v21-hall-arch--right{stroke:#826b52}
+.v21-dome{fill:url(#v21Glass);stroke:#d2ad72;stroke-width:2}
+.v21-dome-grid{fill:none;stroke:rgba(236,205,156,.58);stroke-width:1}
+.v21-hall-table{fill:#2b1b13}.v21-hall-table-top{fill:#7a5230;stroke:#c99a61;stroke-width:1}
+.v21-hall-globe{fill:#bb8644;stroke:#f1cf94;stroke-width:1}.v21-globe-grid{fill:none;stroke:#efd08e;stroke-width:1}
+.v21-hall-shelves rect{fill:#3c271a;stroke:#906039;stroke-width:1}
+.v21-hall-light circle{fill:url(#v21Lamp)}
+
+.v21-entry{pointer-events:none}
+.v21-entry-step{fill:#302820;stroke:#b28a55;stroke-width:1}.v21-entry-step--2{fill:#1d1814}
+.v21-entry-arrow{fill:none;stroke:#cba56d;stroke-width:1.4;opacity:.8}
+
+.iso-map-hud{
+  position:absolute;right:clamp(18px,3vw,42px);bottom:clamp(18px,3vh,34px);z-index:10;
+  display:flex;align-items:center;gap:12px;padding:10px 13px 10px 10px;
+  border:1px solid rgba(214,179,125,.14);border-radius:14px;background:rgba(9,8,7,.72);
+  backdrop-filter:blur(12px);box-shadow:0 12px 32px rgba(0,0,0,.24)
+}
+.iso-compass{width:34px;height:34px;position:relative;display:grid;place-items:start center;border:1px solid rgba(199,161,105,.25);border-radius:50%;padding-top:4px}
+.iso-compass span{font:600 7px/1 Inter,sans-serif;color:#d4b37d;letter-spacing:.12em}
+.iso-compass i{position:absolute;left:50%;top:13px;width:1px;height:14px;background:#b99058;transform:translateX(-50%)}
+.iso-compass i::before{content:"";position:absolute;left:-3px;top:-1px;border-left:3.5px solid transparent;border-right:3.5px solid transparent;border-bottom:6px solid #d1ad73}
+.iso-map-hud__copy strong{display:block;font:600 14px/1 "Cormorant Garamond",serif;color:#e8d8c1}
+.iso-map-hud__copy small{display:block;margin-top:4px;color:#81786e;font-size:7px}
+
 .iso-mobile-list{display:none}
-@media(max-width:980px){
-  .iso-main{grid-template-columns:1fr;padding-top:10px}
-  .iso-copy{max-width:760px}
-  .iso-map-wrap{margin-top:-30px}
-  .iso-map{max-height:58dvh}
+.site-seo-footer{
+  position:relative;z-index:6;padding:20px 18px 28px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.06);background:#090907
+}
+.site-seo-footer a{color:#756e65;text-decoration:none;font-size:8px}
+
+@media(max-width:1180px){
+  .iso-copy{width:300px}
+  .iso-map-wrap{padding-left:150px}
+  .iso-map{width:min(1050px,calc(100vw - 40px))}
+}
+@media(max-width:960px){
+  .iso-main{display:grid;grid-template-rows:auto auto;padding-top:8px}
+  .iso-copy{position:relative;left:auto;top:auto;width:min(720px,100%);padding:18px 16px 0;z-index:12}
+  .iso-copy::before{display:none}
+  .iso-copy h1{font-size:60px}
+  .iso-copy__intro{max-width:560px}
+  .iso-current{max-width:520px}
+  .iso-map-wrap{height:auto;min-height:570px;padding-left:0;margin-top:-20px}
+  .iso-map{width:100%;height:auto;max-height:680px}
 }
 @media(max-width:680px){
   .iso-header{height:66px;padding-inline:16px}
-  .iso-main{display:block;padding:20px 18px 42px}
+  .iso-main{display:block;padding:12px 16px 36px;min-height:auto}
+  .iso-copy{padding:12px 0 4px}
   .iso-copy h1{font-size:48px}
   .iso-copy__intro{font-size:17px}
   .iso-current{display:none}
-  .iso-map-wrap{margin:18px -14px 0}
-  .iso-map{max-height:none}
-  .iso-mobile-list{
-    display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px
-  }
+  .iso-map-wrap{display:none}
+  .iso-mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
   .iso-mobile-card{
-    min-height:112px;padding:16px;border:1px solid var(--line);border-radius:14px;
-    text-decoration:none;background:rgba(255,255,255,.025)
+    min-height:118px;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;
+    background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012))
   }
   .iso-mobile-card small{display:block;color:#8e857a;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
-  .iso-mobile-card strong{display:block;margin-top:8px;font:600 21px/1 "Cormorant Garamond",serif}
-  .iso-mobile-card span{display:block;margin-top:8px;color:#b99b70;font-size:9px}
+  .iso-mobile-card strong{display:block;margin-top:9px;font:600 22px/1 "Cormorant Garamond",serif}
+  .iso-mobile-card span{display:block;margin-top:9px;color:#b99b70;font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
-
-/* V9 — architectural isometric library */
-.iso-map-wrap{filter:drop-shadow(0 36px 34px rgba(0,0,0,.48))}
-.iso-map--library{overflow:visible}
-.map-ornament{fill:none;stroke:rgba(197,160,106,.08);stroke-width:1;stroke-dasharray:3 7;pointer-events:none}
-.library-shadow{fill:rgba(0,0,0,.42);transform:translateY(18px)}
-.library-plinth{fill:#17130f;stroke:rgba(214,181,129,.18);stroke-width:1.3}
-.library-plinth-side{fill:#0b0908;stroke:rgba(255,255,255,.025)}
-.library-plinth-side--right{fill:#100d0a}
-.hall-group{pointer-events:none}
-.hall-floor{fill:url(#stoneTop);stroke:rgba(224,194,149,.35);stroke-width:1.3}
-.hall-wall{stroke:rgba(224,194,149,.2);stroke-width:1}
-.hall-wall--left{fill:#30271e}.hall-wall--right{fill:#261e18}
-.hall-rug{fill:#7a3d30;stroke:#c39358;stroke-width:2}
-.hall-rug--inner{fill:none;stroke:#243f4d;stroke-width:5;stroke-dasharray:4 3}
-.hall-arch{fill:none;stroke:#8d765b;stroke-width:8;stroke-linejoin:round}
-.hall-arch--right{stroke:#7b664f}
-.hall-dome{fill:url(#glassGlow);stroke:#cfaa70;stroke-width:2}
-.hall-dome-line{fill:none;stroke:rgba(231,199,148,.55);stroke-width:1}
-.hall-table{fill:#2a1a12}.hall-table-top{fill:#76502f;stroke:#c49a63;stroke-width:1}
-.hall-globe{fill:#b98442;stroke:#f1ce91;stroke-width:1}
-.hall-globe-ring{fill:none;stroke:#e7c37f;stroke-width:1}
-.hall-chairs ellipse{fill:#583622;stroke:#aa7446;stroke-width:1}
-.hall-shelves rect{fill:#3b2518;stroke:#8e6038;stroke-width:1}
-.hall-light{fill:url(#hallGlow)}
-.iso-wing{transform-box:fill-box;transform-origin:center;transition:transform .28s cubic-bezier(.2,.8,.2,1),filter .28s ease}
-.iso-wing:hover,.iso-wing:focus{transform:translateY(-8px);filter:brightness(1.1) saturate(1.04)}
-.iso-wing:hover .wing-floor,.iso-wing:focus .wing-floor{stroke:rgba(236,202,148,.72)}
-.wing-floor,.wing-wall,.wing-front-edge{stroke:rgba(255,255,255,.11);stroke-width:1}
-.fantasy-floor{fill:url(#woodTop)}.fantasy-wall{fill:#352419}.fantasy-wall-side{fill:#241912}
-.scifi-floor{fill:url(#blueTop)}.scifi-wall{fill:#22333d}.scifi-wall-side{fill:#18262e}
-.polar-floor{fill:#2d2b27}.polar-wall{fill:#211c17}.polar-wall-side{fill:#171411}
-.youth-floor{fill:url(#honeyTop)}.youth-wall{fill:#5f4531}.youth-wall-side{fill:#3a2b21}
-.wing-front-edge{fill:#17110d}.scifi-edge{fill:#151f25}.polar-edge{fill:#11100f}.youth-edge{fill:#291f18}
-.shelf rect,.shelf polygon{fill:url(#woodDark);stroke:#95643b;stroke-width:1}
-.shelf path{fill:none;stroke:#a77345;stroke-width:1}
-.shelf--scifi polygon{fill:#243946;stroke:#66869a}
-.shelf--polar rect,.shelf--polar polygon{fill:#211811;stroke:#65472f}
-.shelf--youth polygon{fill:#68482f;stroke:#b98450}
-.book-spines rect{fill:#a7653e;stroke:none}.book-spines rect:nth-child(2n){fill:#52604a}.book-spines rect:nth-child(3n){fill:#66516b}
-.fantasy-rug,.polar-rug{fill:#74372d;stroke:#c09562;stroke-width:1}
-.scifi-rug{fill:#172936;stroke:#b48a52;stroke-width:3;stroke-dasharray:3 3}
-.youth-rug{fill:#35516a;stroke:#d5a35f;stroke-width:2}.youth-rug-inner{fill:none;stroke:#d8b068;stroke-width:2;stroke-dasharray:3 5}
-.reading-table{fill:#6e472b;stroke:#c18b51;stroke-width:1}.reading-table--scifi{fill:#263a45;stroke:#8eabb6}.reading-table--polar{fill:#3a281c}.reading-table-leg{fill:#342218}
-.table-lamp{stroke:#f0d497;stroke-width:1}.table-lamp--amber{fill:#e6aa54}.table-lamp--blue{fill:#9bcbd8}.table-lamp--green{fill:#4f8c69}
-.ladder{fill:none;stroke:#bb8650;stroke-width:2}
-.globe{fill:#92724d;stroke:#e1bc78;stroke-width:1}.globe-line{fill:none;stroke:#e1bc78;stroke-width:1}.globe--dark{fill:#4c5a5a}
-.plant circle,.tree circle{fill:#536f3f}.plant rect,.tree rect{fill:#65442b}
-.gothic-window,.youth-window{fill:#e7c88e;stroke:#f0ddb1;stroke-width:1;opacity:.82}
-.gothic-window-line,.youth-window-line{fill:none;stroke:#9c7144;stroke-width:1}
-.wall-map{fill:#9a8058;stroke:#d2b57e;stroke-width:1;opacity:.75}
-.observatory-window{fill:url(#glassGlow);stroke:#9fbfd0;stroke-width:1.4}
-.observatory-grid{fill:none;stroke:rgba(221,239,247,.5);stroke-width:1}
-.planet{fill:#8aa9bd;stroke:#d5e8ef;stroke-width:1}.planet--large{fill:#6f8ba7}.planet--small{fill:#d2c294}
-.orrery ellipse,.orrery path{fill:none;stroke:#d2a55f;stroke-width:1.5}.orrery circle{fill:#c69049;stroke:#f0d29b;stroke-width:1}
-.instrument path{fill:none;stroke:#a7bbc4;stroke-width:1.5}.instrument circle{fill:#b48c55}
-.paper{fill:#d9cfba;stroke:#9d8c71;stroke-width:.6}
-.youth-table{fill:#66452e}.youth-table-top{fill:#a87346;stroke:#e0b47a}.youth-chairs circle{fill:#b0774c;stroke:#e0b47a}
-.reading-nook polygon{fill:#785337;stroke:#c89458}.reading-nook circle{fill:#a66f55}
-.room-sign{pointer-events:none;text-anchor:middle;font:600 14px "Cormorant Garamond",serif;fill:#f4e8d5;letter-spacing:.06em;paint-order:stroke;stroke:#0b0908;stroke-width:4px}
-.room-sign-small{pointer-events:none;text-anchor:middle;font:500 7px Inter,sans-serif;fill:#b7a58f;letter-spacing:.18em;text-transform:uppercase;paint-order:stroke;stroke:#0b0908;stroke-width:3px}
-.room-sign--hall{font-size:12px;fill:#e5c58f}
-@media(max-width:980px){.iso-map--library{max-height:62dvh}.room-sign{font-size:16px}.room-sign-small{font-size:8px}}
-@media(max-width:680px){.iso-map--library{min-width:760px;width:760px;transform:translateX(calc((100vw - 760px)/2));}.iso-map-wrap{overflow:hidden}.iso-mobile-list{position:relative;z-index:3}}
-
-/* V11 — annexes: Classiques, Romance, Horreur */
-.iso-wing--annex{transform-box:fill-box;transform-origin:center}
-.annex-floor,.annex-wall{stroke:rgba(255,255,255,.13);stroke-width:1}
-.classics-floor{fill:#6f604f}.classics-wall{fill:#33291f}.classics-wall-side{fill:#241d17}
-.romance-floor{fill:#80565b}.romance-wall{fill:#4b3036}.romance-wall-side{fill:#342126}
-.horror-floor{fill:#302728}.horror-wall{fill:#1e1719}.horror-wall-side{fill:#120e10}
-.annex-shelves rect{fill:#422c1e;stroke:#9d7149;stroke-width:1}
-.annex-columns rect{fill:#b49a77;stroke:#d3bd99;stroke-width:.7}
-.annex-table{fill:#7c5638;stroke:#c79b66;stroke-width:1}
-.romance-rug{fill:#74414d;stroke:#d6a1a3;stroke-width:2}
-.romance-sofa{fill:#a16d73;stroke:#d5a2a6;stroke-width:1}.romance-sofa--right{fill:#8b5c65}
-.romance-lamp{fill:#e2b780;stroke:#ffe0ad}.romance-lamp-stand{stroke:#b08a5e;stroke-width:2}
-.horror-arch{fill:none;stroke:#715052;stroke-width:6}
-.horror-candles circle{fill:#f0c779}.horror-candles path{stroke:#d2aa68;stroke-width:1.5}
-.annex-sign{font-size:11px}.annex-sign-small{font-size:6px}
-@media(max-width:680px){.iso-mobile-list{grid-template-columns:1fr 1fr}.iso-wing--annex{filter:none}}
-
-/* V19 — SEO/GEO navigation */
-.site-seo-footer{position:relative;z-index:6;padding:22px 18px 30px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);background:#0b0a08}.site-seo-footer a{color:#81796f;text-decoration:none;font-size:8px}
-
-
-/* V20 — grand architectural plan */
-.iso-map-wrap{
-  isolation:isolate;
-  padding:clamp(10px,1.2vw,18px);
-  border:1px solid rgba(211,178,127,.08);
-  border-radius:28px;
-  background:
-    radial-gradient(circle at 50% 42%,rgba(195,151,88,.075),transparent 42%),
-    linear-gradient(145deg,rgba(255,255,255,.018),rgba(255,255,255,0) 42%);
-}
-.iso-map-wrap::before{
-  content:"";position:absolute;inset:5% 4% 9%;z-index:-1;pointer-events:none;
-  background:radial-gradient(ellipse at center,rgba(170,125,66,.13),transparent 67%);
-  filter:blur(26px);
-}
-.iso-map-wrap::after{
-  content:"";position:absolute;inset:12px;pointer-events:none;border-radius:20px;
-  border:1px solid rgba(255,255,255,.025);
-  box-shadow:inset 0 0 70px rgba(0,0,0,.22);
-}
-.iso-map--library{position:relative;z-index:1}
-.library-plinth{filter:drop-shadow(0 18px 18px rgba(0,0,0,.34))}
-.library-circulation{pointer-events:none;filter:drop-shadow(0 7px 8px rgba(0,0,0,.38))}
-.gallery{
-  fill:url(#galleryStone);stroke:rgba(219,183,128,.24);stroke-width:1.1
-}
-.gallery--fantasy,.gallery--romance{fill:#31231a}
-.gallery--scifi{fill:#1e2b32}
-.gallery--polar,.gallery--horror{fill:#211b18}
-.gallery--youth{fill:#3c2c21}
-.gallery--classics{fill:#393128}
-.gallery-runner{
-  fill:none;stroke:#7b5635;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;
-  opacity:.42;filter:drop-shadow(0 0 4px rgba(212,163,91,.15))
-}
-.gallery-rail{
-  fill:none;stroke:#b68a51;stroke-width:1.2;stroke-linecap:round;opacity:.58
-}
-.gallery-lamps circle{fill:url(#lampPool)}
-.gallery-thresholds path{fill:none;stroke:#d0a66c;stroke-width:1.3;opacity:.58}
-.fantasy-floor{fill:url(#parquet)}
-.hall-group{filter:drop-shadow(0 8px 10px rgba(0,0,0,.42))}
-.hall-floor{filter:drop-shadow(0 3px 4px rgba(0,0,0,.28))}
-.hall-balustrade path{
-  fill:none;stroke:#ba9160;stroke-width:1.25;stroke-linecap:round;opacity:.7
-}
-.hall-book-island polygon{fill:#5f412b;stroke:#c39a68;stroke-width:1}
-.hall-book-island path{fill:none;stroke:#e2bd82;stroke-width:.8;opacity:.7}
-
-.iso-wing{
-  filter:drop-shadow(0 6px 7px rgba(0,0,0,.34));
-  will-change:transform,filter
-}
-.iso-wing.is-active{
-  transform:translateY(-3px);
-  filter:brightness(1.08) saturate(1.05) drop-shadow(0 10px 10px rgba(0,0,0,.42))
-}
-.iso-wing.is-active .wing-floor,.iso-wing.is-active .annex-floor{
-  stroke:rgba(235,197,137,.74);stroke-width:1.6
-}
-.iso-wing.is-active .room-sign{fill:#fff2dc}
-.iso-wing:hover,.iso-wing:focus{
-  transform:translateY(-10px);
-  filter:brightness(1.16) saturate(1.08) drop-shadow(0 15px 14px rgba(0,0,0,.48))
-}
-
-.wing-detail{pointer-events:none}
-.fireplace{fill:#2b1c14;stroke:#a87348;stroke-width:1.4}
-.fire-glow{fill:none;stroke:#f2aa56;stroke-width:2;filter:drop-shadow(0 0 4px #d68136)}
-.armchair{fill:#604631;stroke:#b1865b;stroke-width:1}
-.book-stack{fill:#7d4936;stroke:#d3a06e;stroke-width:.7}
-.book-stack--2{fill:#4d6254}
-.console{fill:#22343d;stroke:#8faebd;stroke-width:1}
-.console-lines,.star-chart path{fill:none;stroke:#9ec0cd;stroke-width:.9;opacity:.78}
-.star-chart circle{fill:#d8edf4}
-.evidence-board{fill:#59432d;stroke:#a78057;stroke-width:1}
-.evidence-lines{fill:none;stroke:#d3c09d;stroke-width:.8;opacity:.75}
-.file-cabinet polygon{fill:#252522;stroke:#6f7068;stroke-width:1}
-.file-cabinet path{fill:none;stroke:#a9aa9d;stroke-width:.7}
-.floor-cushion{fill:#c17d53;stroke:#e1ae77;stroke-width:1}
-.floor-cushion--2{fill:#56738b}
-.youth-stack{fill:#4f6e8b}.youth-stack--2{fill:#c0844f}
-.wall-stars{fill:#e8bd6d;stroke:#f5d799;stroke-width:.5;opacity:.85}
-.marble-bust,.marble-bust-base{fill:#c9bca7;stroke:#eadcc4;stroke-width:.7}
-.classics-rail{fill:none;stroke:#c1a778;stroke-width:1;opacity:.65}
-.side-table{fill:#6d4730;stroke:#c58b5f;stroke-width:1}
-.side-table-leg{stroke:#8f633f;stroke-width:1.6}
-.romance-plant circle{fill:#657c55}.romance-plant path{stroke:#8b684b;stroke-width:2}
-.horror-rune{fill:none;stroke:#7c4b54;stroke-width:1.2;opacity:.75}
-.horror-rune-lines{fill:none;stroke:#925863;stroke-width:.7;opacity:.65}
-.horror-chain{fill:none;stroke:#8b7775;stroke-width:1.1}
-
-.iso-map-hud{
-  position:absolute;right:clamp(16px,2vw,28px);bottom:clamp(14px,2vw,24px);z-index:4;
-  display:flex;align-items:center;gap:12px;padding:10px 13px 10px 10px;
-  border:1px solid rgba(214,179,125,.14);border-radius:14px;
-  background:rgba(11,9,7,.7);backdrop-filter:blur(12px);
-  box-shadow:0 12px 32px rgba(0,0,0,.2)
-}
-.iso-compass{
-  width:34px;height:34px;position:relative;display:grid;place-items:start center;
-  border:1px solid rgba(199,161,105,.25);border-radius:50%;padding-top:4px
-}
-.iso-compass span{font:600 7px/1 Inter,sans-serif;color:#d4b37d;letter-spacing:.12em}
-.iso-compass i{
-  position:absolute;left:50%;top:13px;width:1px;height:14px;background:#b99058;transform:translateX(-50%)
-}
-.iso-compass i::before{
-  content:"";position:absolute;left:-3px;top:-1px;border-left:3.5px solid transparent;border-right:3.5px solid transparent;
-  border-bottom:6px solid #d1ad73
-}
-.iso-map-hud__copy strong{
-  display:block;font:600 14px/1 "Cormorant Garamond",serif;color:#e8d8c1
-}
-.iso-map-hud__copy small{
-  display:block;margin-top:4px;color:#81786e;font-size:7px;letter-spacing:.03em
-}
-
-@keyframes libria-plan-in{from{opacity:0}to{opacity:1}}
-.iso-map--library{animation:libria-plan-in .7s ease both}
-
-@media(max-width:980px){
-  .iso-map-wrap{border-radius:22px;padding:8px}
-  .iso-map-hud{right:14px;bottom:12px}
-}
-@media(max-width:680px){
-  .iso-map-wrap{border-left:0;border-right:0;border-radius:0;padding:0}
-  .iso-map-wrap::after{display:none}
-  .iso-map-hud{display:none}
-  .iso-wing.is-active{transform:none;filter:none}
-}
-@media(prefers-reduced-motion:reduce){
-  .iso-map--library{animation:none}
-}
