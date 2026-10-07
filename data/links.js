@@ -649,6 +649,27 @@ export const reviewsByWork = {
   "beloved": [
     {lang:"en",source:"Leeswammes' Blog",kind:"Book blog",title:"Book Review: Beloved by Toni Morrison",url:"https://leeswammes.wordpress.com/2012/07/18/book-review-beloved-by-toni-morrison/"},
     {lang:"en",source:"Joel Swagman",kind:"Book blog",title:"Beloved by Toni Morrison — Book Review",url:"https://joelswagman.blogspot.com/2017/10/beloved-by-toni-morrison.html"}
+  ],
+  "eye-of-world": [
+    {lang:"en",source:"Strakul's Thoughts",kind:"Book blog",title:"Book Review: The Eye of the World",url:"https://www.strakul.com/blog/posts/book-review-the-eye-of-the-world-by-robert-jordan/"},
+    {lang:"en",source:"Every Day Should Be Tuesday",kind:"SFF book blog",title:"Review of The Eye of the World",url:"https://everydayshouldbetuesday.wordpress.com/2015/10/15/review-eye-world-robert-jordan/"}
+  ],
+  "bear-nightingale": [
+    {lang:"en",source:"Brew and Books Review",kind:"Book blog",title:"The Bear and the Nightingale",url:"https://brewandbooksreview.blogspot.com/2016/11/the-bear-and-nightingale-by-katherine.html"},
+    {lang:"en",source:"SFF Book Reviews",kind:"SFF book blog",title:"Katherine Arden — The Bear and the Nightingale",url:"https://sffbookreview.wordpress.com/2017/03/06/my-first-favorite-of-the-year-katherine-arden-the-bear-and-the-nightingale/"}
+  ],
+  "gardens-of-moon": [
+    {lang:"en",source:"SFF Book Reviews",kind:"SFF book blog",title:"Steven Erikson — Gardens of the Moon",url:"https://sffbookreview.wordpress.com/2025/08/11/lets-do-this-steven-erikson-gardens-of-the-moon/"},
+    {lang:"en",source:"RonarsCorruption",kind:"Book blog",title:"Book Review — Gardens of the Moon",url:"https://ronarscorruption.wordpress.com/2017/02/01/book-review-gardens-of-the-moon/"}
+  ],
+  "last-unicorn": [
+    {lang:"en",source:"Narrative Investigations",kind:"Book blog",title:"Book Review: The Last Unicorn",url:"https://narrativeinvestigations.blogspot.com/2011/07/book-review-last-unicorn.html?m=0"}
+  ],
+  "fahrenheit-451": [
+    {lang:"en",source:"Let Me Tell You the Story of…",kind:"Book blog",title:"Book Review: Fahrenheit 451",url:"https://hrrgorman.wordpress.com/2019/12/16/book-review-fahrenheit-451/"}
+  ],
+  "les-miserables": [
+    {lang:"en",source:"The Blue Bookcase",kind:"Book review blog",title:"Review: Les Misérables by Victor Hugo",url:"https://thebluebookcase.blogspot.com/2012/12/review-les-miserables-by-victor-hugo.html"}
   ]
 };
 
