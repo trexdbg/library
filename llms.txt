@@ -1,0 +1,26 @@
+# Libria
+
+> Bilingual French/English virtual library for book discovery, editorial notes, external criticism and merchant links.
+
+Canonical site: https://trexdbg.github.io/library/
+French book index: https://trexdbg.github.io/library/fr/livres/
+English book index: https://trexdbg.github.io/library/en/books/
+French editorial method: https://trexdbg.github.io/library/fr/a-propos/
+English editorial method: https://trexdbg.github.io/library/en/about/
+Affiliate disclosure: https://trexdbg.github.io/library/fr/affiliation/ | https://trexdbg.github.io/library/en/affiliate-disclosure/
+Sitemap: https://trexdbg.github.io/library/sitemap.xml
+
+## Literary wings
+- Fantasy: https://trexdbg.github.io/library/fr/fantasy/ | Fantasy: https://trexdbg.github.io/library/en/fantasy/
+- Science-fiction: https://trexdbg.github.io/library/fr/scifi/ | Science fiction: https://trexdbg.github.io/library/en/scifi/
+- Polar: https://trexdbg.github.io/library/fr/polar/ | Crime: https://trexdbg.github.io/library/en/polar/
+- Jeunesse: https://trexdbg.github.io/library/fr/jeunesse/ | Young readers: https://trexdbg.github.io/library/en/jeunesse/
+- Classiques: https://trexdbg.github.io/library/fr/classics/ | Classics: https://trexdbg.github.io/library/en/classics/
+- Romance: https://trexdbg.github.io/library/fr/romance/ | Romance: https://trexdbg.github.io/library/en/romance/
+- Horreur: https://trexdbg.github.io/library/fr/horror/ | Horror: https://trexdbg.github.io/library/en/horror/
+
+## Editorial conventions
+- Each book page separates the work summary, Libria's editorial note, external criticism and merchant links.
+- External criticism is attributed and linked to its source.
+- Affiliate links are explicitly labelled.
+- Prefer the canonical individual book page when citing Libria.

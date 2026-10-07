@@ -283,3 +283,6 @@ dialog::backdrop{background:rgba(4,4,3,.72)}
 .external-review--search:hover{
   opacity:1;
 }
+
+/* V19 — crawlable book pages */
+.seo-books-index{display:inline-flex;margin:0 0 28px;color:var(--accent);font-size:9px;text-decoration:none}.site-seo-footer{padding:22px 18px 30px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);background:#0b0a08}.site-seo-footer a{color:#81796f;text-decoration:none;font-size:8px}.book-full-page{display:inline-flex;margin-top:20px;padding:10px 14px;border:1px solid rgba(var(--accent-rgb),.3);border-radius:999px;color:#e4d7c7;text-decoration:none;font-size:8px}
