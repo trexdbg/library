@@ -2,121 +2,92 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d1010">
-  <meta name="description" content="Libria, une bibliothèque virtuelle immersive pour explorer et découvrir des livres.">
-  <title>Libria — Bibliothèque immersive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0908">
+  <meta name="description" content="Libria, une bibliothèque virtuelle immersive où l’on se promène de salle en salle pour découvrir des livres.">
+  <title>Libria — La bibliothèque vivante</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body data-theme="fantasy">
-  <div class="app-shell">
-    <header class="topbar">
-      <button class="brand" id="homeButton" type="button" aria-label="Accueil">
-        <span class="brand-mark" aria-hidden="true">⌑</span>
-        <span class="brand-copy">
+<body>
+  <div class="app" id="app">
+    <header class="site-header">
+      <button class="brand" id="homeButton" type="button" aria-label="Retour au hall">
+        <span class="brand__seal" aria-hidden="true">L</span>
+        <span class="brand__copy">
           <strong>LIBRIA</strong>
           <small id="brandTagline">La bibliothèque vivante</small>
         </span>
       </button>
-
-      <label class="search">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" placeholder="Rechercher un livre, un auteur, un univers...">
-      </label>
-
-      <div class="top-actions">
-        <button class="quiet-link" id="discoverButton" type="button">Découvrir</button>
-        <button class="language" id="languageButton" type="button" aria-label="Changer de langue">FR</button>
+      <div class="location" aria-live="polite">
+        <span class="location__line" aria-hidden="true"></span>
+        <span id="locationLabel">Hall</span>
+      </div>
+      <div class="header-actions">
+        <button class="header-button" id="searchButton" type="button" aria-haspopup="dialog">
+          <span aria-hidden="true">⌕</span>
+          <span id="searchButtonLabel">Rechercher</span>
+        </button>
+        <a class="language-button" id="languageButton" href="../en/" hreflang="en">EN</a>
       </div>
     </header>
 
-    <main class="library-shell">
-      <aside class="genre-panel" aria-label="Univers">
-        <p class="menu-caption" id="menuCaption">Explorer</p>
-        <nav class="genre-nav" id="genreNav"></nav>
-        <div class="genre-note">
-          <span class="genre-note-dot"></span>
-          <p id="genreNote">Faites défiler la scène ou glissez les livres pour flâner dans le rayon.</p>
-        </div>
-      </aside>
-
-      <section class="library-scene" id="libraryScene" aria-label="Bibliothèque immersive">
-        <div class="scene-image" id="sceneImage" aria-hidden="true"></div>
-        <div class="scene-grade" aria-hidden="true"></div>
-        <div class="scene-light scene-light-a" aria-hidden="true"></div>
-        <div class="scene-light scene-light-b" aria-hidden="true"></div>
-
-        <div class="room-copy">
-          <p class="eyebrow" id="eyebrow">Explorez les rayons</p>
-          <h1 id="roomTitle">Fantasy</h1>
-          <p id="roomIntro">Des mondes anciens, des quêtes impossibles et des légendes à portée de main.</p>
-        </div>
-
-        <div class="shelf-zone shelf-zone-top" data-shelf="0">
-          <div class="shelf-strip" id="shelfTop"></div>
-        </div>
-        <div class="shelf-zone shelf-zone-middle" data-shelf="1">
-          <div class="shelf-strip" id="shelfMiddle"></div>
-        </div>
-        <div class="shelf-zone shelf-zone-bottom" data-shelf="2">
-          <div class="shelf-strip" id="shelfBottom"></div>
-        </div>
-
-        <div class="shelf-sign" id="shelfSign">
-          <span id="shelfSignText">Grands univers</span>
-        </div>
-
-        <div class="scene-hint" id="sceneHint">
-          <span class="hint-arrow">←</span>
-          <span id="scrollText">Faites défiler les rayons</span>
-          <span class="hint-arrow">→</span>
-        </div>
-
-        <nav class="bottom-rail" id="bottomRail" aria-label="Navigation des univers"></nav>
-      </section>
-    </main>
-  </div>
-
-  <aside class="book-panel" id="bookPanel" aria-hidden="true">
-    <button class="panel-close" id="panelClose" type="button" aria-label="Fermer">×</button>
-    <div class="panel-hero">
-      <div class="panel-cover" id="panelCover"></div>
-      <div class="panel-heading">
-        <p class="panel-kicker" id="panelKicker">Sélection Libria</p>
-        <h2 id="panelTitle"></h2>
-        <p class="panel-subtitle" id="panelSubtitle"></p>
-        <p class="panel-author" id="panelAuthor"></p>
-        <div class="panel-tags" id="panelTags"></div>
+    <main class="viewport" id="viewport" tabindex="0" aria-label="Bibliothèque virtuelle">
+      <div class="world" id="world"></div>
+      <div class="edge-shade edge-shade--left" aria-hidden="true"></div>
+      <div class="edge-shade edge-shade--right" aria-hidden="true"></div>
+      <div class="walk-hint" id="walkHint" aria-hidden="true">
+        <span>←</span><span id="walkHintText">Molette, glisser ou balayer pour se promener</span><span>→</span>
       </div>
-    </div>
+    </main>
 
-    <div class="panel-tabs" aria-hidden="true">
-      <span class="active" id="tabOverview">Aperçu</span>
-      <span id="tabReview">Notre critique</span>
-      <span id="tabAuthor">L’auteur</span>
-      <span id="tabSimilar">Similaires</span>
-    </div>
+    <nav class="compass" id="compass" aria-label="Navigation dans la bibliothèque">
+      <button class="compass__arrow" id="previousRoom" type="button" aria-label="Salle précédente">←</button>
+      <div class="compass__rooms" id="compassRooms"></div>
+      <button class="compass__arrow" id="nextRoom" type="button" aria-label="Salle suivante">→</button>
+    </nav>
 
-    <div class="panel-content">
-      <p class="panel-summary" id="panelSummary"></p>
+    <dialog class="search-dialog" id="searchDialog" aria-labelledby="searchTitle">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" type="submit" aria-label="Close">×</button>
+      </form>
+      <p class="dialog-eyebrow" id="searchEyebrow">Catalogue Libria</p>
+      <h2 id="searchTitle">Trouver un livre</h2>
+      <label class="search-field">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Titre, auteur, univers…">
+      </label>
+      <div class="search-results" id="searchResults"></div>
+    </dialog>
 
-      <section class="review-card">
-        <small id="reviewLabel">Notre avis</small>
-        <p id="panelReview"></p>
-      </section>
-
-      <section class="edition-card">
-        <small id="editionLabel">Édition affichée</small>
-        <div class="edition-line">
-          <strong id="editionPublisher"></strong>
-          <span id="editionLanguage"></span>
+    <dialog class="book-dialog" id="bookDialog" aria-labelledby="bookTitle">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" type="submit" aria-label="Close">×</button>
+      </form>
+      <div class="book-dialog__layout">
+        <div class="book-dialog__cover-wrap">
+          <div class="book-dialog__cover" id="bookCover"></div>
         </div>
-        <p class="source-note" id="sourceNote">Couverture de démonstration via Open Library.</p>
-      </section>
-    </div>
-  </aside>
-
-  <div class="panel-backdrop" id="panelBackdrop"></div>
+        <div class="book-dialog__content">
+          <p class="dialog-eyebrow" id="bookKicker">Sélection Libria</p>
+          <h2 id="bookTitle"></h2>
+          <p class="book-dialog__subtitle" id="bookSubtitle"></p>
+          <p class="book-dialog__author" id="bookAuthor"></p>
+          <div class="book-tags" id="bookTags"></div>
+          <p class="book-dialog__summary" id="bookSummary"></p>
+          <blockquote class="book-review">
+            <span id="reviewLabel">Notre regard</span>
+            <p id="bookReview"></p>
+          </blockquote>
+          <div class="edition-meta">
+            <span id="editionLabel">Édition présentée</span>
+            <strong id="editionPublisher"></strong>
+            <small id="editionLanguage"></small>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </div>
+  <noscript>Cette bibliothèque interactive nécessite JavaScript.</noscript>
   <script type="module" src="../app.js"></script>
 </body>
 </html>
