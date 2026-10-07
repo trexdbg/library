@@ -670,6 +670,141 @@ export const reviewsByWork = {
   ],
   "les-miserables": [
     {lang:"en",source:"The Blue Bookcase",kind:"Book review blog",title:"Review: Les Misérables by Victor Hugo",url:"https://thebluebookcase.blogspot.com/2012/12/review-les-miserables-by-victor-hugo.html"}
+  ],
+  "alice-wonderland": [
+    {source:"L'Imaginaria",kind:"Blog littéraire",title:"Alice au pays des merveilles — Lewis Carroll",url:"https://limaginaria.wordpress.com/2017/11/06/alice-au-pays-des-merveilles-lewis-carroll/"}
+  ],
+  "secret-garden": [
+    {source:"Clé de l'intrigue",kind:"Blog de lecture",title:"The Secret Garden — Frances Hodgson Burnett",url:"https://cledelintrigue.wordpress.com/2021/06/06/the-secret-garden-de-frances-hodgson-burnett/"}
+  ],
+  "the-stranger": [
+    {source:"The Quarter-Life Experiment",kind:"Book blog",title:"Book Review: The Stranger by Albert Camus",url:"https://thebadbread.wordpress.com/2015/05/15/book-review-the-stranger-by-albert-camus/"}
+  ],
+  "dracula": [
+    {source:"Editorial Notes",kind:"Book review blog",title:"Dracula by Bram Stoker",url:"https://editorialnotes.wordpress.com/2017/08/10/dracula-by-bram-stoker/"}
+  ],
+  "it-stephen-king": [
+    {source:"Grub Street",kind:"Book review blog",title:"Book Review: It by Stephen King",url:"https://grubstreethack.wordpress.com/"}
+  ],
+  "lies-locke-lamora": [
+    {source:"SFF Book Reviews",kind:"SFF book blog",title:"The Lies of Locke Lamora — Scott Lynch",url:"https://sffbookreview.wordpress.com/2012/11/16/review-scott-lynch-the-lies-of-locke-lamora/"}
+  ],
+  "jonathan-strange": [
+    {source:"Les Chroniques de FeyGirl",kind:"Blog littéraire",title:"Jonathan Strange et Mr Norrell — Susanna Clarke",url:"https://feygirl.home.blog/2019/10/26/jonathan-strange-et-mr-norrell-de-susanna-clarke/"}
+  ],
+  "the-martian": [
+    {source:"Les Chroniques de FeyGirl",kind:"Blog littéraire",title:"Seul sur Mars — Andy Weir",url:"https://feygirl.home.blog/2021/08/06/seul-sur-mars-dandy-weir/"}
+  ],
+  "brave-new-world": [
+    {source:"Les Chroniques du Chroniqueur",kind:"Blog littéraire",title:"Le Meilleur des mondes — Aldous Huxley",url:"https://leschroniquesduchroniqueur.wordpress.com/2024/02/19/le-meilleur-des-mondes-daldous-huxley/"}
+  ],
+  "rendezvous-rama": [
+    {source:"Les Chroniques de FeyGirl",kind:"Blog littéraire",title:"Rendez-vous avec Rama — Arthur C. Clarke",url:"https://feygirl.home.blog/2024/09/30/rendez-vous-avec-rama-darthur-c-clark/"}
+  ],
+  "memory-called-empire": [
+    {source:"Strakul's Thoughts",kind:"Book blog",title:"Book Review: A Memory Called Empire",url:"https://www.strakul.com/blog/posts/book-review-a-memory-called-empire-by-arkady-martine/"}
+  ],
+  "maltese-falcon": [
+    {source:"Story Treasury",kind:"Book blog",title:"Book Review: The Maltese Falcon",url:"https://storytreasury.wordpress.com/2011/12/24/book-review-the-maltese-falcon/"}
+  ],
+  "talented-mr-ripley": [
+    {source:"Between the Lines",kind:"Book blog",title:"Book Review: The Talented Mr Ripley",url:"https://ccnlibraryblog.wordpress.com/2014/06/26/book-review-the-talented-mr-ripley/"}
+  ],
+  "the-dry": [
+    {source:"Clues and Reviews",kind:"Crime book blog",title:"Book Review: The Dry — Jane Harper",url:"https://cluesandreviews.wordpress.com/2017/01/07/book-review-the-dry-jane-harper/"}
+  ],
+  "the-poet": [
+    {source:"D'encre et de papier",kind:"Blog littéraire",title:"Le Poète — Michael Connelly",url:"https://papierencre.wordpress.com/author/flobooks/"}
+  ],
+  "black-dahlia": [
+    {source:"Mindful Pleasures",kind:"Literary blog",title:"The Black Dahlia by James Ellroy",url:"https://mindfulpleasures.blogspot.com/2011/08/black-dahlia-by-james-ellroy.html"}
+  ],
+  "thursday-murder-club": [
+    {source:"I Read, Therefore I Blog",kind:"Book review blog",title:"The Thursday Murder Club — Richard Osman",url:"https://ireadthereforeiblog.com/2020/12/31/the-thursday-murder-club-by-richard-osman/"}
+  ],
+  "before-i-go-to-sleep": [
+    {source:"ReviewsbyLola",kind:"Book blog",title:"Book Review: Before I Go to Sleep",url:"https://reviewsbylola.wordpress.com/2011/07/"}
+  ],
+  "lion-witch-wardrobe": [
+    {source:"Kieran's Book Review Blog",kind:"Book blog",title:"The Lion, The Witch and The Wardrobe review",url:"https://kieransbookreviewblog.blogspot.com/2012/03/lion-witch-and-wardrobe-review.html"}
+  ],
+  "graveyard-book": [
+    {source:"Rhapsody in Books",kind:"Book review blog",title:"Review of The Graveyard Book by Neil Gaiman",url:"https://rhapsodyinbooks.wordpress.com/2009/12/04/review-of-the-graveyard-book-by-neil-gaiman/"}
+  ],
+  "neverending-story": [
+    {source:"Heather McReads",kind:"Book blog",title:"The Neverending Story — Book Review / Analysis",url:"https://heathermcreads.wordpress.com/2026/01/30/the-neverending-story-by-michael-ende-book-review-analysis/"}
+  ],
+  "howls-moving-castle": [
+    {source:"C.A. Hughes Book Reviews",kind:"Book blog",title:"Howl's Moving Castle by Diana Wynne Jones",url:"https://cahughesbookreviews.wordpress.com/2020/11/08/book-review-howls-moving-castle-by-diana-wynne-jones/"}
+  ],
+  "the-giver": [
+    {source:"My Thing About Books",kind:"Book blog",title:"Book Review: The Giver",url:"https://mythingaboutbooks.wordpress.com/2019/08/30/book-review-the-giver/"}
+  ],
+  "wind-in-willows": [
+    {source:"neverimitate",kind:"Book review blog",title:"Book Review: The Wind in the Willows",url:"https://neverimitate.wordpress.com/2026/04/23/book-review-the-wind-in-the-willows/"}
+  ],
+  "bfg": [
+    {source:"kindred books",kind:"Book blog",title:"Review: The BFG by Roald Dahl",url:"https://kindredbooks.wordpress.com/2016/07/28/review-the-bfg-by-roald-dahl/"}
+  ],
+  "girl-drank-moon": [
+    {source:"Cover to Cover",kind:"Book review blog",title:"The Girl Who Drank the Moon — Book Review",url:"https://covertocover-bookreview.blogspot.com/2025/01/the-girl-who-drank-moon.html"}
+  ],
+  "tale-despereaux": [
+    {source:"ChCse's blog",kind:"Book blog",title:"Book Review: The Tale of Despereaux",url:"https://chcse.blogspot.com/2011/04/book-review-tale-of-despereaux.html"}
+  ],
+  "madame-bovary": [
+    {source:"Critiques d'une lectrice assidue",kind:"Blog littéraire",title:"Mme Bovary — Gustave Flaubert",url:"https://critiquesdunelectriceassidue.wordpress.com/2017/11/04/mme-bovary-de-gustave-flaubert/"}
+  ],
+  "crime-punishment": [
+    {source:"FictionFan's Book Reviews",kind:"Classic fiction blog",title:"Review: Crime and Punishment",url:"https://fictionfanblog.wordpress.com/2025/11/10/review-crime-and-punishment-by-fyodor-dostoevsky-classic-fiction/"}
+  ],
+  "war-and-peace": [
+    {source:"A Blog of Books and Musicals",kind:"Book blog",title:"War and Peace — Book Review",url:"https://funfandomblog.wordpress.com/2019/10/04/war-and-peace-book-review/"}
+  ],
+  "brothers-karamazov": [
+    {source:"Morose Musing",kind:"Book review blog",title:"The Brothers Karamazov — Book Review",url:"https://morosebookreview.blogspot.com/2024/09/the-brothers-karamazov-book-review.html"}
+  ],
+  "dorian-gray": [
+    {source:"A Curly Sue's Ramblings",kind:"Book blog",title:"The Picture of Dorian Gray — Book Review",url:"https://evinsblog.wordpress.com/2023/03/26/the-picture-of-dorian-gray-book-review/"}
+  ],
+  "hundred-years-solitude": [
+    {source:"Priscilla's Zine & Bookstore",kind:"Book review blog",title:"Book Review: One Hundred Years of Solitude",url:"https://priscillaking.blogspot.com/2016/09/book-review-one-hundred-years-of.html"}
+  ],
+  "master-margarita": [
+    {source:"Brandon Smith",kind:"Book review",title:"The Master and Margarita — A Book Review",url:"https://brandonsmithistrash.substack.com/p/the-master-and-margarita-a-book-review"}
+  ],
+  "love-hypothesis": [
+    {source:"She Can't Stop Reading",kind:"Book blog",title:"Review: The Love Hypothesis",url:"https://shecantstopreading.wordpress.com/2021/11/09/review-the-love-hypothesis/"}
+  ],
+  "hating-game": [
+    {source:"Riya's Blogs",kind:"Book review blog",title:"Book Review: The Hating Game",url:"https://riyabhorkar.com/book-review-the-hating-game-by-sally-thorne/"}
+  ],
+  "rosie-project": [
+    {source:"Books on the 7:47",kind:"Book blog",title:"Review: The Rosie Project",url:"https://booksonthe747.com/2020/04/07/the-rosie-project/"}
+  ],
+  "outlander": [
+    {source:"SFF Book Reviews",kind:"SFF book blog",title:"Review: Outlander / Cross Stitch",url:"https://sffbookreview.wordpress.com/2012/10/27/review-diana-gabaldon-outlandercross-stitch/"}
+  ],
+  "bridges-madison-county": [
+    {source:"A Bookworm's Musing",kind:"Book blog",title:"The Bridges of Madison County — Book Review",url:"https://abookwormsmusing.wordpress.com/2017/06/18/book-review-the-bridges-of-madison-county-by-robert-james-waller/"}
+  ],
+  "misery": [
+    {source:"Je lis, et alors ?",kind:"Blog littéraire",title:"Chronique #30 : Misery de Stephen King",url:"https://jelisetalors.wordpress.com/2024/10/23/chronique-30-misery/"}
+  ],
+  "bird-box": [
+    {source:"Baddie Book Reviews",kind:"Book review blog",title:"Bird Box by Josh Malerman",url:"https://baddiebookreviews.com/2023/09/30/bird-box-by-josh-malerman/"}
+  ],
+  "let-right-one-in": [
+    {source:"Gypsyscarlett's Weblog",kind:"Book review blog",title:"Book Review: Let the Right One In",url:"https://gypsyscarlett.wordpress.com/2011/11/21/book-review-let-the-right-one-in/"}
+  ],
+  "turn-of-screw": [
+    {source:"Chronicled Efforts",kind:"Book review blog",title:"Review: The Turn of the Screw",url:"https://chronicledefforts.wordpress.com/2011/11/02/review-the-turn-of-the-screw-by-henry-james/"}
+  ],
+  "rosemarys-baby": [
+    {source:"WAT DA BOOK",kind:"Book review blog",title:"Review: Rosemary's Baby by Ira Levin",url:"https://watdabook.wordpress.com/2016/01/18/review-rosemarys-baby-by-ira-levin/"}
+  ],
+  "woman-in-black": [
+    {source:"xoxoxo e",kind:"Book review blog",title:"The Woman in Black — Susan Hill",url:"https://xoxoxoe.blogspot.com/2011/10/woman-in-black.html"}
   ]
 };
 
