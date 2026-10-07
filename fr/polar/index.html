@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#0b0a08">
+<meta name="description" content="Enquêtes, noir et suspense. Une aile plus feutrée, faite de secrets, de pistes et de livres qui refusent de tout révéler immédiatement.">
+<title>Polar — Libria</title>
+<link rel="stylesheet" href="../../wing.css">
+</head>
+<body data-genre="polar" data-lang="fr">
+<header class="wing-header">
+  <a class="wing-brand" href="../../"><span class="wing-brand__seal">L</span><strong>LIBRIA</strong></a>
+  <div class="wing-actions">
+    <a class="wing-home" href="../../">Retour au plan</a>
+    <a class="wing-lang" id="languageSwitch" href="#"></a>
+  </div>
+</header>
+<main>
+<section class="wing-hero">
+  <div class="wing-hero__content">
+    <p class="wing-eyebrow">Aile · Polar</p>
+    <h1>Le cabinet des ombres</h1>
+    <p class="wing-hero__intro">Enquêtes, noir et suspense. Une aile plus feutrée, faite de secrets, de pistes et de livres qui refusent de tout révéler immédiatement.</p>
+    <div class="wing-meta"><strong id="bookCount"></strong><span>LIBRIA / Polar</span></div>
+  </div>
+</section>
+
+<nav class="wing-nav" aria-label="Ailes de la bibliothèque">
+  <a data-genre-link="fantasy"></a>
+  <a data-genre-link="scifi"></a>
+  <a data-genre-link="polar"></a>
+  <a data-genre-link="jeunesse"></a>
+</nav>
+
+<section class="wing-content">
+  <div class="wing-toolbar">
+    <div><h2>Sélection actuelle</h2><p>Parcourez les livres actuellement disponibles dans cette aile.</p></div>
+    <label class="wing-search"><span aria-hidden="true">⌕</span><input id="wingSearch" type="search" autocomplete="off"></label>
+  </div>
+  <div class="book-grid" id="bookGrid"></div>
+</section>
+</main>
+
+<dialog id="bookDialog" aria-labelledby="dialogTitle">
+  <form method="dialog" class="dialog-close"><button type="submit" aria-label="Fermer">×</button></form>
+  <div class="book-dialog__layout">
+    <div class="book-dialog__visual"><div class="book-dialog__cover" id="dialogCover"></div></div>
+    <div class="book-dialog__body">
+      <p class="wing-eyebrow">Sélection Libria</p>
+      <h2 id="dialogTitle"></h2>
+      <p class="book-dialog__subtitle" id="dialogSubtitle"></p>
+      <p class="book-dialog__author" id="dialogAuthor"></p>
+      <div class="book-tags" id="dialogTags"></div>
+      <p class="book-summary" id="dialogSummary"></p>
+      <div class="book-review"><small id="dialogReviewLabel"></small><p id="dialogReview"></p></div>
+    </div>
+  </div>
+</dialog>
+<script type="module" src="../../wing.js"></script>
+</body></html>
