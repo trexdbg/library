@@ -83,51 +83,135 @@ function fallbackGradient(work){
 
 const dynamicCoverCache=new Map();
 
-async function resolveCover(work,edition,size="L"){
-  const direct=coverUrl(edition,size);
-  if(direct) return direct;
+function imageLoads(url,timeoutMs=6500){
+  return new Promise((resolve)=>{
+    if(!url){ resolve(false); return; }
+    const img=new Image();
+    let settled=false;
+    const finish=(ok)=>{
+      if(settled) return;
+      settled=true;
+      window.clearTimeout(timer);
+      img.onload=null;
+      img.onerror=null;
+      resolve(ok);
+    };
+    const timer=window.setTimeout(()=>finish(false),timeoutMs);
+    img.onload=()=>finish(img.naturalWidth>20&&img.naturalHeight>20);
+    img.onerror=()=>finish(false);
+    img.referrerPolicy="no-referrer";
+    img.src=url;
+  });
+}
 
-  const cacheKey=`${work.id}:${lang}:${size}`;
-  if(dynamicCoverCache.has(cacheKey)) return dynamicCoverCache.get(cacheKey);
+function directCoverCandidates(work,edition,size){
+  const candidates=[];
+  const seen=new Set();
+  const push=(value)=>{
+    if(!value||seen.has(value)) return;
+    seen.add(value);
+    candidates.push(value);
+  };
 
-  try{
-    const stored=sessionStorage.getItem(`libria-cover:${cacheKey}`);
-    if(stored){
-      dynamicCoverCache.set(cacheKey,stored==="none"?"":stored);
-      return stored==="none"?"":stored;
-    }
-  }catch{}
+  push(coverUrl(edition,size));
 
-  const titles=[edition.title,work.editions?.en?.title].filter((title,index,array)=>title&&array.indexOf(title)===index);
+  const siblings=[work.editions?.en,work.editions?.fr];
+  siblings.forEach((candidate)=>{
+    if(candidate&&candidate!==edition) push(coverUrl(candidate,size));
+  });
 
-  try{
-    for(const title of titles){
+  return candidates;
+}
+
+async function openLibrarySearchCover(work,edition,size){
+  const titles=[edition.title,work.editions?.en?.title,work.editions?.fr?.title]
+    .filter((title,index,array)=>title&&array.indexOf(title)===index);
+
+  for(const title of titles){
+    try{
       const params=new URLSearchParams({
         title,
         author:work.author,
         fields:"cover_i,title,author_name",
-        limit:"6"
+        limit:"8"
       });
       const response=await fetch(`https://openlibrary.org/search.json?${params.toString()}`,{
         headers:{Accept:"application/json"}
       });
       if(!response.ok) continue;
       const data=await response.json();
-      const match=(data.docs||[]).find(doc=>doc.cover_i);
-      if(match){
-        const resolved=`https://covers.openlibrary.org/b/id/${match.cover_i}-${size}.jpg?default=false`;
-        dynamicCoverCache.set(cacheKey,resolved);
-        try{sessionStorage.setItem(`libria-cover:${cacheKey}`,resolved);}catch{}
-        return resolved;
+      for(const doc of data.docs||[]){
+        if(!doc.cover_i) continue;
+        const url=`https://covers.openlibrary.org/b/id/${doc.cover_i}-${size}.jpg?default=false`;
+        if(await imageLoads(url)) return url;
       }
-    }
-    dynamicCoverCache.set(cacheKey,"");
-    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,"none");}catch{}
-    return "";
-  }catch{
-    dynamicCoverCache.set(cacheKey,"");
-    return "";
+    }catch{}
   }
+  return "";
+}
+
+async function googleBooksCover(work,edition){
+  const titles=[edition.title,work.editions?.en?.title,work.editions?.fr?.title]
+    .filter((title,index,array)=>title&&array.indexOf(title)===index);
+
+  for(const title of titles){
+    try{
+      const q=`intitle:"${title}" inauthor:"${work.author}"`;
+      const params=new URLSearchParams({q,maxResults:"8",printType:"books"});
+      const response=await fetch(`https://www.googleapis.com/books/v1/volumes?${params.toString()}`);
+      if(!response.ok) continue;
+      const data=await response.json();
+
+      for(const item of data.items||[]){
+        const links=item.volumeInfo?.imageLinks||{};
+        const raw=links.extraLarge||links.large||links.medium||links.small||links.thumbnail||links.smallThumbnail;
+        if(!raw) continue;
+        const url=raw.replace(/^http:/,"https:").replace("&edge=curl","");
+        if(await imageLoads(url)) return url;
+      }
+    }catch{}
+  }
+  return "";
+}
+
+async function resolveCover(work,edition,size="L"){
+  const cacheKey=`v3:${work.id}:${lang}:${size}`;
+  if(dynamicCoverCache.has(cacheKey)) return dynamicCoverCache.get(cacheKey);
+
+  try{
+    const stored=sessionStorage.getItem(`libria-cover:${cacheKey}`);
+    if(stored){
+      const value=stored==="none"?"":stored;
+      dynamicCoverCache.set(cacheKey,value);
+      return value;
+    }
+  }catch{}
+
+  for(const candidate of directCoverCandidates(work,edition,size)){
+    if(await imageLoads(candidate)){
+      dynamicCoverCache.set(cacheKey,candidate);
+      try{sessionStorage.setItem(`libria-cover:${cacheKey}`,candidate);}catch{}
+      return candidate;
+    }
+  }
+
+  const openLibrary=await openLibrarySearchCover(work,edition,size);
+  if(openLibrary){
+    dynamicCoverCache.set(cacheKey,openLibrary);
+    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,openLibrary);}catch{}
+    return openLibrary;
+  }
+
+  const google=await googleBooksCover(work,edition);
+  if(google){
+    dynamicCoverCache.set(cacheKey,google);
+    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,google);}catch{}
+    return google;
+  }
+
+  dynamicCoverCache.set(cacheKey,"");
+  try{sessionStorage.setItem(`libria-cover:${cacheKey}`,"none");}catch{}
+  return "";
 }
 
 async function hydrateCardCover(cover,work,edition){
@@ -138,6 +222,7 @@ async function hydrateCardCover(cover,work,edition){
   img.alt="";
   img.loading="lazy";
   img.decoding="async";
+  img.referrerPolicy="no-referrer";
   img.addEventListener("load",()=>{
     if(!cover.isConnected) return;
     cover.innerHTML="";
