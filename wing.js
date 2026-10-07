@@ -175,7 +175,7 @@ async function googleBooksCover(work,edition){
 }
 
 async function resolveCover(work,edition,size="L"){
-  const cacheKey=`v3:${work.id}:${lang}:${size}`;
+  const cacheKey=`v4:${work.id}:${lang}:${size}`;
   if(dynamicCoverCache.has(cacheKey)) return dynamicCoverCache.get(cacheKey);
 
   try{
@@ -195,13 +195,6 @@ async function resolveCover(work,edition,size="L"){
     }
   }
 
-  const openLibrary=await openLibrarySearchCover(work,edition,size);
-  if(openLibrary){
-    dynamicCoverCache.set(cacheKey,openLibrary);
-    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,openLibrary);}catch{}
-    return openLibrary;
-  }
-
   const google=await googleBooksCover(work,edition);
   if(google){
     dynamicCoverCache.set(cacheKey,google);
@@ -209,27 +202,94 @@ async function resolveCover(work,edition,size="L"){
     return google;
   }
 
+  const openLibrary=await openLibrarySearchCover(work,edition,size);
+  if(openLibrary){
+    dynamicCoverCache.set(cacheKey,openLibrary);
+    try{sessionStorage.setItem(`libria-cover:${cacheKey}`,openLibrary);}catch{}
+    return openLibrary;
+  }
+
   dynamicCoverCache.set(cacheKey,"");
   try{sessionStorage.setItem(`libria-cover:${cacheKey}`,"none");}catch{}
   return "";
 }
 
-async function hydrateCardCover(cover,work,edition){
-  const url=await resolveCover(work,edition,"L");
-  if(!url || !cover.isConnected) return;
+const coverTasks=[];
+let activeCoverTasks=0;
+const MAX_COVER_TASKS=3;
 
-  const img=document.createElement("img");
-  img.alt="";
-  img.loading="lazy";
-  img.decoding="async";
-  img.referrerPolicy="no-referrer";
-  img.addEventListener("load",()=>{
-    if(!cover.isConnected) return;
+function runCoverQueue(){
+  while(activeCoverTasks<MAX_COVER_TASKS&&coverTasks.length){
+    const task=coverTasks.shift();
+    if(!task.cover.isConnected) continue;
+    activeCoverTasks+=1;
+    hydrateCardCover(task.cover,task.work,task.edition)
+      .finally(()=>{
+        activeCoverTasks-=1;
+        runCoverQueue();
+      });
+  }
+}
+
+function enqueueCover(cover,work,edition,priority=false){
+  if(cover.dataset.coverQueued==="true") return;
+  cover.dataset.coverQueued="true";
+  const task={cover,work,edition};
+  if(priority) coverTasks.unshift(task);
+  else coverTasks.push(task);
+  runCoverQueue();
+}
+
+const coverObserver="IntersectionObserver" in window
+  ? new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(!entry.isIntersecting) return;
+        const cover=entry.target;
+        coverObserver.unobserve(cover);
+        const work=works.find(item=>item.id===cover.dataset.workId);
+        const edition=work?editionFor(work,lang):null;
+        if(work&&edition) enqueueCover(cover,work,edition,true);
+      });
+    },{rootMargin:"600px 0px",threshold:0.01})
+  : null;
+
+async function hydrateCardCover(cover,work,edition){
+  cover.classList.add("is-loading-cover");
+  try{
+    const url=await resolveCover(work,edition,"L");
+    if(!url || !cover.isConnected) return;
+
+    const img=document.createElement("img");
+    img.alt="";
+    img.loading="lazy";
+    img.decoding="async";
+    img.referrerPolicy="no-referrer";
+
+    const loaded=await new Promise((resolve)=>{
+      const timer=window.setTimeout(()=>resolve(false),7000);
+      img.onload=()=>{
+        window.clearTimeout(timer);
+        resolve(img.naturalWidth>20&&img.naturalHeight>20);
+      };
+      img.onerror=()=>{
+        window.clearTimeout(timer);
+        resolve(false);
+      };
+      img.src=url;
+    });
+
+    if(!loaded||!cover.isConnected) return;
     cover.innerHTML="";
     cover.appendChild(img);
-  },{once:true});
-  img.addEventListener("error",()=>img.remove(),{once:true});
-  img.src=url;
+  }finally{
+    if(cover.isConnected) cover.classList.remove("is-loading-cover");
+  }
+}
+
+function scheduleCardCover(cover,work,edition){
+  cover.dataset.workId=work.id;
+  if(coverObserver) coverObserver.observe(cover);
+  else enqueueCover(cover,work,edition);
 }
 function makeCard(work){
   const edition=editionFor(work,lang);
@@ -241,7 +301,7 @@ function makeCard(work){
   const cover=document.createElement("span");cover.className="book-card__cover";cover.style.background=fallbackGradient(work);
   cover.innerHTML=`<span class="book-card__fallback">${edition.title}</span>`;
   wrap.appendChild(cover);
-  hydrateCardCover(cover,work,edition);
+  scheduleCardCover(cover,work,edition);
 
   const copy=document.createElement("span");copy.className="book-card__copy";
   copy.innerHTML=`<strong>${edition.title}</strong><span>${work.author}</span><small>${edition.tags.slice(0,2).join(" · ")}</small>`;
