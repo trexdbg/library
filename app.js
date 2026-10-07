@@ -246,7 +246,7 @@ function createBookButton(work) {
   cover.className = "display-book__cover";
   cover.style.background = gradient(work);
 
-  const imageUrl = coverUrl(edition, "M");
+  const imageUrl = coverUrl(edition, "L");
   if (imageUrl) {
     const img = document.createElement("img");
     img.src = imageUrl;
